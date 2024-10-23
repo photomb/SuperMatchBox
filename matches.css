@@ -1,0 +1,26 @@
+/*-----------------Style Matches-----------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.matchVisu {
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    display: inline-block;
+    text-align: center;
+}
+
+#resultGame {
+    text-align: center;;
+}
