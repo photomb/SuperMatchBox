@@ -2,9 +2,9 @@ import { displayMatches } from './displaymatches.js'
 import { arrPlayers, alertMessage, resultGame, takeMatchesButton, inputNumberMatches } from './start.js'
 
 //Start Conditions
-export let totalMatches = 12
-export let maxMatches = 3
-export let numberOfPlayers = 2
+export let totalMatches = 48
+export let maxMatches = 6
+export let numberOfPlayers = 4
 
 //Gameplay
 export let currentPlayer = 0

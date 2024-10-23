@@ -11,7 +11,7 @@ export function displayMatches() {
     for(let i = 0; i < totalMatches; i++) {
         const match = document.createElement('div');
         match.classList.add('matchVisu')
-        match.textContent = '!'
+        //match.textContent = '!'
         totalMatchesContainer.appendChild(match)
     }
 }
