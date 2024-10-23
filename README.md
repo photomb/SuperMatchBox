@@ -1,2 +1,2 @@
 # SuperMatchBros
-A game with players and matches
+Super multiplayers game, very simple and so fun !
