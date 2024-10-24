@@ -1,5 +1,5 @@
 import { displayMatches } from './displaymatches.js'
-import { arrPlayers, alertMessage, resultGame, takeMatchesButton, inputNumberMatches } from './start.js'
+import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 //Start Conditions
 export let totalMatches = 48
@@ -12,9 +12,9 @@ export let winner = ''
 
 export function gamePlay(matches) {
 
-    alertMessage.textContent = ''
-    
-    matches = parseInt(inputNumberMatches.value)
+    //alertMessage.textContent = ''
+    matches = parseInt(gameButtons)
+    console.log(matches)
     
     //to check if the input is a number
     if(isNaN(matches)) {
@@ -41,13 +41,16 @@ export function gamePlay(matches) {
     if(totalMatches == 0) {
         resultGame.innerHTML = `XxX YOU LOSE PLAYER ${arrPlayers[currentPlayer]} XxX<br>`
         resultGame.innerHTML += `<br>*** PLAYER(S) ${winner} YOU WIN ***`
-        takeMatchesButton.disabled = true
-        inputNumberMatches.disabled = true
+        //takeMatchesButton.disabled = true
+        //inputNumberMatches.disabled = true
+        document.querySelectorAll('.choice').forEach(button => { 
+            button.disabled = true
+        })
         return
     }
     
     //clear field game
-    inputNumberMatches.value = ''
+    //inputNumberMatches.value = ''
     
     //change player
     currentPlayer = (currentPlayer +1) % numberOfPlayers
