@@ -2,9 +2,9 @@ import { displayMatches } from './displaymatches.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 //Start Conditions
-export let totalMatches = 48
+export let totalMatches = 24
 export let maxMatches = 6
-export let numberOfPlayers = 4
+export let numberOfPlayers = 2
 
 //Gameplay
 export let currentPlayer = 0
@@ -12,7 +12,6 @@ export let winner = ''
 
 export function gamePlay(matches) {
 
-    //alertMessage.textContent = ''
     matches = parseInt(gameButtons)
     console.log(matches)
     
@@ -41,16 +40,12 @@ export function gamePlay(matches) {
     if(totalMatches == 0) {
         resultGame.innerHTML = `XxX YOU LOSE PLAYER ${arrPlayers[currentPlayer]} XxX<br>`
         resultGame.innerHTML += `<br>*** PLAYER(S) ${winner} YOU WIN ***`
-        //takeMatchesButton.disabled = true
-        //inputNumberMatches.disabled = true
         document.querySelectorAll('.choice').forEach(button => { 
             button.disabled = true
         })
         return
     }
-    
-    //clear field game
-    //inputNumberMatches.value = ''
+
     
     //change player
     currentPlayer = (currentPlayer +1) % numberOfPlayers
