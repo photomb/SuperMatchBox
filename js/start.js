@@ -1,6 +1,6 @@
 import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
-import { randomizeBtn1, randomizeBtn2, randomizeBtn3 } from './random.js'
+import { randomizeBtns, specialBtn } from './random.js'
 
 //Players Management
 export let arrPlayers = []
@@ -31,6 +31,15 @@ document.querySelectorAll('.choice').forEach(button => {
     })
 })
 
-randomizeBtn1()
-randomizeBtn2()
-randomizeBtn3()
+document.querySelectorAll('.special').forEach(button => {
+    button.addEventListener('click', function(event) {
+        gameButtons = parseInt(event.target.value) // Get the value of the clicked event
+        gamePlay() // Call the gameplay function
+    })
+    button.addEventListener('click', button => {
+        button.style.display = "none"
+    })
+})
+
+randomizeBtns()
+specialBtn()

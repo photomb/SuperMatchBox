@@ -21,11 +21,6 @@ export function gamePlay(matches) {
         return
     }
 
-    if(matches < 1 || matches > maxMatches) {
-        alertMessage.textContent = `You only could take from 1 to ${maxMatches} matches`
-        return
-    }
-
     if (matches > totalMatches) {
         alertMessage.textContent = `Warning : only ${totalMatches} match(es) left`
         return
@@ -46,7 +41,6 @@ export function gamePlay(matches) {
         return
     }
 
-    
     //change player
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`

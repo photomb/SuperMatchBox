@@ -1,28 +1,63 @@
 //Randomize the value of buttons
 import { maxMatches } from './gameplay.js'
-import { gameButtons } from './start.js'
 
-export let valueBtn1
-export let valueBtn2
-export let valueBtn3
+let valueBtn1
+let valueBtn2
+let valueBtn3
+let valueBtn4
 
-export function randomizeBtn1() {
-    valueBtn1 = Math.floor(Math.random() * maxMatches) + 1
+//Get random number
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min +1)) + min
+}
+
+//Get unique random number
+function getUniqueRandomValue(uniqueValues, min, max) {
+    let value;
+    do {
+        value = getRandomArbitrary(min, max)
+    } while (uniqueValues.includes(value))
+    uniqueValues.push(value)
+    return value
+}
+
+//Randomize buttons Value
+export function randomizeBtns() {
+    const min = 1
+    const max = maxMatches
+    const uniqueValues = []
+
+    //Button 1 value
+    valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
-    console.log(gameButtons)
-}
 
-export function randomizeBtn2() {
-    valueBtn2 = Math.floor(Math.random() * maxMatches) + 1
+    //Button 2 value
+    valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn2').value = valueBtn2
     document.getElementById('btn2').innerHTML = valueBtn2
-    console.log(gameButtons)
-}
 
-export function randomizeBtn3() {
-    valueBtn3 = Math.floor(Math.random() * maxMatches) + 1
+    //Button 3 value
+    valueBtn3 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
-    console.log(gameButtons)
+    
+    console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
+}
+
+export function specialBtn() {
+    const min = 1
+    const max = maxMatches
+    const uniqueValues = []
+
+    valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max) 
+    
+    while (valueBtn4 === 0) {
+        document.getElementById('btn4').style.display = "inline"; 
+        break
+    }
+    document.getElementById('btn4').value = valueBtn4
+    document.getElementById('btn4').innerHTML = valueBtn4
+
+    console.log(" Button 4 : " + valueBtn4)
 }

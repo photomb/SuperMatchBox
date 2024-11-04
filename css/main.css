@@ -37,7 +37,21 @@ main {
     margin: 5px;
     padding: 2px;
     border-radius: 15px;
-    border-color: #c23d3d;
+    border-color: blue;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    font-size: 2em;
+}
+
+.special {
+    display: none;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 15px;
+    border-color: yellow;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     background-image: linear-gradient(#ffffff,  #b6b6b6);
