@@ -34,11 +34,11 @@ export function gamePlay(matches) {
     //check the game over
     if(totalMatches == 0) {
         resultGame.innerHTML = `XxX YOU LOSE PLAYER ${arrPlayers[currentPlayer]} XxX<br>`
-        resultGame.innerHTML += `<br>*** PLAYER(S) ${winner} YOU WIN ***`
+        resultGame.innerHTML += `<br>*** PLAYER(S) ${winner} YOU WIN ***<br>`
         document.querySelectorAll('.choice').forEach(button => { 
             button.disabled = true
         })
-        resultGame.innerHTML = `<a href='gameplay.html'>Restart</a>`
+        resultGame.innerHTML += `<a href='gameplay.html'>Restart</a>`
         return
     }
 

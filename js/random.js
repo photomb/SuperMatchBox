@@ -57,7 +57,7 @@ export function specialBtn() {
         break
     }
     document.getElementById('btn4').value = valueBtn4
-    document.getElementById('btn4').innerHTML = valueBtn4
+    document.getElementById('btn4').innerHTML ='☕'
 
     console.log(" Button 4 : " + valueBtn4)
 }
