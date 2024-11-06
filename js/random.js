@@ -50,10 +50,10 @@ export function specialBtn() {
     const max = maxMatches
     const uniqueValues = []
 
-    valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max) 
+    valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
     
-    while (valueBtn4 === 0) {
-        document.getElementById('btn4').style.display = "inline"; 
+    while (valueBtn4 == 0) {
+        document.getElementById('btn4').style.opacity = 1; 
         break
     }
     document.getElementById('btn4').value = valueBtn4

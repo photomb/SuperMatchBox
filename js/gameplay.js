@@ -2,8 +2,8 @@ import { displayMatches } from './displaymatches.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 //Start Conditions
-export let totalMatches = 24
-export let maxMatches = 6
+export let totalMatches = 16
+export let maxMatches = 4
 export let numberOfPlayers = 2
 
 //Gameplay
@@ -38,6 +38,7 @@ export function gamePlay(matches) {
         document.querySelectorAll('.choice').forEach(button => { 
             button.disabled = true
         })
+        resultGame.innerHTML = `<a href='gameplay.html'>Restart</a>`
         return
     }
 
