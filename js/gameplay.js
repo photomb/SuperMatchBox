@@ -42,6 +42,10 @@ export function gamePlay(matches) {
         return
     }
 
+    if(totalMatches == 0) {
+        document.getElementById('btn4').style.opacity = 0
+    }
+
     //change player
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`

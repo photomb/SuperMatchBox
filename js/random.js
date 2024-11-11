@@ -45,6 +45,8 @@ export function randomizeBtns() {
     console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
 }
 
+//Special "Joker" button
+
 export function specialBtn() {
     const min = 1
     const max = maxMatches
@@ -53,11 +55,11 @@ export function specialBtn() {
     valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
     
     while (valueBtn4 == 0) {
-        document.getElementById('btn4').style.opacity = 1; 
-        break
+        document.getElementById('btn4').style.opacity = 1
+        break //Stop the loop if the value is 0
     }
     document.getElementById('btn4').value = valueBtn4
-    document.getElementById('btn4').innerHTML ='☕'
+    document.getElementById('btn4').innerHTML ='<img id="joker" src="./img/joker.png" alt="joker">'
 
-    console.log(" Button 4 : " + valueBtn4)
+    console.log(" Special Button : " + valueBtn4)
 }

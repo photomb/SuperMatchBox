@@ -61,3 +61,8 @@ main {
     background-image: linear-gradient(#ffffff,  #b6b6b6);
     font-size: 2.5em;
 }
+
+#joker {
+    width: 38px;
+    height: auto;
+}
