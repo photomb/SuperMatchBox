@@ -1,17 +1,14 @@
-//Randomize the value of buttons
+// Randomize the value of buttons //
 import { maxMatches } from './gameplay.js'
 
-let valueBtn1
-let valueBtn2
-let valueBtn3
-let valueBtn4
+let valueBtn1, valueBtn2, valueBtn3, valueBtn4
 
-//Get random number
+// Get random number //
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min +1)) + min
 }
 
-//Get unique random number
+// Get unique number per button //
 function getUniqueRandomValue(uniqueValues, min, max) {
     let value;
     do {
@@ -21,7 +18,7 @@ function getUniqueRandomValue(uniqueValues, min, max) {
     return value
 }
 
-//Randomize buttons Value
+//  Game Buttons Value //
 export function randomizeBtns() {
     const min = 1
     const max = maxMatches
@@ -42,10 +39,10 @@ export function randomizeBtns() {
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
     
-    console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
+        console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
 }
 
-//Special "Joker" button
+//Special "Joker" Button //
 
 export function specialBtn() {
     const min = 1
@@ -56,10 +53,10 @@ export function specialBtn() {
     
     while (valueBtn4 == 0) {
         document.getElementById('btn4').style.opacity = 1
-        break //Stop the loop if the value is 0
+        break // Stop the loop if the value is 0 //
     }
     document.getElementById('btn4').value = valueBtn4
     document.getElementById('btn4').innerHTML ='<img id="joker" src="./img/joker.png" alt="joker">'
 
-    console.log(" Special Button : " + valueBtn4)
+        console.log(" Special Button : " + valueBtn4)
 }
