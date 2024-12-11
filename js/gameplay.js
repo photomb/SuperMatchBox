@@ -1,4 +1,5 @@
 import { displayMatches } from './displaymatches.js'
+import { randomizeBtns, specialBtn } from './random.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 // Start Conditions //
@@ -43,10 +44,6 @@ export function gamePlay(matches) {
         return
     }
 
-    if(totalMatches == 0) {
-        document.getElementById('btn4').style.opacity = 0
-    }
-
     // Change player //
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
@@ -59,3 +56,5 @@ export function gamePlay(matches) {
 
     console.log('And the winner is : ' + winner)
 }
+
+//randomizeBtns()

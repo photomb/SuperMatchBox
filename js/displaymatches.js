@@ -9,7 +9,7 @@ export function displayMatches() {
     resultGame.textContent = `Your turn Player ${arrPlayers[currentPlayer]}`
     randomizeBtns()
     specialBtn()
-
+    
     // Materialize Matches for Game interface //
     for(let i = 0; i < totalMatches; i++) {
         const match = document.createElement('div');

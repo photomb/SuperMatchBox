@@ -38,6 +38,3 @@ document.querySelectorAll('.special').forEach(button => {
         gamePlay() // Call the gameplay function //
     })
 })
-
-//randomizeBtns()
-//specialBtn()

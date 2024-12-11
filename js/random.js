@@ -59,4 +59,9 @@ export function specialBtn() {
     document.getElementById('btn4').innerHTML ='<img id="joker" src="./img/joker.png" alt="joker">'
 
         console.log(" Special Button : " + valueBtn4)
+    
+    // Hide the joker button if the game is over //
+    if(totalMatches == 0) {
+        document.getElementById('btn4').style.opacity = 0
+    }
 }
