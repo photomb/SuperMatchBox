@@ -1,0 +1,68 @@
+/*-----------------Style Matches-----------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+main {
+    padding: 0 25%;
+}
+
+.matchVisu {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    background-image: url(../img/match.png);
+    background-size: cover;
+}
+
+#playing {
+    margin-left: 75px;
+}
+
+#resultGame {
+    text-align: center;;
+}
+
+.choice {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 15px;
+    border-color: blue;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    font-size: 2em;
+}
+
+.special {
+    opacity: 0;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 15px;
+    border-color: yellow;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    font-size: 2.5em;
+}
+
+#joker {
+    width: 38px;
+    height: auto;
+}
