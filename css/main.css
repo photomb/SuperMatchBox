@@ -1,4 +1,3 @@
-/*-----------------Style Matches-----------------*/
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +16,8 @@
   src: url("../fonts/Reglisse.otf") format("opentype");
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #eeeeee;
   color: #333;
-  line-height: 1.6;
   text-align: center;
 }
 
