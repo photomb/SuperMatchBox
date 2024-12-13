@@ -1,11 +1,10 @@
 import { displayMatches } from './displaymatches.js'
-import { randomizeBtns, specialBtn } from './random.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 // Start Conditions //
-export let totalMatches = 32
-export let maxMatches = 6
-export let numberOfPlayers = 4
+export let totalMatches = 24
+export let maxMatches = 4
+export let numberOfPlayers = 2
 
 // Gameplay //
 export let currentPlayer = 0
@@ -13,9 +12,9 @@ export let winner = ''
 
 // Function Gameplay which manage the flow of the game //
 export function gamePlay(matches) {
-    matches = parseInt(gameButtons)
     
-    console.log('Number of matches : ' + matches, 'maxMatches : ' + maxMatches)
+    matches = parseInt(gameButtons)
+    console.log('Number of matches : ' + matches, '| maxMatches : ' + maxMatches)
     
     // Warnings of the near end of the game //
     if (matches > totalMatches) {
@@ -29,7 +28,7 @@ export function gamePlay(matches) {
     game.textContent = `Player ${arrPlayers[currentPlayer]} takes ${matches} match(es)`
 
     // New maxMatches value to dodge blocked situation //
-    if (totalMatches <= 3) {
+    if (totalMatches <= 6) {
         maxMatches = 3;
     }
 
@@ -56,5 +55,3 @@ export function gamePlay(matches) {
 
     console.log('And the winner is : ' + winner)
 }
-
-//randomizeBtns()
