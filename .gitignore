@@ -24,3 +24,5 @@ TestResults.xml
 dart-sass/
 #Apple
 .DS_Store
+#CSS because of SASS
+css/
