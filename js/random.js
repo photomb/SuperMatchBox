@@ -1,5 +1,5 @@
 // Randomize the value of buttons //
-import { maxMatches } from './gameplay.js'
+import { maxMatches, totalMatches } from './gameplay.js'
 
 let valueBtn1, valueBtn2, valueBtn3, valueBtn4
 
@@ -53,15 +53,13 @@ export function specialBtn() {
     
     while (valueBtn4 == 0) {
         document.getElementById('btn4').style.opacity = 1
+        if (totalMatches == 0) {
+            document.getElementById('btn4').style.opacity = 0 // Hide the joker button if the game is over //
+        }
         break // Stop the loop if the value is 0 //
     }
     document.getElementById('btn4').value = valueBtn4
     document.getElementById('btn4').innerHTML ='<img id="joker" src="./img/joker.png" alt="joker">'
 
-        console.log(" Special Button : " + valueBtn4)
-    
-    // Hide the joker button if the game is over //
-    if(totalMatches == 0) {
-        document.getElementById('btn4').style.opacity = 0
-    }
+    console.log(" Special Button : " + valueBtn4)
 }

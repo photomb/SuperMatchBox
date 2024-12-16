@@ -1,36 +1,5 @@
-/*-----------------Style Matches-----------------*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-@font-face {
-    font-family: 'Reglisse-Back';
-    src: url('../fonts/Reglisse_Back.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Reglisse-Fill';
-    src: url('../fonts/Reglisse_Fill.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Reglisse';
-    src: url('../fonts/Reglisse.otf') format('opentype');
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #eeeeee;
-    color: #333;
-    line-height: 1.6;
-    text-align: center;
-}
-
-main {
-    padding: 0 25%;
-}
+@use "./libs/base.scss";
+@use "./libs/fonts.scss";
 
 .matchVisu {
     width: 100px;
@@ -48,12 +17,8 @@ main {
     color: orange;
 }
 
-#playing {
-    margin-left: 75px;
-}
-
 #resultGame {
-    text-align: center;;
+    text-align: center;
 }
 
 .choice {
