@@ -1,6 +1,5 @@
 import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
-//import { randomizeBtns, specialBtn } from './random.js'
 
 //Players Management//
 export let arrPlayers = []
@@ -17,8 +16,6 @@ export let gameButtons = 0
 for (let n = 1; n <= numberOfPlayers; n++) {
     arrPlayers.push(n)
 }
-
-console.log('Number of players : ' + arrPlayers)
 
 // Screen initialization //
 displayMatches()

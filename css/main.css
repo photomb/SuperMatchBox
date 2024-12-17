@@ -26,14 +26,18 @@ main {
   font-family: "Reglisse";
   src: url("../fonts/Reglisse.otf") format("opentype");
 }
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../fonts/SuperMario256.ttf") format("truetype");
+}
 .matchVisu {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 #totalMatches {
   font-size: 13em;
-  font-family: Reglisse-Fill;
+  font-family: "Reglisse-Fill";
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 11px 11px 3px #999;
   color: orange;
 }
@@ -64,7 +68,6 @@ main {
   border-radius: 15px;
   border-color: yellow;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
   background-image: linear-gradient(#ffffff, #b6b6b6);
   font-size: 2.5em;
 }
@@ -72,6 +75,10 @@ main {
 #joker {
   width: 38px;
   height: auto;
+}
+
+#btn2 {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=main.css.map */

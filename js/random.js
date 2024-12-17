@@ -1,8 +1,6 @@
 // Randomize the value of buttons //
 import { maxMatches, totalMatches } from './gameplay.js'
 
-let valueBtn1, valueBtn2, valueBtn3, valueBtn4
-
 // Get random number //
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min +1)) + min
@@ -25,37 +23,43 @@ export function randomizeBtns() {
     const uniqueValues = []
 
     //Button 1 value
-    valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
+    let valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
 
     //Button 2 value
-    valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)
+    let valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn2').value = valueBtn2
     document.getElementById('btn2').innerHTML = valueBtn2
+    if (totalMatches <= 6) {
+        document.getElementById('btn2').style.display = 'none'
+    }
 
     //Button 3 value
-    valueBtn3 = getUniqueRandomValue(uniqueValues, min, max)
+    let valueBtn3 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
+    if (totalMatches <= 2) {
+        document.getElementById('btn3').value = 1
+        document.getElementById('btn3').innerHTML = 1
+    }
     
-        console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
+    console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
 }
 
 //Special "Joker" Button //
 
 export function specialBtn() {
-    const min = 1
     const max = maxMatches
     const uniqueValues = []
+    const valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
 
-    valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
+    if (totalMatches === 0) {
+        document.getElementById('btn4').style.opacity = 0
+    }
     
     while (valueBtn4 == 0) {
         document.getElementById('btn4').style.opacity = 1
-        if (totalMatches == 0) {
-            document.getElementById('btn4').style.opacity = 0 // Hide the joker button if the game is over //
-        }
         break // Stop the loop if the value is 0 //
     }
     document.getElementById('btn4').value = valueBtn4

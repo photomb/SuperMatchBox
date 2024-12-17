@@ -14,23 +14,18 @@ export let winner = ''
 export function gamePlay(matches) {
     
     matches = parseInt(gameButtons)
-    console.log('Number of matches : ' + matches, '| maxMatches : ' + maxMatches)
     
     // Warnings of the near end of the game //
     if (matches > totalMatches) {
         alertMessage.textContent = `Warning : only ${totalMatches} match(es) left`
         return
     }
-
+    
     // Take matches //
     totalMatches -= matches
     displayMatches(matches)
     game.textContent = `Player ${arrPlayers[currentPlayer]} takes ${matches} match(es)`
 
-    // New maxMatches value to dodge blocked situation //
-    if (totalMatches <= 6) {
-        maxMatches = 3;
-    }
 
     // Check the game over //
     if(totalMatches == 0) {
@@ -42,16 +37,16 @@ export function gamePlay(matches) {
         resultGame.innerHTML += `<a href='gameplay.html'>Restart</a>`
         return
     }
-
-    // Change player //
+    
+    // Player Turn//
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
-
+    
     console.log('Current player : ' + arrPlayers[currentPlayer])
     
     // Winner //
     let arrWinners = arrPlayers.filter((player) => player != arrPlayers[currentPlayer])
     winner = arrWinners.join(', ')
-
-    console.log('And the winner is : ' + winner)
+    
+    console.log('Number of matches : ' + matches, '| maxMatches : ' + maxMatches, '| totalMatches : ' + totalMatches)
 }
