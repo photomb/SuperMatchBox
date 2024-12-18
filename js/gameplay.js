@@ -1,4 +1,5 @@
 import { displayMatches } from './displaymatches.js'
+import { gameOver } from './gameover.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 // Start Conditions //
@@ -25,22 +26,13 @@ export function gamePlay(matches) {
     totalMatches -= matches
     displayMatches(matches)
     game.textContent = `Player ${arrPlayers[currentPlayer]} takes ${matches} match(es)`
-
-
-    // Check the game over //
-    if(totalMatches == 0) {
-        resultGame.innerHTML = `XxX YOU LOSE PLAYER ${arrPlayers[currentPlayer]} XxX<br>`
-        resultGame.innerHTML += `<br>*** PLAYER(S) ${winner} YOU WIN ***<br>`
-        document.querySelectorAll('.choice').forEach(button => { 
-            button.disabled = true
-        })
-        resultGame.innerHTML += `<a href='gameplay.html'>Restart</a>`
-        return
-    }
     
     // Player Turn//
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
+
+    // Game Over //
+    gameOver()
     
     console.log('Current player : ' + arrPlayers[currentPlayer])
     

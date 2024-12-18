@@ -32,6 +32,5 @@ document.querySelectorAll('.special').forEach(button => {
     button.addEventListener('click', function(event) {
         gameButtons = parseInt(event.target.value) // Get the value of the clicked event //
         gameButtons = document.getElementById('btn4').style.opacity = 0
-        gamePlay() // Call the gameplay function //
     })
 })

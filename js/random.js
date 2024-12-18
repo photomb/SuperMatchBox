@@ -26,6 +26,10 @@ export function randomizeBtns() {
     let valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
+    if (totalMatches <= 2) {
+        document.getElementById('btn1').value = 2
+        document.getElementById('btn1').innerHTML = 2
+    }
 
     //Button 2 value
     let valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)

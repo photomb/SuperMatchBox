@@ -11,5 +11,26 @@ body {
 }
 
 main {
-    padding: 0 25%;
+    padding: 3%;
+}
+
+h1 {
+    font-family: 'SuperMario256';
+    padding: 1%;
+    text-shadow: 
+        2px 2px 0 #ff6f00,
+        4px 4px 0 #ff5722,
+        6px 6px 0 #e64a19,
+        7px 7px 2px #999;
+    color: orange;
+}
+
+h2 {
+    font-family: 'SuperMario256';
+    text-shadow: 
+        1px 1px 0 #ff6f00,
+        2px 2px 0 #ff5722,
+        3px 3px 0 #e64a19,
+        5px 5px 1px #999;
+    color: orange;
 }
