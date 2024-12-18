@@ -49,12 +49,10 @@ h2 {
 }
 
 #totalMatches {
+  color: orange;
   font-size: 13em;
   font-family: "Reglisse-Fill";
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 11px 11px 3px #999;
-  color: orange;
-  margin-top: -5%;
-  margin-bottom: -2%;
 }
 
 #resultGame {
@@ -67,12 +65,20 @@ h2 {
   height: 100px;
   margin: 5px;
   padding: 2px;
+  border-width: 5px;
   border-radius: 15px;
   border-color: orange;
+  border-style: outset;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   background-image: linear-gradient(#ffffff, #b6b6b6);
   font-size: 3em;
+}
+.choice:hover {
+  border-color: #ff5722;
+}
+.choice:active {
+  border-color: #d33505;
 }
 
 .special {
@@ -86,6 +92,10 @@ h2 {
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(#ffffff, #b6b6b6);
   font-size: 2.5em;
+  cursor: pointer;
+}
+.special:hover {
+  border-color: #ffe522;
 }
 
 #joker {
