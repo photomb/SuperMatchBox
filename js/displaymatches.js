@@ -1,4 +1,4 @@
-import { totalMatchesContainer, showPlayer, resultGame, arrPlayers} from './start.js'
+import { totalMatchesContainer, showPlayer, resultGame, arrPlayers } from './start.js'
 import { totalMatches, numberOfPlayers, currentPlayer } from './gameplay.js'
 import { randomizeBtns, specialBtn } from './random.js'
 

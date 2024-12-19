@@ -5,13 +5,13 @@ import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 // Start Conditions //
 export let totalMatches = 24
 export let maxMatches = 4
-export let numberOfPlayers = 2
+export let numberOfPlayers = sessionStorage.getItem("numberOfPlayers")
 
 // Gameplay //
 export let currentPlayer = 0
 export let winner = ''
 
-// Function Gameplay which manage the flow of the game //
+// Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {
     
     matches = parseInt(gameButtons)

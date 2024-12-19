@@ -1,0 +1,71 @@
+.matchVisu {
+    width: 50px;
+    height: 50px;
+}
+
+.totalMatches {
+    color: orange;
+    font-size: 13em;
+    font-family: 'Reglisse-Fill';
+    text-shadow: 
+        2px 2px 0 #ff6f00,
+        4px 4px 0 #ff5722,
+        6px 6px 0 #e64a19,
+        11px 11px 3px #999;
+}
+
+#resultGame {
+    text-align: center;
+}
+
+.choice {
+    font-family: 'Reglisse-fill';
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 2px;
+    border-width: 5px;
+    border-radius: 15px;
+    border-color: orange;
+    border-style: outset;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    font-size: 3em;
+
+
+    &:hover {
+        border-color: #ff5722;
+    }
+
+    &:active {
+        border-color: #d33505;
+    }
+}
+
+.special {
+    opacity: 0;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 15px;
+    border-color: yellow;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    font-size: 2.5em;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #ffe522;
+    }
+}
+
+#joker {
+    width: 38px;
+    height: auto;
+}
+
+#btn2 {
+    display: inline-block;
+}

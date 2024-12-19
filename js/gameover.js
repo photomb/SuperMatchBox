@@ -1,7 +1,5 @@
-import { totalMatches } from "./gameplay.js"
-import { resultGame } from "./start.js"
-import { currentPlayer, winner } from "./gameplay.js"
-import { arrPlayers } from "./start.js"
+import { arrPlayers, resultGame } from "./start.js"
+import { totalMatches, currentPlayer, winner } from "./gameplay.js"
 
 export function gameOver() {
     if(totalMatches == 0) {
@@ -13,7 +11,7 @@ export function gameOver() {
         document.querySelectorAll('.special').forEach(button => { 
             button.style.opacity = 0
         })
-        resultGame.innerHTML += `<a href='gameplay.html'>Restart</a>`
+        resultGame.innerHTML += '<button id="btnReset" onclick="location.reload()">New Game</button>'
         return
     }
 }

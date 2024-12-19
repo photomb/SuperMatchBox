@@ -1,0 +1,14 @@
+#startGame {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border-color: #ff6f00;
+    cursor: pointer;
+    font-weight: bold;
+    border-width: 3px;
+    box-shadow: #999 2px 1px 3px;
+
+    &:hover {
+        border-color: #e64a19;
+    }
+}
