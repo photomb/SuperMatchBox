@@ -16,11 +16,12 @@ export let gameButtons = 0
 for (let n = 1; n <= numberOfPlayers; n++) {
     arrPlayers.push(n)
 }
+console.log(arrPlayers)
 
 // Screen initialization //
 displayMatches()
 
-// Add event listeners //
+// Add event listeners with classics game buttons //
 document.querySelectorAll('.choice').forEach(button => {
     button.addEventListener('click', function(event) {
         gameButtons = parseInt(event.target.value) // Get the value of the clicked event //
@@ -28,9 +29,11 @@ document.querySelectorAll('.choice').forEach(button => {
     })
 })
 
+// Add event listeners with special game button //
 document.querySelectorAll('.special').forEach(button => {
     button.addEventListener('click', function(event) {
         gameButtons = parseInt(event.target.value) // Get the value of the clicked event //
         gameButtons = document.getElementById('btn4').style.opacity = 0
+        gamePlay() // Call the gameplay function //
     })
 })
