@@ -3,8 +3,8 @@ import { gameOver } from './gameover.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons, game } from './start.js'
 
 // Start Conditions //
-export let totalMatches = 24
-export let maxMatches = 4
+export let totalMatches = sessionStorage.getItem("totalMatches")
+export let maxMatches = sessionStorage.getItem("maxMatches")
 export let numberOfPlayers = sessionStorage.getItem("numberOfPlayers")
 
 // Gameplay //
