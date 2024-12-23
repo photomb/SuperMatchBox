@@ -6,7 +6,7 @@ import { randomizeBtns, specialBtn } from './random.js'
 export function displayMatches() {
     totalMatchesContainer.innerHTML = `${totalMatches}<img src="./img/match.png" alt="match" class="matchVisu">`
     showPlayer.textContent = `Number of players : ${numberOfPlayers}`
-    resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
+    resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}` // in start game, first player annonced //
     
     randomizeBtns()
     specialBtn()

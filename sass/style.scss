@@ -1,6 +1,7 @@
 @use "./libs/fonts.scss";
 @use "./pages/index.scss";
 @use "./pages/gameplay.scss";
+@use "./libs/button.scss";
 
 * {
     margin: 0;
@@ -9,7 +10,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eeeeee;
+    background-color: #eee;
     color: #333;
     text-align: center;
 }
@@ -18,6 +19,7 @@ main {
     background-color: #fff;
     border: 2px dotted #ff6f00;
     width: 50%;
+    height: auto;
     margin: 2% auto;
     padding: 1%;
     border-radius: 35px;

@@ -10,7 +10,7 @@ export let numberOfPlayers = sessionStorage.getItem("numberOfPlayers")
 // Gameplay //
 export let currentPlayer = 0
 export let winner = ''
-export let gameInfo = ''
+export let gameTrack = ''
 
 // Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {
@@ -22,13 +22,14 @@ export function gamePlay(matches) {
         alertMessage.textContent = `Warning : only ${totalMatches} match(es) left`
         return
     }
-    
+
     // Take matches //
     totalMatches -= matches
     displayMatches(matches)
-    game.textContent = `PLAYER ${arrPlayers[currentPlayer]} takes ${matches} match(es)`
-    gameInfo = document.getElementById("game")
-    console.log(gameInfo.textContent)
+    gameTrack = arrPlayers[currentPlayer]
+    alertMessage.textContent = `PLAYER ${gameTrack} takes ${matches} match(es)`
+    
+    console.log("potential loser : player " + gameTrack) 
     
     // Player Turn//
     currentPlayer = (currentPlayer +1) % numberOfPlayers
