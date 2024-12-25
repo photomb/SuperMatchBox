@@ -62,7 +62,7 @@ export function specialBtn() {
         document.getElementById('btn4').style.opacity = 0
     }
     
-    while (valueBtn4 == 0) {
+    while (valueBtn4 === 0) {
         document.getElementById('btn4').style.opacity = 1
         break // Stop the loop if the value is 0 //
     }

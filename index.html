@@ -3,14 +3,43 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/getconditions.js" type="module" defer></script>
     <link rel="stylesheet" href="./css/main.css">
     <title>Super Match Bros</title>
 </head>
-<audio src="./media/LaBossaLostFrontier.mp3" loop autoplay></audio>
 <body>
     <h1>Super Match Bros</h1>
-    <p>
-        <a href="gameplay.html"><button id="start">Start Random Game</button></a>
-    </p>
+    <h2>Welcome<br>Choose your game options</h2>
+    <main>
+        <form>
+            <label for="numberOfPlayers">Number of players</label>
+            <select type="number" name="numberOfPlayers" id="numberOfPlayers">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <span>&nbsp;|&nbsp;</span>
+
+            <label for="totalMatches">Total matches</label>
+            <select type="number" name="totalMatches" id="totalMatches">
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+            </select>
+
+            <span>&nbsp;|&nbsp;</span>
+
+            <label for="maxMatches">Max matches</label>
+            <select type="number" name="maxMatches" id="maxMatches">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+            </select>
+        </form>
+        <button id="startGame">Start Game</button>
+    </main>
+    <audio src="./media/WiiMusic.mp3" loop autoplay></audio>
 </body>
 </html>
