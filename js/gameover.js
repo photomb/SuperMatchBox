@@ -1,5 +1,5 @@
-import { arrPlayers, resultGame } from "./start.js"
-import { totalMatches, currentPlayer, winner, gameTrack } from "./gameplay.js"
+import { resultGame } from "./start.js"
+import { totalMatches, winner, gameTrack } from "./gameplay.js"
 
 export function gameOver() {
     if(totalMatches === 0) {
