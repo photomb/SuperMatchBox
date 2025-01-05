@@ -12,6 +12,29 @@ export const resultGame = document.getElementById("resultGame")
 export const alertMessage = document.getElementById("alertMessage")
 export let gameButtons = 0
 
+// ProgressBar //
+let maxBar = 200
+let currentBar = 0
+let progressBar
+let intervalID
+
+function updateProgressBar() {
+    progressBar = getElementById('progressBar')
+    progressBar.value = currentBar
+    progressBar.max = maxBar
+}
+
+function displayBar() {
+    currentBar++
+    progressBar = currentBar
+    if (currentBar > maxBar) {
+        clearInterval( intervalID )
+    }
+    progressBar.valueOf = currentBar
+}
+
+intervalID = setInterval( displayBar(), 100)
+
 // Number of players //
 for (let n = 1; n <= numberOfPlayers; n++) {
     arrPlayers.push(n)
