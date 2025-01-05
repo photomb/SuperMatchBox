@@ -1,11 +1,11 @@
 import { displayMatches } from './displaymatches.js'
 import { gameOver } from './gameover.js'
-import { arrPlayers, alertMessage, resultGame, gameButtons, game } from './start.js'
+import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
 // Start Conditions //
 export let totalMatches = sessionStorage.getItem("totalMatches")
-export let maxMatches = sessionStorage.getItem("maxMatches")
 export let numberOfPlayers = sessionStorage.getItem("numberOfPlayers")
+export let maxMatches = sessionStorage.getItem("maxMatches")
 
 // Gameplay //
 export let currentPlayer = 0

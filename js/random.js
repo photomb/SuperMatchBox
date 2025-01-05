@@ -8,7 +8,7 @@ function getRandomArbitrary(min, max) {
 
 // Get unique number per button //
 function getUniqueRandomValue(uniqueValues, min, max) {
-    let value;
+    let value = 0
     do {
         value = getRandomArbitrary(min, max)
     } while (uniqueValues.includes(value))
@@ -26,9 +26,10 @@ export function randomizeBtns() {
     let valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
-    if (totalMatches <= 2) {
-        document.getElementById('btn1').value = 2
-        document.getElementById('btn1').innerHTML = 2
+    if (totalMatches <= 6) {
+        valueBtn1 = getRandomArbitrary(1, 3)
+        document.getElementById('btn1').value = valueBtn1
+        document.getElementById('btn1').innerHTML = valueBtn1
     }
 
     //Button 2 value
@@ -44,6 +45,7 @@ export function randomizeBtns() {
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
     if (totalMatches <= 2) {
+        valueBtn2 = getRandomArbitrary(1, 1)
         document.getElementById('btn3').value = 1
         document.getElementById('btn3').innerHTML = 1
     }
