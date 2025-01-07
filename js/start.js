@@ -1,9 +1,6 @@
 import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
 
-//Players Management//
-export let arrPlayers = []
-
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
 export const showPlayer = document.getElementById("player")
@@ -12,30 +9,8 @@ export const resultGame = document.getElementById("resultGame")
 export const alertMessage = document.getElementById("alertMessage")
 export let gameButtons = 0
 
-// ProgressBar //
-let maxBar = 200
-let currentBar = 0
-let progressBar
-let intervalID
-
-function updateProgressBar() {
-    progressBar = getElementById('progressBar')
-    progressBar.value = currentBar
-    progressBar.max = maxBar
-}
-
-function displayBar() {
-    currentBar++
-    progressBar = currentBar
-    if (currentBar > maxBar) {
-        clearInterval( intervalID )
-    }
-    progressBar.valueOf = currentBar
-}
-
-intervalID = setInterval( displayBar(), 100)
-
 // Number of players //
+export let arrPlayers = []
 for (let n = 1; n <= numberOfPlayers; n++) {
     arrPlayers.push(n)
 }

@@ -10,11 +10,11 @@ function getConditions() {
     })
 }
 
-function displayPlayers() {
+function nameOfPlayers() {
     document.getElementById("startGame").addEventListener("click", () => {
         const namePlayer1 = document.getElementById("namePlayer1").value
         const namePlayer2 = document.getElementById("namePlayer2").value
-        const namePlayer3 = document.getElementById("namePlayer3").value        
+        const namePlayer3 = document.getElementById("namePlayer3").value       
         const namePlayer4 = document.getElementById("namePlayer4").value
         sessionStorage.setItem("namePlayer1", namePlayer1)
         sessionStorage.setItem("namePlayer2", namePlayer2)
@@ -24,5 +24,20 @@ function displayPlayers() {
     })
 }
 
+function displayPlayers() {
+    const getPlayers = document.getElementById("numberOfPlayers").value
+    const num = sessionStorage.setItem("numberOfPlayers", getPlayers)
+    if (getPlayers == 3) {
+        document.getElementById("label3").style.display = "display"
+        document.getElementById("label4").style.display = "none"
+    } else if (getPlayers == 4) {
+        document.getElementById("label3").style.display = "display"
+        document.getElementById("label4").style.display = "display"
+    } else {
+        document.getElementById("label3").style.display = "none"
+        document.getElementById("label4").style.display = "none"
+    }
+}
+
 getConditions()
-displayPlayers()
+nameOfPlayers()
