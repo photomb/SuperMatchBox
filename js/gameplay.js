@@ -2,9 +2,12 @@ import { displayMatches } from './displaymatches.js'
 import { gameOver } from './gameover.js'
 import { arrPlayers, alertMessage, resultGame, gameButtons } from './start.js'
 
+console.log(sessionStorage.getItem("players"))
+console.log(sessionStorage.getItem("totalMatches"))
+console.log(sessionStorage.getItem("maxMatches"))
 // Start Conditions //
 export let totalMatches = sessionStorage.getItem("totalMatches")
-export let numberOfPlayers = sessionStorage.getItem("numberOfPlayers")
+export let numberOfPlayers = sessionStorage.getItem("players")
 export let maxMatches = sessionStorage.getItem("maxMatches")
 
 // Gameplay //
@@ -14,7 +17,13 @@ export let gameTrack = ''
 
 // Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {
-    
+    if (numberOfPlayers == null) {
+        alertMessage.textContent = "Error : No start conditons"
+    } else {
+        console.log('Number of players : ' + numberOfPlayers)
+    }
+
+
     matches = parseInt(gameButtons)
     
     // Warnings of the near end of the game //

@@ -27,7 +27,7 @@ export function randomizeBtns() {
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
     if (totalMatches <= 6) {
-        valueBtn1 = getRandomArbitrary(1, 3)
+        valueBtn1 = getRandomArbitrary(2, 3) 
         document.getElementById('btn1').value = valueBtn1
         document.getElementById('btn1').innerHTML = valueBtn1
     }
@@ -45,7 +45,6 @@ export function randomizeBtns() {
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
     if (totalMatches <= 2) {
-        valueBtn2 = getRandomArbitrary(1, 1)
         document.getElementById('btn3').value = 1
         document.getElementById('btn3').innerHTML = 1
     }
@@ -54,7 +53,6 @@ export function randomizeBtns() {
 }
 
 //Special "Joker" Button //
-
 export function specialBtn() {
     const max = maxMatches
     const uniqueValues = []

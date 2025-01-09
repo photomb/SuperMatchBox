@@ -1,22 +1,38 @@
-select {
-    width: 70px;
-    height: auto;
-    background-color: #fff;
+.game-option-label {
     font-family: 'Reglisse-Fill';
     font-size: 3em;
-    margin-left: 10px;
-    margin-right: 10px;
     color: #ff6f00;
-    text-shadow: #333 1px 1px 1px;
-    text-align: center;
-    border: none;
+    cursor: pointer;
 }
 
-label {
-    font-family: 'Reglisse';
-    font-size: 1.5em;
-}
-
-#label3, #label4 {
+input[type="radio"].game-option-input {
     display: none;
+
+    & + label {
+        border: dashed 1px grey;
+        border-radius: 5px;
+        padding: 0 20px;
+        margin-bottom: 3%;
+        display: inline-block;
+    }
+
+    &:checked + label {
+    color: red;
+    border: solid 1px #ff6f00;
+    background-color: rgba(255, 255, 0, 0.5);
+    }
 }
+
+fieldset {
+    border: 1px solid #ff6f00;
+    border-radius: 5px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+
+// #label3, #label4 {
+//     display: none;
+// }

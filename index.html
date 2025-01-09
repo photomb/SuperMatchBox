@@ -12,32 +12,49 @@
     <h2>Welcome<br>Choose your game options</h2>
     <main>
         <form>
-            <label for="numberOfPlayers">Number of players</label>
-            <select type="number" name="numberOfPlayers" id="numberOfPlayers">
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
+            <fieldset>
+                <legend>&nbsp;Number of players&nbsp;</legend>
+                <input type="radio" name="players" id="2Players" class="game-option-input" value="2" checked>
+                <label for="2Players" class="game-option-label">2</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="players" id="3Players" class="game-option-input" value="3">
+                <label for="3Players" class="game-option-label">3</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="players" id="4Players" class="game-option-input" value="4">
+                <label for="4Players" class="game-option-label">4</label>
+            </fieldset>
             <br>
 
-            <label for="totalMatches">Total matches</label>
-            <select type="number" name="totalMatches" id="totalMatches">
-                <option value="12">12</option>
-                <option value="24">24</option>
-                <option value="36">36</option>
-                <option value="48">48</option>
-                <option value="99">99</option>
-            </select>
-
+            <fieldset>
+                <legend>&nbsp;Total Matches&nbsp;</legend>
+                <input type="radio" name="totalMatches" id="12Matches" class="game-option-input" value="12" checked>
+                <label for="12Matches" class="game-option-label">12</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="24Matches" class="game-option-input" value="24">
+                <label for="24Matches" class="game-option-label">24</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="36Matches" class="game-option-input" value="36">
+                <label for="36Matches" class="game-option-label">36</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="48Matches" class="game-option-input" value="48">
+                <label for="48Matches" class="game-option-label">48</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="99Matches" class="game-option-input" value="99">
+                <label for="99Matches" class="game-option-label">99</label>
+            </fieldset>
             <br>
 
-            <label for="maxMatches">Max matches</label>
-            <select type="number" name="maxMatches" id="maxMatches">
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-            </select>
-
+            <fieldset>
+                <legend>&nbsp;Max Matches&nbsp;</legend>
+                <input type="radio" name="maxMatches" id="3Matches" class="game-option-input" value="3" checked>
+                <label for="3Matches" class="game-option-label">3</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="maxMatches" id="4Matches" class="game-option-input" value="4">
+                <label for="4Matches" class="game-option-label">4</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="maxMatches" id="6Matches" class="game-option-input" value="6">
+                <label for="6Matches" class="game-option-label">6</label>
+            </fieldset>
             <br>
             <br>
             <hr>

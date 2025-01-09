@@ -5,13 +5,15 @@
 
 .totalMatches {
     color: orange;
-    font-size: 13em;
+    font-size: 11em;
     font-family: 'Reglisse-Fill';
     text-shadow: 
         2px 2px 0 #ff6f00,
         4px 4px 0 #ff5722,
         6px 6px 0 #e64a19,
         11px 11px 3px #999;
+    margin-top: -50px;
+    margin-bottom: -20px;
 }
 
 #resultGame {

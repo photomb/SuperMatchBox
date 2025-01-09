@@ -14,27 +14,36 @@
   font-family: "SuperMario256";
   src: url("../fonts/SuperMario256.ttf") format("truetype");
 }
-select {
-  width: 70px;
-  height: auto;
-  background-color: #fff;
+.game-option-label {
   font-family: "Reglisse-Fill";
   font-size: 3em;
-  margin-left: 10px;
-  margin-right: 10px;
   color: #ff6f00;
-  text-shadow: #333 1px 1px 1px;
-  text-align: center;
-  border: none;
+  cursor: pointer;
 }
 
-label {
-  font-family: "Reglisse";
-  font-size: 1.5em;
-}
-
-#label3, #label4 {
+input[type=radio].game-option-input {
   display: none;
+}
+input[type=radio].game-option-input + label {
+  border: dashed 1px grey;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin-bottom: 3%;
+  display: inline-block;
+}
+input[type=radio].game-option-input:checked + label {
+  color: red;
+  border: solid 1px #ff6f00;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+fieldset {
+  border: 1px solid #ff6f00;
+  border-radius: 5px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
 }
 
 .matchVisu {
@@ -44,9 +53,11 @@ label {
 
 .totalMatches {
   color: orange;
-  font-size: 13em;
+  font-size: 11em;
   font-family: "Reglisse-Fill";
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 11px 11px 3px #999;
+  margin-top: -50px;
+  margin-bottom: -20px;
 }
 
 #resultGame {
@@ -138,10 +149,10 @@ body {
 main {
   background-color: #fff;
   border: 2px dotted #ff6f00;
-  width: 50%;
+  width: 70%;
   height: auto;
   margin: 2% auto;
-  padding: 1%;
+  padding: 3%;
   border-radius: 35px;
 }
 

@@ -1,13 +1,37 @@
 function getConditions() {
     document.getElementById("startGame").addEventListener("click", () => {
-        const getPlayers = document.getElementById("numberOfPlayers").value
-        const getTotalMatches = document.getElementById("totalMatches").value
-        const getMaxMatches = document.getElementById("maxMatches").value
-        sessionStorage.setItem("numberOfPlayers", getPlayers)
+        //choose number of players //
+        const players = document.getElementsByName("players")
+        let getPlayers = 0
+        for(let i = 0; i < players.length; i++) {
+            if(players[i].checked) {
+                getPlayers = players[i].value
+                break
+            }
+        }
+        //choose total number of matches //
+        const totalMatches = document.getElementsByName("totalMatches")
+        let getTotalMatches = 0
+        for (let m = 0; m < totalMatches.length; m++) {
+            if(totalMatches[m].checked) {
+                getTotalMatches = totalMatches[m].value
+                break
+            }
+        }
+        //choose max number of matches //
+        const maxMatches = document.getElementsByName("maxMatches")
+        let getMaxMatches = 0
+        for (let p = 0; p < maxMatches.length; p++) {
+            if(maxMatches[p].checked) {
+                getMaxMatches = maxMatches[p].value
+                break
+            }
+        }
+        // set and send results to sessionStorage //
+        sessionStorage.setItem("players", getPlayers)
         sessionStorage.setItem("totalMatches", getTotalMatches)
         sessionStorage.setItem("maxMatches", getMaxMatches)
-        window.location.href = "gameplay.html"
-    })
+     })
 }
 
 function nameOfPlayers() {
@@ -24,20 +48,19 @@ function nameOfPlayers() {
     })
 }
 
-function displayPlayers() {
-    const getPlayers = document.getElementById("numberOfPlayers").value
-    const num = sessionStorage.setItem("numberOfPlayers", getPlayers)
-    if (getPlayers == 3) {
-        document.getElementById("label3").style.display = "display"
-        document.getElementById("label4").style.display = "none"
-    } else if (getPlayers == 4) {
-        document.getElementById("label3").style.display = "display"
-        document.getElementById("label4").style.display = "display"
-    } else {
-        document.getElementById("label3").style.display = "none"
-        document.getElementById("label4").style.display = "none"
-    }
-}
+// function displayPlayers() {
+//     const players = document.getElementById("players").value
+//     if (players === 3) {
+//         document.getElementById("label3").style.display = "display"
+//         document.getElementById("label4").style.display = "none"
+//     } else if (players === 4) {
+//         document.getElementById("label3").style.display = "display"
+//         document.getElementById("label4").style.display = "display"
+//     } else {
+//         document.getElementById("label3").style.display = "none"
+//         document.getElementById("label4").style.display = "none"
+//     }
+// }
 
 getConditions()
 nameOfPlayers()
