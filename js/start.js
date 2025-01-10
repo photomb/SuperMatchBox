@@ -3,10 +3,11 @@ import { displayMatches } from './displaymatches.js'
 
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
-export const showPlayer = document.getElementById("player")
+export const showPlayer = document.getElementById("gameConditions")
 export const game = document.getElementById("game")
 export const resultGame = document.getElementById("resultGame")
 export const alertMessage = document.getElementById("alertMessage")
+export const specialMessage = document.getElementById("specialMessage")
 export let gameButtons = 0
 
 // Number of players //

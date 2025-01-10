@@ -26,11 +26,6 @@ export function randomizeBtns() {
     let valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
-    if (totalMatches <= 6) {
-        valueBtn1 = getRandomArbitrary(2, 3) 
-        document.getElementById('btn1').value = valueBtn1
-        document.getElementById('btn1').innerHTML = valueBtn1
-    }
 
     //Button 2 value
     let valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)
@@ -57,15 +52,17 @@ export function specialBtn() {
     const max = maxMatches
     const uniqueValues = []
     const valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
-
-    if (totalMatches === 0) {
-        document.getElementById('btn4').style.opacity = 0
+    
+    if (valueBtn4 == 0) {
+        document.querySelectorAll('.special').forEach(button => { 
+            button.disabled = false, button.style.opacity = 1
+        })
+    } else {
+        document.querySelectorAll('.special').forEach(button => { 
+            button.disabled = true, button.style.opacity = 0.3
+        })
     }
     
-    while (valueBtn4 === 0) {
-        document.getElementById('btn4').style.opacity = 1
-        break // Stop the loop if the value is 0 //
-    }
     document.getElementById('btn4').value = valueBtn4
     document.getElementById('btn4').innerHTML ='<img id="joker" src="./img/joker.png" alt="joker">'
 

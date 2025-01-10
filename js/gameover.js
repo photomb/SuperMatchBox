@@ -10,7 +10,7 @@ export function gameOver() {
             button.disabled = true
         })
         document.querySelectorAll('.special').forEach(button => { 
-            button.style.opacity = 0
+            button.disabled = true, button.style.opacity = 0.3
         })
         resultGame.innerHTML += `<br><button id="btnReset" class="gameBtn" onclick="location.reload()">New Game</button>`
         return

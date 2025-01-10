@@ -1,6 +1,5 @@
-function getConditions() {
+function getNumberOfPlayers() { //choose number of players //
     document.getElementById("startGame").addEventListener("click", () => {
-        //choose number of players //
         const players = document.getElementsByName("players")
         let getPlayers = 0
         for(let i = 0; i < players.length; i++) {
@@ -9,7 +8,12 @@ function getConditions() {
                 break
             }
         }
-        //choose total number of matches //
+        sessionStorage.setItem("players", getPlayers)
+    })
+}
+
+function getTotalMatches() { //choose total number of matches //
+    document.getElementById("startGame").addEventListener("click", () => {
         const totalMatches = document.getElementsByName("totalMatches")
         let getTotalMatches = 0
         for (let m = 0; m < totalMatches.length; m++) {
@@ -18,7 +22,12 @@ function getConditions() {
                 break
             }
         }
-        //choose max number of matches //
+        sessionStorage.setItem("totalMatches", getTotalMatches)
+    })
+}
+
+function getMaxMatches() { //choose max number of matches //
+    document.getElementById("startGame").addEventListener("click", () => {
         const maxMatches = document.getElementsByName("maxMatches")
         let getMaxMatches = 0
         for (let p = 0; p < maxMatches.length; p++) {
@@ -27,14 +36,13 @@ function getConditions() {
                 break
             }
         }
-        // set and send results to sessionStorage //
-        sessionStorage.setItem("players", getPlayers)
-        sessionStorage.setItem("totalMatches", getTotalMatches)
         sessionStorage.setItem("maxMatches", getMaxMatches)
      })
 }
 
 function nameOfPlayers() {
+    const openPopupButton = document.getElementById("popup")
+    const goButton = document.getElementById("go")
     document.getElementById("startGame").addEventListener("click", () => {
         const namePlayer1 = document.getElementById("namePlayer1").value
         const namePlayer2 = document.getElementById("namePlayer2").value
@@ -44,23 +52,11 @@ function nameOfPlayers() {
         sessionStorage.setItem("namePlayer2", namePlayer2)
         sessionStorage.setItem("namePlayer3", namePlayer3)
         sessionStorage.setItem("namePlayer4", namePlayer4)
-        window.location.href = "gameplay.html"
+        openPopupButton.style.display = "block"
     })
 }
 
-// function displayPlayers() {
-//     const players = document.getElementById("players").value
-//     if (players === 3) {
-//         document.getElementById("label3").style.display = "display"
-//         document.getElementById("label4").style.display = "none"
-//     } else if (players === 4) {
-//         document.getElementById("label3").style.display = "display"
-//         document.getElementById("label4").style.display = "display"
-//     } else {
-//         document.getElementById("label3").style.display = "none"
-//         document.getElementById("label4").style.display = "none"
-//     }
-// }
-
-getConditions()
+getNumberOfPlayers()
+getTotalMatches()
+getMaxMatches()
 nameOfPlayers()

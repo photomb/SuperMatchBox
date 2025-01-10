@@ -1,4 +1,4 @@
-import { totalMatchesContainer, showPlayer, resultGame, arrPlayers } from './start.js'
+import { totalMatchesContainer, showPlayer, game, arrPlayers } from './start.js'
 import { totalMatches, numberOfPlayers, currentPlayer } from './gameplay.js'
 import { randomizeBtns, specialBtn } from './random.js'
 
@@ -6,7 +6,7 @@ import { randomizeBtns, specialBtn } from './random.js'
 export function displayMatches() {
     totalMatchesContainer.innerHTML = `${totalMatches}<img src="./img/match.png" alt="match" class="matchVisu">`
     showPlayer.textContent = `Number of players : ${numberOfPlayers}`
-    resultGame.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}` // in start game, first player annonced //
+    game.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}` // in start game, first player annonced //
     
     randomizeBtns()
     specialBtn()

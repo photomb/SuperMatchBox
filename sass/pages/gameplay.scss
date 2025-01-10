@@ -16,6 +16,15 @@
     margin-bottom: -20px;
 }
 
+.interactive {
+    border: 1px dashed grey;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 3% auto;
+    width: 70%;
+    height: 160px;
+}
+
 #resultGame {
     text-align: center;
 }
@@ -24,6 +33,16 @@
     color: #ff6f00;
     font-family: 'Reglisse-Fill';
     font-size: 1.3em;
+}
+
+#specialMessage {
+    color: #e64a19,;
+    font-family: 'Reglisse-Fill';
+    font-size: 1.1em;
+}
+
+#game {
+    color: #ff6f00;
 }
 
 .choice {
@@ -52,10 +71,10 @@
 }
 
 .special {
-    opacity: 0;
+    opacity: 0.3;
     width: 75px;
     height: 75px;
-    margin: 5px;
+    margin: 3% 0;
     padding: 2px;
     border-radius: 15px;
     border-color: yellow;
