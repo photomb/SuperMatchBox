@@ -7,4 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closePopupButton.addEventListener('click', () => {
         popup.classList.add('hidden');
       });
+      goButton = window.location.href = "gameplay.html"
+      xButton.style.display = "none"
 })

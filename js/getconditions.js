@@ -43,6 +43,7 @@ function getMaxMatches() { //choose max number of matches //
 function nameOfPlayers() {
     const openPopupButton = document.getElementById("popup")
     const goButton = document.getElementById("go")
+    const xButton = document.getElementById("close")
     document.getElementById("startGame").addEventListener("click", () => {
         const namePlayer1 = document.getElementById("namePlayer1").value
         const namePlayer2 = document.getElementById("namePlayer2").value
