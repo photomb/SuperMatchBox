@@ -12,7 +12,8 @@ export const namePlayer1 = sessionStorage.getItem("namePlayer1")
 export const namePlayer2 = sessionStorage.getItem("namePlayer2")
 export const namePlayer3 = sessionStorage.getItem("namePlayer3")
 export const namePlayer4 = sessionStorage.getItem("namePlayer4")
-console.log(namePlayer1, namePlayer2, namePlayer3, namePlayer4)
+export const arrNames = [namePlayer1, namePlayer2, namePlayer3, namePlayer4]
+console.log(arrNames)
 
 // Gameplay //
 export let currentPlayer = 0
@@ -22,7 +23,7 @@ export let gameTrack = ''
 // Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {
     matches = parseInt(gameButtons)
-    
+
     // Warnings of the near end of the game //
     if (matches > totalMatches) {
         alertMessage.textContent = `Warning : only ${totalMatches} match(es) left`
@@ -38,19 +39,20 @@ export function gamePlay(matches) {
     totalMatches -= matches
     displayMatches(matches)
     gameTrack = arrPlayers[currentPlayer]
-    alertMessage.textContent = `PLAYER ${gameTrack} takes ${matches} match(es)`
-    console.log("potential loser : player " + gameTrack)
+    for (let x = 0; x < arrNames.length; x++) {
+        if (gameTrack == x + 1) {
+            alertMessage.textContent = arrNames[x] + ' takes ' + matches + ' match(es)'
+            console.log("potential loser : " + arrNames[x])
+        }
+    }
+    
     
     // Player Turn//
     currentPlayer = (currentPlayer +1) % numberOfPlayers
-    game.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
-    console.log('Current Player : ' + arrPlayers[currentPlayer])
-
-    const arrNames = [namePlayer1, namePlayer2, namePlayer3, namePlayer4]
-    console.log(arrNames)
     for (let w = 0; w < arrNames.length; w++) {
         if (arrPlayers[currentPlayer] == w + 1) {
             game.textContent = 'Your turn ' + arrNames[w]
+            console.log('Current Player : ' + arrNames[w])
         }
     }
 
@@ -58,7 +60,16 @@ export function gamePlay(matches) {
     gameOver()
     
     // Winner //
+    const nameList = new Map()
+    nameList.set(1, namePlayer1)
+    nameList.set(2, namePlayer2)
+    nameList.set(3, namePlayer3)
+    nameList.set(4, namePlayer4)
+    nameList.length = 4
+
     let arrWinners = arrPlayers.filter((player) => player != arrPlayers[currentPlayer])
-    winner = arrWinners.join(', ')
+    const newArrWinners = arrWinners.map(nameList.get, nameList)
+    winner = newArrWinners.join(', ')
+ 
     console.log('Number of matches : ' + matches, '| maxMatches : ' + maxMatches, '| totalMatches : ' + totalMatches)
 }
