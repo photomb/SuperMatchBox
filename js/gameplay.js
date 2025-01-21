@@ -12,7 +12,7 @@ export const namePlayer1 = sessionStorage.getItem("namePlayer1")
 export const namePlayer2 = sessionStorage.getItem("namePlayer2")
 export const namePlayer3 = sessionStorage.getItem("namePlayer3")
 export const namePlayer4 = sessionStorage.getItem("namePlayer4")
-console.log(namePlayer1, namePlayer2)
+console.log(namePlayer1, namePlayer2, namePlayer3, namePlayer4)
 
 // Gameplay //
 export let currentPlayer = 0
@@ -45,6 +45,14 @@ export function gamePlay(matches) {
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     game.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
     console.log('Current Player : ' + arrPlayers[currentPlayer])
+
+    const arrNames = [namePlayer1, namePlayer2, namePlayer3, namePlayer4]
+    console.log(arrNames)
+    for (let w = 0; w < arrNames.length; w++) {
+        if (arrPlayers[currentPlayer] == w + 1) {
+            game.textContent = 'Your turn ' + arrNames[w]
+        }
+    }
 
     // Game Over //
     gameOver()

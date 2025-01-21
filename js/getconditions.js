@@ -40,24 +40,6 @@ function getMaxMatches() { //choose max number of matches //
      })
 }
 
-function nameOfPlayers() {
-    const openPopupButton = document.getElementById("popup")
-    const goButton = document.getElementById("go")
-    const xButton = document.getElementById("close")
-    document.getElementById("startGame").addEventListener("click", () => {
-        const namePlayer1 = document.getElementById("namePlayer1").value
-        const namePlayer2 = document.getElementById("namePlayer2").value
-        const namePlayer3 = document.getElementById("namePlayer3").value       
-        const namePlayer4 = document.getElementById("namePlayer4").value
-        sessionStorage.setItem("namePlayer1", namePlayer1)
-        sessionStorage.setItem("namePlayer2", namePlayer2)
-        sessionStorage.setItem("namePlayer3", namePlayer3)
-        sessionStorage.setItem("namePlayer4", namePlayer4)
-        openPopupButton.style.display = "block"
-    })
-}
-
 getNumberOfPlayers()
 getTotalMatches()
 getMaxMatches()
-nameOfPlayers()
