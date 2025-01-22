@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/getconditions.js" type="module" defer></script>
+    <script src="./js/popupname.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Super Match Bros - Game Options</title>
+</head>
+<body>
+    <h1>Super Match Bros</h1>
+    <h2>Choose your game options</h2>
+    <main>
+        <form>
+            <fieldset>
+                <legend>&nbsp;Number of players&nbsp;</legend>
+                <input type="radio" name="players" id="2Players" class="game-option-input" value="2" checked>
+                <label for="2Players" class="game-option-label">2</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="players" id="3Players" class="game-option-input" value="3">
+                <label for="3Players" class="game-option-label">3</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="players" id="4Players" class="game-option-input" value="4">
+                <label for="4Players" class="game-option-label">4</label>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>&nbsp;Total Matches&nbsp;</legend>
+                <input type="radio" name="totalMatches" id="12Matches" class="game-option-input" value="12" checked>
+                <label for="12Matches" class="game-option-label">12</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="24Matches" class="game-option-input" value="24">
+                <label for="24Matches" class="game-option-label">24</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="36Matches" class="game-option-input" value="36">
+                <label for="36Matches" class="game-option-label">36</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="48Matches" class="game-option-input" value="48">
+                <label for="48Matches" class="game-option-label">48</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="totalMatches" id="99Matches" class="game-option-input" value="99">
+                <label for="99Matches" class="game-option-label">99</label>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>&nbsp;Max Matches&nbsp;</legend>
+                <input type="radio" name="maxMatches" id="3Matches" class="game-option-input" value="3" checked>
+                <label for="3Matches" class="game-option-label">3</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="maxMatches" id="4Matches" class="game-option-input" value="4">
+                <label for="4Matches" class="game-option-label">4</label>
+                <span>&nbsp;</span>
+                <input type="radio" name="maxMatches" id="6Matches" class="game-option-input" value="6">
+                <label for="6Matches" class="game-option-label">6</label>
+            </fieldset>
+            <br>
+        </form>
+
+        <br>
+
+        <div id="popup">
+            <h2>Give your name, players</h2>
+            <form>
+                <label for="namePlayer1" id="labelPlayer1">Your Name Player 1 &nbsp;
+                    <input name="namePlayer1" id="namePlayer1" type="text" placeholder="Chandler" value="">
+                </label>
+                <br>
+                <label for="namePlayer2" id="labelPlayer2">Your Name Player 2 &nbsp;
+                    <input name="namePlayer2" id="namePlayer2" type="text" placeholder="Monica" value="">
+                </label>
+                <br>
+                <label for="namePlayer3" id="labelPlayer3">Your Name Player 3 &nbsp;
+                    <input name="namePlayer3" id="namePlayer3" type="text" placeholder="Joey" value="">
+                </label>
+                <br>
+                <label for="namePlayer4" id="labelPlayer4">Your Name Player 4 &nbsp;
+                    <input name="namePlayer4" id="namePlayer4" type="text" placeholder="Phoebe" value="">
+                </label>
+                <br>
+                <button id="go" class="gameBtn">Go</button>
+                <button id="close" class="gameBtn"> </button>
+            </form>
+        </div>
+
+        <button id="startGame" class="gameBtn">Start Game</button>
+    </main>
+    <audio src="./media/WiiMusic.ogg" loop autoplay></audio>
+</body>
+</html>

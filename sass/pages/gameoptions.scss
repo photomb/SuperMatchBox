@@ -1,0 +1,38 @@
+.game-option-label {
+    font-family: 'Reglisse-Fill';
+    font-size: 3em;
+    color: #ff6f00;
+    cursor: pointer;
+}
+
+input[type="radio"].game-option-input {
+    display: none;
+
+    &+label {
+        border: dashed 1px grey;
+        border-radius: 5px;
+        padding: 0 20px;
+        margin-bottom: 3%;
+        display: inline-block;
+    }
+
+    &:checked+label {
+        color: red;
+        border: solid 1px #ff6f00;
+        background-color: rgba(255, 255, 0, 0.5);
+    }
+}
+
+fieldset {
+    border: 1px solid #ff6f00;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+
+#labelPlayer3,
+#labelPlayer4 {
+    display: none;
+}

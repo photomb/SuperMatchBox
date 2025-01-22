@@ -41,9 +41,17 @@ fieldset {
   border: 1px solid #ff6f00;
   border-radius: 5px;
   width: 80%;
-  height: auto;
   margin: 0 auto;
   padding: 3%;
+}
+
+#labelPlayer3,
+#labelPlayer4 {
+  display: none;
+}
+
+.ponctuation {
+  font-size: 1.5em;
 }
 
 .matchVisu {
@@ -64,7 +72,7 @@ fieldset {
   border: 1px dashed grey;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin: 3% auto;
+  margin: 2% auto;
   width: 70%;
   height: 160px;
 }
@@ -83,10 +91,13 @@ fieldset {
   color: #e64a19;
   font-family: "Reglisse-Fill";
   font-size: 1.1em;
+  height: 1.1em;
 }
 
 #game {
-  color: #ff6f00;
+  font-size: 2em;
+  color: orange;
+  font-family: "Reglisse-Fill";
 }
 
 .choice {
@@ -157,12 +168,12 @@ fieldset {
   display: none;
   position: fixed;
   top: 25%;
-  left: 23%;
-  width: 50%;
-  height: auto;
+  left: 18%;
+  width: 60%;
+  height: 60%;
   padding: 2%;
   background-color: rgba(255, 255, 234, 0.9);
-  border: dotted 2px #ff6f00;
+  border: dotted 2px #e64a19;
   border-radius: 15px;
   z-index: 9999;
   overflow: auto;
@@ -197,10 +208,10 @@ body {
 main {
   background-color: #fff;
   border: 2px dotted #ff6f00;
-  width: 70%;
+  width: 50%;
   height: auto;
-  margin: 2% auto;
-  padding: 3%;
+  margin: 1% auto;
+  padding: 1%;
   border-radius: 35px;
 }
 
@@ -214,6 +225,14 @@ h1 {
 
 h2 {
   font-family: "SuperMario256";
+  font-size: 1.6em;
+  padding: 1%;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
+  color: orange;
+}
+
+h3 {
+  font-family: "Reglisse-fill";
   font-size: 1.6em;
   text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
   color: orange;

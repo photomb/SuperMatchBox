@@ -1,5 +1,5 @@
 @use "./libs/fonts.scss";
-@use "./pages/index.scss";
+@use "./pages/gameoptions.scss";
 @use "./pages/gameplay.scss";
 @use "./libs/button.scss";
 @use "./pages/popupname.scss";
@@ -19,10 +19,10 @@ body {
 main {
     background-color: #fff;
     border: 2px dotted #ff6f00;
-    width: 70%;
+    width: 50%;
     height: auto;
-    margin: 2% auto;
-    padding: 3%;
+    margin: 1% auto;
+    padding: 1%;
     border-radius: 35px;
 }
 
@@ -40,6 +40,18 @@ h1 {
 
 h2 {
     font-family: 'SuperMario256';
+    font-size: 1.6em;
+    padding: 1%;
+    text-shadow: 
+        2px 2px 0 #ff6f00,
+        4px 4px 0 #ff5722,
+        6px 6px 0 #e64a19,
+        7px 7px 2px #999;
+    color: orange;
+}
+
+h3 {
+    font-family: 'Reglisse-fill';
     font-size: 1.6em;
     text-shadow: 
         1px 1px 0 #ff6f00,
