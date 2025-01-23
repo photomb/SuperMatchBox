@@ -168,9 +168,9 @@ fieldset {
   display: none;
   position: fixed;
   top: 25%;
-  left: 18%;
-  width: 60%;
-  height: 60%;
+  left: 25%;
+  width: 50%;
+  height: auto;
   padding: 2%;
   background-color: rgba(255, 255, 234, 0.9);
   border: dotted 2px #e64a19;
@@ -211,8 +211,8 @@ main {
   width: 50%;
   height: auto;
   margin: 1% auto;
-  padding: 1%;
-  border-radius: 35px;
+  padding: 2%;
+  border-radius: 5%;
 }
 
 h1 {
