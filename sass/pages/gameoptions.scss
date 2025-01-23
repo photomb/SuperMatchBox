@@ -47,8 +47,14 @@ fieldset {
     color: #ff6f00;
 }
 
+#labelPlayer1, #labelPlayer2 {
+    font-family: 'Reglisse-Fill';
+    font-size: 1.1em;
+}
 
 #labelPlayer3,
 #labelPlayer4 {
     display: none;
+    font-family: 'Reglisse-Fill';
+    font-size: 1.1em;
 }

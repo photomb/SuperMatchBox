@@ -61,9 +61,16 @@ fieldset {
   color: #ff6f00;
 }
 
+#labelPlayer1, #labelPlayer2 {
+  font-family: "Reglisse-Fill";
+  font-size: 1.1em;
+}
+
 #labelPlayer3,
 #labelPlayer4 {
   display: none;
+  font-family: "Reglisse-Fill";
+  font-size: 1.1em;
 }
 
 .ponctuation {
@@ -187,7 +194,7 @@ fieldset {
 #popup {
   display: none;
   position: fixed;
-  top: 23%;
+  top: 15cap;
   left: 25%;
   width: 50%;
   height: auto;
@@ -211,6 +218,26 @@ fieldset {
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#start {
+  padding-left: 5cap;
+  padding-right: 5cap;
+  line-height: 1.3cap;
+  margin: 3cap;
+}
+
+.title {
+  font-size: 9em;
+  padding-top: 0.5cap;
+}
+
+h4 {
+  font-family: "Reglisse-fill";
+  font-size: 2em;
+  text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
+  color: orange;
+  padding-top: 1.6cap;
 }
 
 * {
