@@ -16,7 +16,7 @@
 }
 .game-option-label {
   font-family: "Reglisse-Fill";
-  font-size: 3em;
+  font-size: 2.3em;
   color: #ff6f00;
   cursor: pointer;
 }
@@ -33,16 +33,32 @@ input[type=radio].game-option-input + label {
 }
 input[type=radio].game-option-input:checked + label {
   color: red;
-  border: solid 1px #ff6f00;
+  border: solid 0.1cap #ff6f00;
   background-color: rgba(255, 255, 0, 0.5);
+}
+
+input[type=text] {
+  width: 35%;
+  height: 0.9rem;
+  border: 0.3cap solid #bbc3ce;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  padding: 1.2cap;
+  font-family: "Reglisse-Fill";
+  font-size: 1.3em;
+  color: #ff6f00;
+  margin-bottom: 1cap;
 }
 
 fieldset {
   border: 1px solid #ff6f00;
-  border-radius: 5px;
-  width: 80%;
+  border-radius: 0.5rem;
+  width: 90%;
   margin: 0 auto;
   padding: 3%;
+  font-family: "Reglisse-Fill";
+  font-size: 1.3em;
+  color: #ff6f00;
 }
 
 #labelPlayer3,
@@ -151,14 +167,18 @@ fieldset {
 .gameBtn {
   width: auto;
   height: 35px;
-  border-radius: 15px;
+  border-radius: 1.1rem;
+  line-height: 1.2cap;
   padding: 7px;
   border-color: #ff6f00;
+  color: rgb(114, 53, 34);
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Reglisse-Fill";
+  font-size: 1.3em;
   border-width: 3px;
   box-shadow: #333 1px 3px 2px;
   background-color: rgb(255, 241, 161);
+  letter-spacing: -0.1rem;
 }
 .gameBtn:hover {
   border-color: #e64a19;
@@ -167,11 +187,11 @@ fieldset {
 #popup {
   display: none;
   position: fixed;
-  top: 25%;
+  top: 23%;
   left: 25%;
   width: 50%;
   height: auto;
-  padding: 2%;
+  padding-bottom: 1cap;
   background-color: rgba(255, 255, 234, 0.9);
   border: dotted 2px #e64a19;
   border-radius: 15px;
@@ -212,21 +232,20 @@ main {
   height: auto;
   margin: 1% auto;
   padding: 2%;
-  border-radius: 5%;
+  border-radius: 1.5rem;
 }
 
 h1 {
   font-family: "SuperMario256";
   font-size: 3em;
-  padding: 1%;
+  padding-top: 1cap;
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
   color: orange;
 }
 
 h2 {
-  font-family: "SuperMario256";
-  font-size: 1.6em;
-  padding: 1%;
+  font-family: "Reglisse-Fill";
+  font-size: 2em;
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
   color: orange;
 }

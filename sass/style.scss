@@ -23,13 +23,13 @@ main {
     height: auto;
     margin: 1% auto;
     padding: 2%;
-    border-radius: 5%;
+    border-radius: 1.5rem;
 }
 
 h1 {
     font-family: 'SuperMario256';
     font-size: 3em;
-    padding: 1%;
+    padding-top: 1cap;
     text-shadow: 
         2px 2px 0 #ff6f00,
         4px 4px 0 #ff5722,
@@ -39,9 +39,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'SuperMario256';
-    font-size: 1.6em;
-    padding: 1%;
+    font-family: 'Reglisse-Fill';
+    font-size: 2em;
     text-shadow: 
         2px 2px 0 #ff6f00,
         4px 4px 0 #ff5722,

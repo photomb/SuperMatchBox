@@ -22,6 +22,7 @@ rad.json
 TestResults.xml
 #Sass
 dart-sass/
+dart-sass/src/sass.snapshot
 #Apple
 .DS_Store
 #CSS because of SASS
