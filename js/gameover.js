@@ -6,8 +6,9 @@ export function gameOver() {
         let loser = gameTrack
         for (let y = 0; y < arrNames.length; y++) {
             if (loser == y + 1) {
-                resultGame.innerHTML = 'xX You lose ' + arrNames[y] + ' Xx<br>'
-                resultGame.innerHTML += `<br>*** ${winner}, you win ***<br>`
+                resultGame.style.display = 'block'
+                resultGame.innerHTML = '<p class="resultloser">  🌀🌀 You lose ' + arrNames[y] + ' 🌀🌀</p>'
+                resultGame.innerHTML += `<p class="resultwinner">⭐⭐⭐ ${winner}, you win ⭐⭐⭐</p>`
             }
         }
         document.querySelectorAll('.choice').forEach(button => { 

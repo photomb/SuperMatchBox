@@ -29,7 +29,33 @@
 }
 
 #resultGame {
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 35%;
+    height: auto;
+    padding: 3%;
+    border-radius: 3cap;
+    border: dotted 2px #ff6f00;
     text-align: center;
+    background-color: rgba(255, 255, 234, 0.9);
+}
+
+.resultloser {
+    color: #e64a19;
+    font-family: 'Reglisse-Fill';
+    font-size: 1.5em;
+    padding: 1%;
+    text-shadow: #333 0px 3px 2px;
+}
+
+.resultwinner {
+    color: #ffd900;
+    font-family: 'Reglisse-Fill';
+    font-size: 1.5em;
+    padding: 1%;
+    text-shadow: #333 0px 3px 2px;
 }
 
 #alertMessage {
@@ -101,4 +127,18 @@
 
 #btn2 {
     display: inline-block;
+}
+
+#gameConditions {
+    font-family: 'Reglisse-Fill';
+}
+
+.playerturn {
+    color: #e64a19;
+    font-family: 'Reglisse-Fill';
+    text-shadow: 
+    2px 2px 0 orange,
+    4px 4px 0 #ff6f00,
+    6px 6px 0 #ff5722,
+    8px 8px 2px #999;
 }

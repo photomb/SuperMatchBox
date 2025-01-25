@@ -51,7 +51,7 @@ export function gamePlay(matches) {
     currentPlayer = (currentPlayer +1) % numberOfPlayers
     for (let w = 0; w < arrNames.length; w++) {
         if (arrPlayers[currentPlayer] == w + 1) {
-            game.textContent = 'Your turn ' + arrNames[w]
+            game.innerHTML = 'Your turn ' + '<span class="playerturn">' + arrNames[w] + '</span'
             console.log('Current Player : ' + arrNames[w])
         }
     }

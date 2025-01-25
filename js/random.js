@@ -52,10 +52,29 @@ export function specialBtn() {
     const max = maxMatches
     const uniqueValues = []
     const valueBtn4 = getUniqueRandomValue(uniqueValues, 0, max)
+    const audioSpecial = new Audio('./media/special.mp3')
     
     if (valueBtn4 == 0) {
         document.querySelectorAll('.special').forEach(button => { 
             button.disabled = false, button.style.opacity = 1
+            audioSpecial.play()
+
+            // gif effect //
+            const gifEffect = document.createElement('img')
+            gifEffect.src = './media/twinkle.gif'
+            gifEffect.alt = 'twinkle'
+            gifEffect.style.position = 'absolute'
+            gifEffect.style.zIndex = 10
+            gifEffect.style.top = '0'
+            gifEffect.style.left = '40%'
+
+            const specialEffect = button.parentNode
+            specialEffect.style.position = 'relative'
+            specialEffect.appendChild(gifEffect)
+
+            setTimeout(() => {
+                gifEffect.remove()
+            }, 500)
         })
     } else {
         document.querySelectorAll('.special').forEach(button => { 
