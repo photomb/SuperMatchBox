@@ -17,7 +17,8 @@ export function gameOver() {
         document.querySelectorAll('.special').forEach(button => { 
             button.disabled = true, button.style.opacity = 0.3
         })
-        resultGame.innerHTML += `<br><button id="btnReset" class="gameBtn" onclick="location.reload()">New Game</button>`
+        resultGame.innerHTML += `<br><button id="btnReset" class="gameBtn" onclick="location.reload()">New Game</button>&nbsp;`
+        resultGame.innerHTML += `&nbsp;<button id="btnExit" class="gameBtn" onclick="location.replace('index.html')">Exit Game</button>`
         return
     }
 }

@@ -4,8 +4,9 @@ import { randomizeBtns, specialBtn } from './random.js'
 
 // Start Displayed Game Interface //
 export function displayMatches() {
+    const gameMatches = sessionStorage.getItem("totalMatches")
     totalMatchesContainer.innerHTML = `${totalMatches}<img src="./img/match.png" alt="match" class="matchVisu">`
-    showPlayer.textContent = ` 👤${numberOfPlayers} | 🪔${totalMatches} | 🔥${maxMatches}`
+    showPlayer.textContent = `Game Conditions : 👤${numberOfPlayers} | 🪔${gameMatches} | 🔥${maxMatches}`
     // in start game, first player annonced //
     if (arrPlayers[currentPlayer] == 1) {
         game.innerHTML = `Your turn <span class='playerturn'>${namePlayer1}</span>`

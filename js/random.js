@@ -39,7 +39,7 @@ export function randomizeBtns() {
     let valueBtn3 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
-    if (totalMatches <= 2) {
+    if (totalMatches <= 3) {
         document.getElementById('btn3').value = 1
         document.getElementById('btn3').innerHTML = 1
     }
