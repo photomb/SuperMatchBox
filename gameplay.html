@@ -9,8 +9,12 @@
     <title>Super Match Bros - GamePlay</title>
 </head>
 <body>
+    <audio src="./media/Mii.ogg" loop autoplay></audio>
+    <video id="background-video" autoplay loop>
+        <source src="./media/animation_bg_smb14.mp4" type="video/mp4">    
+    </video>
     <h1>Super Match Bros</h1>
-    <h3><span class="ponctuation">"</span> Don't take the last match(es) ! <span class="ponctuation">"</span></h3>
+    <h3>Don't take the last one !</h3>
     <main>
         <div id="gameConditions"></div>
         <div id ="totalMatches" class="totalMatches"></div>
@@ -32,7 +36,6 @@
 
         <div id="resultGame"></div>
     </main>
-    <a href="./gameoptions.html"><button id="back" class="gameBtn">Back To The Main Menu</button></a>
-    <audio src="./media/La Bossa Lost Frontier.ogg" loop autoplay></audio>
+    <button id="back" class="gameBtn">Back to Game Options</button>
 </body>
 </html>

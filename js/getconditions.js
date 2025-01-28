@@ -1,3 +1,19 @@
+function audioTouch() {
+    document.querySelectorAll('.game-option-input').forEach(radio => {
+        radio.addEventListener("click", () => {
+            const menuSelect = new Audio('./media/menu-selection.mp3')
+            menuSelect.play()
+         })
+    })
+}
+
+function startGameSound() {
+    document.getElementById("startGame").addEventListener("click", () => {
+        const correctBell = new Audio("./media/correct.mp3")
+        correctBell.play()
+    })
+}
+
 function getNumberOfPlayers() { //choose number of players //
     document.getElementById("startGame").addEventListener("click", () => {
         const players = document.getElementsByName("players")
@@ -56,3 +72,5 @@ function getMaxMatches() { //choose max number of matches //
 getNumberOfPlayers()
 getTotalMatches()
 getMaxMatches()
+audioTouch()
+startGameSound()

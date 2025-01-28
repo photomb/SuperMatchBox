@@ -73,10 +73,6 @@ fieldset {
   font-size: 1.1em;
 }
 
-.ponctuation {
-  font-size: 1.5em;
-}
-
 .matchVisu {
   width: 50px;
   height: 50px;
@@ -266,6 +262,22 @@ fieldset {
   background-position: center;
 }
 
+body {
+  text-align: center;
+}
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 #start {
   padding-left: 5cap;
   padding-right: 5cap;
@@ -289,13 +301,6 @@ h4 {
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #eee;
-  color: #333;
-  text-align: center;
 }
 
 main {

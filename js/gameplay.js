@@ -35,6 +35,7 @@ export function gamePlay(matches) {
         maxMatches = 3
     }
     
+    
     // Take matches //
     totalMatches -= matches
     displayMatches(matches)

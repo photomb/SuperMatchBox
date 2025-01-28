@@ -7,6 +7,7 @@ function nameOfPlayers() {
 
 function goButton() {
     const goButton = document.getElementById("go")
+    const yesBell = new Audio('./media/mouse-start.mp3')
     goButton.addEventListener("click", (event) => {
         event.preventDefault()
 
@@ -31,15 +32,20 @@ function goButton() {
         sessionStorage.setItem("namePlayer2", namePlayer2)
         sessionStorage.setItem("namePlayer3", namePlayer3)
         sessionStorage.setItem("namePlayer4", namePlayer4)
-        window.location.href = "gameplay.html"
+        yesBell.play()
+        yesBell.onended = () => {
+            location.replace('./gameplay.html')
+        }
     })
 }
 
 function closePopup() {
     const closePopup = document.getElementById("popup")
     const closePopupButton = document.getElementById("close")
+    const closeSound = new Audio('./media/close.mp3')
     closePopupButton.addEventListener("click", () => {
         sessionStorage.clear()
+        closeSound.play()
         closePopup.style.display = "none"
     })
 }

@@ -1,5 +1,6 @@
 import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
+import { backButton } from './backbutton.js'
 
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
@@ -8,6 +9,8 @@ export const game = document.getElementById("game")
 export const resultGame = document.getElementById("resultGame")
 export const alertMessage = document.getElementById("alertMessage")
 export const specialMessage = document.getElementById("specialMessage")
+export const mouseClick = new Audio ('./media/blip.mp3')
+export const mouseSpecial = new Audio ('./media/mouse-special.mp3')
 export let gameButtons = 0
 
 // Number of players //
@@ -25,6 +28,7 @@ document.querySelectorAll('.choice').forEach(button => {
     button.addEventListener('click', function(event) {
         gameButtons = parseInt(event.target.value) // Get the value of the clicked event //
         gamePlay() // Call the gameplay function //
+        mouseClick.play() // Play the sound of the mouse click //
     })
 })
 
@@ -34,5 +38,8 @@ document.querySelectorAll('.special').forEach(button => {
         gameButtons = parseInt(event.target.value) // Get the value of the clicked event //
         gameButtons = document.getElementById('btn4').style.opacity = 0
         gamePlay() // Call the gameplay function //
+        mouseSpecial.play() // Play the sound of the mouse click //
     })
 })
+
+backButton()
