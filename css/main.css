@@ -99,11 +99,11 @@ fieldset {
 #resultGame {
   display: none;
   position: absolute;
-  left: 30%;
-  top: 20%;
-  width: 35%;
-  height: auto;
-  padding: 3%;
+  left: auto;
+  top: 25%;
+  width: 50%;
+  height: 45%;
+  padding-top: 5%;
   border-radius: 3cap;
   border: dotted 2px #ff6f00;
   text-align: center;
@@ -113,16 +113,16 @@ fieldset {
 .resultloser {
   color: #e64a19;
   font-family: "Reglisse-Fill";
-  font-size: 1.5em;
-  padding: 1%;
+  font-size: 1.7em;
+  padding: 2%;
   text-shadow: #333 0px 3px 2px;
 }
 
 .resultwinner {
   color: #ffd900;
   font-family: "Reglisse-Fill";
-  font-size: 1.5em;
-  padding: 1%;
+  font-size: 1.7em;
+  padding: 2%;
   text-shadow: #333 0px 3px 2px;
 }
 
@@ -224,23 +224,25 @@ fieldset {
 }
 
 #btnExit {
-  margin-left: 2cap;
+  margin-left: 3cap;
+  margin-top: 2cap;
   color: red;
 }
 
 #btnReset {
-  margin-right: 2cap;
+  margin-right: 3cap;
+  margin-top: 2cap;
   color: green;
 }
 
 #popup {
   display: none;
   position: fixed;
-  top: 15cap;
-  left: 25%;
+  top: 23%;
+  left: auto;
   width: 50%;
   height: auto;
-  padding-bottom: 1cap;
+  padding-bottom: 2cap;
   background-color: rgba(255, 255, 234, 0.9);
   border: dotted 2px #e64a19;
   border-radius: 15px;
