@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/introduce.js" type="module" defer></script>
+    <script src="./js/progress.js" type="module" defer></script>
     <title>Super Match Bros - Welcome</title>
 </head>
 <body>
-    <audio src="./media/WiiSports.mp3" loop autoplay></audio>
-    <video id="background-video" autoplay loop>
-        <source src="./media/animation_bg_smb13.mp4" type="video/mp4" rel="preload">    
+    
+    <div id="preloader">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p id="loading-text">0%</p>
+    </div>
+    
+    <audio id="intro-audio" loop autoplay preload="auto">
+        <source src="./media/WiiSports.mp3" type="audio/mpeg">
+    </audio>
+    <video id="background-video" autoplay loop muted preload="auto">
+        <source src="./media/animation_bg_smb13.mp4" type="video/mp4">    
     </video>
     <h4>Welcome to</h4>
     <h1 class="title">Super<br>Match<br>Bros</h1>
