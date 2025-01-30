@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/start.js" type="module" defer></script>
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="favicon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="icon" type="image/png" href="./media/favicon.png">
     <title>Super Match Bros - GamePlay</title>
 </head>
 <body>
-    <audio src="./media/Mii.ogg" loop autoplay></audio>
+    <audio id="miiMusic" loop autoplay>
+        <source src="./media/Mii.ogg" type="audio/ogg">
+    </audio>
+
     <video id="background-video" autoplay loop>
         <source src="./media/animation_bg_smb13.mp4" type="video/mp4">    
     </video>

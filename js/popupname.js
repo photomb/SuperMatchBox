@@ -1,3 +1,5 @@
+import { wiiMusic, fadeVolume } from "./fadevolume.js"
+
 function nameOfPlayers() {
     const openPopup = document.getElementById("popup")
     document.getElementById("startGame").addEventListener("click", () => {
@@ -7,7 +9,7 @@ function nameOfPlayers() {
 
 function goButton() {
     const goButton = document.getElementById("go")
-    const yesBell = new Audio('./media/mouse-start.mp3')
+    const goBell = new Audio('./media/mouse-start.mp3')
     goButton.addEventListener("click", (event) => {
         event.preventDefault()
 
@@ -32,10 +34,11 @@ function goButton() {
         sessionStorage.setItem("namePlayer2", namePlayer2)
         sessionStorage.setItem("namePlayer3", namePlayer3)
         sessionStorage.setItem("namePlayer4", namePlayer4)
-        yesBell.play()
-        yesBell.onended = () => {
+        goBell.play()
+        goBell.onended = () => {
             location.replace('./gameplay.html')
         }
+        fadeVolume(wiiMusic)
     })
 }
 
@@ -43,7 +46,8 @@ function closePopup() {
     const closePopup = document.getElementById("popup")
     const closePopupButton = document.getElementById("close")
     const closeSound = new Audio('./media/close.mp3')
-    closePopupButton.addEventListener("click", () => {
+    closePopupButton.addEventListener("click", (event) => {
+        event.preventDefault()
         sessionStorage.clear()
         closeSound.play()
         closePopup.style.display = "none"

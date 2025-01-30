@@ -28,15 +28,16 @@
 #resultGame {
     display: none;
     position: absolute;
-    left: auto;
-    top: 25%;
+    left: 25%;
+    top: 23%;
     width: 50%;
     height:45%;
-    padding-top: 5%;
+    padding-top: 3%;
     border-radius: 3cap;
     border: dotted 2px #ff6f00;
     text-align: center;
     background-color: rgba(255, 255, 234, 0.9);
+    box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .resultloser {

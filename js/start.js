@@ -1,6 +1,7 @@
 import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
 import { backButton } from './backbutton.js'
+import { miiMusic } from './fadevolume.js'
 
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
@@ -12,6 +13,9 @@ export const specialMessage = document.getElementById("specialMessage")
 export const mouseClick = new Audio ('./media/blip.mp3')
 export const mouseSpecial = new Audio ('./media/mouse-special.mp3')
 export let gameButtons = 0
+
+// Music initialization //
+miiMusic.volume = 0.8
 
 // Number of players //
 export let arrPlayers = []

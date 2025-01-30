@@ -1,19 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 #preloader {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: black;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50vh;
     z-index: 1000;
+}
+
+#loading-logo {
+    padding-top: 30vh;
 }
 
 .progress-bar {
@@ -28,7 +27,7 @@
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: #00ff99;
+    background: #5c74dd;
     transition: width 0.2s;
 }
 

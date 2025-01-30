@@ -27,11 +27,18 @@ function getNumberOfPlayers() { //choose number of players //
         sessionStorage.setItem("players", getPlayers)
 
         // Display the name of the players //
+        const labelPlayer2 = document.getElementById("labelPlayer2")
         const labelPlayer3 = document.getElementById("labelPlayer3")
         const labelPlayer4 = document.getElementById("labelPlayer4")
+
+        if (getPlayers == 2) {
+            labelPlayer3.style.display = "none"
+            labelPlayer4.style.display = "none"
+        }
         
         if (getPlayers == 3) {
             labelPlayer3.style.display = "block"
+            labelPlayer4.style.display = "none"
         }
         
         if (getPlayers == 4) {

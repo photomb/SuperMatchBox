@@ -1,61 +1,79 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("background-video");
-    const audio = document.getElementById("intro-audio");
-    const preloader = document.getElementById("preloader");
-    const progressFill = document.querySelector(".progress-fill");
-    const loadingText = document.getElementById("loading-text");
+    const video = document.getElementById("background-video")
+    const audio = document.getElementById("intro-audio")
+    const preloader = document.getElementById("preloader")
+    const progressFill = document.querySelector(".progress-fill")
+    const loadingText = document.getElementById("loading-text")
 
-    let videoLoaded = false;
-    let audioLoaded = false;
-    let fontsLoaded = false;
+    let videoLoaded = false
+    let audioLoaded = false
+    let fontsLoaded = false
 
-    // Vérifie si la vidéo est prête
-    video.addEventListener("progress", () => {
-        if (video.readyState >= 25) {
-            videoLoaded = true;
-            updateProgress();
-        }
-    });
-
-    video.addEventListener("canplaythrough", () => {
-        videoLoaded = true;
-        updateProgress();
-    });
-
-    // Vérifie si l'audio est prête
-    audio.addEventListener("progress", () => {
-        if (audio.readyState >= 25) {
-            audioLoaded = true;
-            updateProgress();
-        }
-    });
-
-    audio.addEventListener("canplaythrough", () => {
-        audioLoaded = true;
-        updateProgress();
-    });
-
-    // Vérifie si les polices sont chargées
-    document.fonts.ready.then(() => {
-        fontsLoaded = true;
-        updateProgress();
-    });
-
+    
     function updateProgress() {
-        let progress = 0;
+        let progress = 0
         
-        if (videoLoaded) progress += 50;
-        if (audioLoaded) progress += 30;
-        if (fontsLoaded) progress += 20;
+        if (videoLoaded) {
+            progress += 50
+            console.log('video ok')
+        }
 
-        progressFill.style.width = `${progress}%`;
-        loadingText.textContent = `${progress}%`;
+        if (audioLoaded) {
+            progress += 30
+            console.log('audio ok')
+        }
 
-        if (progress === 100) {
+        if (fontsLoaded) {
+            progress += 20
+            console.log('fonts ok')
+        }
+
+        console.log(`progress : ${progress}`)
+        progressFill.style.width = `${progress}%`
+        loadingText.textContent = `${progress}%`
+
+        if (progress == 100) {
             setTimeout(() => {
-                preloader.style.opacity = "0";
-                setTimeout(() => preloader.style.display = "none", 500);
-            }, 500);
+                preloader.style.opacity = "0"
+                setTimeout(() => preloader.style.display = "none", 500)
+            }, 500)
         }
     }
-});
+
+    // Is video ready ?
+    video.addEventListener("progress", () => {
+        if (video.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
+            videoLoaded = true
+            updateProgress()
+        }
+    })
+
+    video.addEventListener("canplaythrough", () => {
+        videoLoaded = true
+        updateProgress()
+    })
+
+    // Is audio ready ?
+    audio.addEventListener("loadeddata", () => {
+        console.log('audio loaded') //Is audio loaded ?
+            audioLoaded = true
+            updateProgress()
+
+            setTimeout(() => {
+                audio.muted = false //Cuz web browser, after audio loaded on mute, we unmute it
+                audio.volume = 0.5
+            }, 1000)
+        })
+
+    audio.addEventListener("canplaythrough", () => {
+        audioLoaded = true
+        updateProgress()
+    })
+
+    // Is fonts ready ?
+    document.fonts.ready.then(() => {
+        fontsLoaded = true
+        updateProgress()
+    })
+
+})

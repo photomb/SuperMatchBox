@@ -99,15 +99,16 @@ fieldset {
 #resultGame {
   display: none;
   position: absolute;
-  left: auto;
-  top: 25%;
+  left: 25%;
+  top: 23%;
   width: 50%;
   height: 45%;
-  padding-top: 5%;
+  padding-top: 3%;
   border-radius: 3cap;
   border: dotted 2px #ff6f00;
   text-align: center;
   background-color: rgba(255, 255, 234, 0.9);
+  box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .resultloser {
@@ -238,8 +239,8 @@ fieldset {
 #popup {
   display: none;
   position: fixed;
-  top: 23%;
-  left: auto;
+  top: 20%;
+  left: 25%;
   width: 50%;
   height: auto;
   padding-bottom: 2cap;
@@ -248,6 +249,7 @@ fieldset {
   border-radius: 15px;
   z-index: 9999;
   overflow: auto;
+  box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 #close {
@@ -300,22 +302,21 @@ h4 {
   padding-top: 1.6cap;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #preloader {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: black;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 50vh;
   z-index: 1000;
+}
+
+#loading-logo {
+  padding-top: 30vh;
 }
 
 .progress-bar {
@@ -330,7 +331,7 @@ h4 {
 .progress-fill {
   width: 0%;
   height: 100%;
-  background: #00ff99;
+  background: #5c74dd;
   transition: width 0.2s;
 }
 
@@ -353,6 +354,7 @@ video {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 main {

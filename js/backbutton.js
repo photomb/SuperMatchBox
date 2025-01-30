@@ -1,3 +1,5 @@
+import { miiMusic, fadeVolume } from "./fadevolume.js"
+
 export function backButton() {
     const backTouch = document.getElementById('back')
     const backSound = new Audio('./media/correct.mp3')
@@ -6,5 +8,6 @@ export function backButton() {
         backSound.onended = () => {
             location.replace('./gameoptions.html')
         }
+        fadeVolume(miiMusic)
     })
 }

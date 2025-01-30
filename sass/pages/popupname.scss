@@ -1,8 +1,8 @@
 #popup {
     display: none;
     position: fixed;
-    top: 23%;
-    left: auto;
+    top: 20%;
+    left: 25%;
     width: 50%;
     height: auto;
     padding-bottom: 2cap;
@@ -11,6 +11,7 @@
     border-radius: 15px;
     z-index: 9999;
     overflow: auto;
+    box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 #close {
