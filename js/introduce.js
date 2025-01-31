@@ -7,7 +7,7 @@ function letStart() {
     start.addEventListener('click', () => {
         mouseStart.play()
         mouseStart.onended = () => {
-        location.replace('./gameoptions.html')
+            location.replace('./gameoptions.html')
         }
         fadeVolume(startMusic)
     })

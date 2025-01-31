@@ -236,6 +236,11 @@ fieldset {
   color: green;
 }
 
+#sendGameButton {
+  opacity: 1;
+  margin-top: 1vh;
+}
+
 #popup {
   display: none;
   position: fixed;
@@ -316,7 +321,7 @@ h4 {
 }
 
 #loading-logo {
-  padding-top: 30vh;
+  padding-top: 1vh;
 }
 
 .progress-bar {
@@ -332,13 +337,13 @@ h4 {
   width: 0%;
   height: 100%;
   background: #5c74dd;
-  transition: width 0.2s;
+  transition: width 0.5s;
 }
 
 #loading-text {
   color: white;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  font-family: "Reglisse-fill";
 }
 
 video {

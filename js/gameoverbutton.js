@@ -1,3 +1,5 @@
+import { fadeVolume, miiMusic } from "./fadevolume.js"
+
 export function gameOverResetButton() {
     const resetButton = document.getElementById("btnReset")
     const resetSound = new Audio('./media/mouse-start.mp3')
@@ -6,6 +8,7 @@ export function gameOverResetButton() {
         resetSound.onended = () => {
             location.reload()
         }
+        fadeVolume(miiMusic)
     })
 }
 
@@ -15,7 +18,10 @@ export function gameOverExitButton() {
     exitButton.addEventListener("click", () => {
         exitSound.play()
         exitSound.onended = () => {
-            location.replace('./index.html')
+            setTimeout(() => {
+                location.replace('./index.html')
+            }, 3000);
         }
+        fadeVolume(miiMusic)
     })
 }

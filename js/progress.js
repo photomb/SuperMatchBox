@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log(`progress : ${progress}`)
         progressFill.style.width = `${progress}%`
-        loadingText.textContent = `${progress}%`
+        loadingText.textContent = `Loading ... ${progress}%`
 
         if (progress == 100) {
             setTimeout(() => {
@@ -58,20 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
             audioLoaded = true
             updateProgress()
         }
+    })
 
     audio.addEventListener("canplaythrough", () => {
         audioLoaded = true
         updateProgress()
     })
 
-    audio.play()
-    audio.loop = true
-
     // Is fonts ready ?
     document.fonts.ready.then(() => {
         fontsLoaded = true
         updateProgress()
     })
-
-})
 })

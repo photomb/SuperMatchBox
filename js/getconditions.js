@@ -27,7 +27,6 @@ function getNumberOfPlayers() { //choose number of players //
         sessionStorage.setItem("players", getPlayers)
 
         // Display the name of the players //
-        const labelPlayer2 = document.getElementById("labelPlayer2")
         const labelPlayer3 = document.getElementById("labelPlayer3")
         const labelPlayer4 = document.getElementById("labelPlayer4")
 
