@@ -1,6 +1,7 @@
 ##Gitignore for Sass and multi OS experience##
 #Sass
 dart-sass/*
+sass-cache/
 #Apple
 .DS_Store
 #CSS because of SASS

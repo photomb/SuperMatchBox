@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("background-video")
-    const audio = document.getElementById("intro-audio")
+    const audio = new Audio('./media/WiiSports.mp3')
     const preloader = document.getElementById("preloader")
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let audioLoaded = false
     let fontsLoaded = false
 
-    
     function updateProgress() {
         let progress = 0
         
@@ -54,21 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // Is audio ready ?
-    audio.addEventListener("loadeddata", () => {
-        console.log('audio loaded') //Is audio loaded ?
+    audio.addEventListener("progress", () => {
+        if (audio.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
             audioLoaded = true
             updateProgress()
-
-            setTimeout(() => {
-                audio.muted = false //Cuz web browser, after audio loaded on mute, we unmute it
-                audio.volume = 0.5
-            }, 1000)
-        })
+        }
 
     audio.addEventListener("canplaythrough", () => {
         audioLoaded = true
         updateProgress()
     })
+
+    audio.play()
+    audio.loop = true
 
     // Is fonts ready ?
     document.fonts.ready.then(() => {
@@ -76,4 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
         updateProgress()
     })
 
+})
 })
