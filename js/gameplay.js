@@ -19,6 +19,7 @@ console.log(arrNames)
 export let currentPlayer = 0
 export let winner = ''
 export let gameTrack = ''
+export let totalMatchesTrack = 0
 
 // Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {
@@ -29,12 +30,6 @@ export function gamePlay(matches) {
         alertMessage.textContent = `Warning : only ${totalMatches} match(es) left`
         return
     }
-
-    if (totalMatches <= 6) {
-        specialMessage.textContent = `Careful, near the end`
-        maxMatches = 3
-    }
-    
     
     // Take matches //
     totalMatches -= matches
@@ -44,6 +39,10 @@ export function gamePlay(matches) {
         if (gameTrack == x + 1) {
             alertMessage.textContent = arrNames[x] + ' takes ' + matches + ' match(es)'
             console.log("potential loser : " + arrNames[x])
+        }
+        if (totalMatches <= 9) {
+            specialMessage.textContent = "Careful, near the end"
+            maxMatches = 3
         }
     }
     

@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("background-video")
-    const audio = new Audio('./media/WiiSports.mp3')
+    //const audio = document.getElementById("intro-audio")
+    const audio = new Audio("./media/WiiSports.mp3")
     const preloader = document.getElementById("preloader")
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
+    const sendGameButton = document.getElementById("sendGameButton")
 
     let videoLoaded = false
     let audioLoaded = false
@@ -32,10 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
         loadingText.textContent = `Loading ... ${progress}%`
 
         if (progress == 100) {
-            setTimeout(() => {
-                preloader.style.opacity = "0"
-                setTimeout(() => preloader.style.display = "none", 500)
-            }, 500)
+            loadingText.textContent = "Done !"
+            sendGameButton.style.opacity = 1
+            sendGameButton.addEventListener("click", () => {
+                preloader.style.display = "none"
+                sendGameButton.style.display = "none"
+                audio.play()
+                audio.volume = 0.3
+            })
         }
     }
 
@@ -52,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateProgress()
     })
 
-    // Is audio ready ?
+    //Is audio ready ?
     audio.addEventListener("progress", () => {
         if (audio.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
             audioLoaded = true

@@ -1,6 +1,6 @@
-export const startMusic = document.getElementById('intro-audio')
 export const wiiMusic = document.getElementById('wiiMusic')
 export const miiMusic = document.getElementById('miiMusic')
+export const wiiSports = new Audio("./media/WiiSports.mp3")
 
 export function fadeVolume(music) {
     let fadeInterval = setInterval(() => {

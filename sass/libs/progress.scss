@@ -7,12 +7,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50vh;
+    padding-top: 35vh;
     z-index: 1000;
 }
 
 #loading-logo {
-    padding-top: 1vh;
+    padding-top: 15vh;
 }
 
 .progress-bar {
@@ -45,4 +45,10 @@ video {
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+#sendGameButton {
+    display: block;
+    opacity: 0;
+    margin-bottom: 20vh;
 }

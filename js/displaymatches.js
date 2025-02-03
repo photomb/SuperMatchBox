@@ -15,5 +15,4 @@ export function displayMatches() {
     }
     randomizeBtns()
     specialBtn()
-    
 }

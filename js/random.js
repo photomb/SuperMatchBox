@@ -21,17 +21,23 @@ export function randomizeBtns() {
     const min = 1
     const max = maxMatches
     const uniqueValues = []
+    if (maxMatches <= 2) {
+        window.alert('FATAL ERROR : maxMatches must be > 2 | CLOSE this tab/window and try again')
+    }
 
     //Button 1 value
     let valueBtn1 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn1').value = valueBtn1
     document.getElementById('btn1').innerHTML = valueBtn1
+    if (totalMatches <= 6) {
+        document.getElementById('btn1').style.display = 'none'
+    }
 
     //Button 2 value
     let valueBtn2 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn2').value = valueBtn2
     document.getElementById('btn2').innerHTML = valueBtn2
-    if (totalMatches <= 6) {
+    if (totalMatches <= 3) {
         document.getElementById('btn2').style.display = 'none'
     }
 
@@ -39,11 +45,15 @@ export function randomizeBtns() {
     let valueBtn3 = getUniqueRandomValue(uniqueValues, min, max)
     document.getElementById('btn3').value = valueBtn3
     document.getElementById('btn3').innerHTML = valueBtn3
-    if (totalMatches <= 3) {
+    if (totalMatches <=3 && totalMatches > 1) {
+        valueBtn3 = getRandomArbitrary(min, 2)
+        document.getElementById('btn3').value = valueBtn3
+        document.getElementById('btn3').innerHTML = valueBtn3
+        console.log('new btn3 value : ' + valueBtn3)
+    } else if (totalMatches == 1) {
         document.getElementById('btn3').value = 1
         document.getElementById('btn3').innerHTML = 1
     }
-    
     console.log(" Button 1 : " + valueBtn1 + "\n", "Button 2 : " + valueBtn2 + "\n", "Button 3 : " + valueBtn3)
 }
 
