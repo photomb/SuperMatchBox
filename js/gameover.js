@@ -1,6 +1,6 @@
 import { resultGame } from "./start.js"
 import { totalMatches, winner, gameTrack, arrNames } from "./gameplay.js"
-import { gameOverExitButton, gameOverResetButton } from "./gameoverbutton.js"
+import { gameOverExitButton, gameOverResetButton } from "./gamebuttons.js"
 
 export function gameOver() {
     if(totalMatches === 0) {

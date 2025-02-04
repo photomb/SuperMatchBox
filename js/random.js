@@ -74,7 +74,7 @@ export function specialBtn() {
             gifEffect.src = './media/twinkle.gif'
             gifEffect.alt = 'twinkle'
             gifEffect.style.position = 'absolute'
-            gifEffect.style.zIndex = 10
+            gifEffect.style.zIndex = 1
             gifEffect.style.top = '0'
             gifEffect.style.left = '40%'
 

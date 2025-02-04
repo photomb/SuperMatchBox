@@ -222,6 +222,8 @@ fieldset {
 }
 .gameBtn:hover {
   border-color: #e64a19;
+  color: rgb(92, 48, 19);
+  box-shadow: #333 1px 1px 2px;
 }
 
 #btnExit {
@@ -239,6 +241,21 @@ fieldset {
 #sendGameButton {
   opacity: 1;
   margin-top: 1vh;
+  width: 15%;
+  height: 10%;
+}
+
+#exit {
+  padding: 0 3cap;
+  margin-right: 33%;
+}
+
+#quickGame, #start, #credits {
+  width: 15cap;
+  height: auto;
+  line-height: 2cap;
+  text-align: center;
+  margin: 0 1%;
 }
 
 #popup {
@@ -287,24 +304,18 @@ body {
   z-index: -1;
 }
 
-#start {
-  padding-left: 5cap;
-  padding-right: 5cap;
-  line-height: 1.3cap;
-  margin: 3cap;
-}
-
 .title {
   font-size: 9em;
-  padding-top: 0.5cap;
 }
 
-h4 {
-  font-family: "Reglisse-fill";
-  font-size: 2em;
-  text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
-  color: orange;
-  padding-top: 1.6cap;
+section {
+  padding-top: 5vh;
+}
+
+.buttonbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 #preloader {
@@ -381,7 +392,6 @@ main {
 h1 {
   font-family: "SuperMario256";
   font-size: 3em;
-  padding-top: 1cap;
   text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
   color: orange;
 }
@@ -399,6 +409,13 @@ h3 {
   text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
   color: orange;
   line-height: 1.6cap;
+}
+
+h4 {
+  font-family: "Reglisse-fill";
+  font-size: 2em;
+  text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
+  color: orange;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,6 @@ console.log(arrNames)
 export let currentPlayer = 0
 export let winner = ''
 export let gameTrack = ''
-export let totalMatchesTrack = 0
 
 // Function Gameplay that manage the flow of the game //
 export function gamePlay(matches) {

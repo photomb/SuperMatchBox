@@ -1,18 +1,10 @@
-function audioTouch() {
-    document.querySelectorAll('.game-option-input').forEach(radio => {
-        radio.addEventListener("click", () => {
-            const menuSelect = new Audio('./media/menu-selection.mp3')
-            menuSelect.play()
-         })
-    })
-}
+import { wiiMusic } from "./fadevolume.js" 
+import { audioTouch, exitButton, startGameSound } from "./gamebuttons.js"
 
-function startGameSound() {
-    document.getElementById("startGame").addEventListener("click", () => {
-        const correctBell = new Audio("./media/correct.mp3")
-        correctBell.play()
-    })
-}
+// Manage audio wiiMusic //
+wiiMusic.play()
+wiiMusic.volume = 0.3
+wiiMusic.loop = true
 
 function getNumberOfPlayers() { //choose number of players //
     document.getElementById("startGame").addEventListener("click", () => {
@@ -80,3 +72,4 @@ getTotalMatches()
 getMaxMatches()
 audioTouch()
 startGameSound()
+exitButton()

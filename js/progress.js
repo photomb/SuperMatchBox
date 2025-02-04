@@ -1,7 +1,9 @@
+import { wiiSports, fadeVolume } from "./fadevolume.js"
+
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("background-video")
-    //const audio = document.getElementById("intro-audio")
-    const audio = new Audio("./media/WiiSports.mp3")
+    const audio = document.getElementById("wiiSports")
+    const letsPlayButton = new Audio('./media/mouse-start.mp3')
     const preloader = document.getElementById("preloader")
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
@@ -39,15 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
             sendGameButton.addEventListener("click", () => {
                 preloader.style.display = "none"
                 sendGameButton.style.display = "none"
+                letsPlayButton.play()
                 audio.play()
                 audio.volume = 0.3
+                audio.loop = true
             })
         }
     }
 
     // Is video ready ?
     video.addEventListener("progress", () => {
-        if (video.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
+        if (video.readyState >= 2) { // 3 = HAVE_FUTURE_DATA for readyState
             videoLoaded = true
             updateProgress()
         }
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Is audio ready ?
     audio.addEventListener("progress", () => {
-        if (audio.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
+        if (audio.readyState >= 2) { // 3 = HAVE_FUTURE_DATA for readyState
             audioLoaded = true
             updateProgress()
         }
