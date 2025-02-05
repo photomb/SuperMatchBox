@@ -3,7 +3,7 @@ import { audioTouch, exitButton, startGameSound } from "./gamebuttons.js"
 
 // Manage audio wiiMusic //
 wiiMusic.play()
-wiiMusic.volume = 0.3
+wiiMusic.volume = 0.5
 wiiMusic.loop = true
 
 function getNumberOfPlayers() { //choose number of players //

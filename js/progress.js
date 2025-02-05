@@ -50,11 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Is video ready ?
-    video.addEventListener("progress", () => {
-        if (video.readyState >= 2) { // 3 = HAVE_FUTURE_DATA for readyState
-            videoLoaded = true
-            updateProgress()
-        }
+    if (video.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
+        videoLoaded = true
+        updateProgress()
+    }
+
+    video.addEventListener("canplay", () => {
+        videoLoaded = true
+        updateProgress()
     })
 
     video.addEventListener("canplaythrough", () => {
@@ -63,11 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //Is audio ready ?
-    audio.addEventListener("progress", () => {
-        if (audio.readyState >= 2) { // 3 = HAVE_FUTURE_DATA for readyState
-            audioLoaded = true
-            updateProgress()
-        }
+    if (audio.readyState >= 3) { // 3 = HAVE_FUTURE_DATA for readyState
+        audioLoaded = true
+        updateProgress()
+    }
+
+    audio.addEventListener("canplay", () => {
+        audioLoaded = true
+        updateProgress()
     })
 
     audio.addEventListener("canplaythrough", () => {

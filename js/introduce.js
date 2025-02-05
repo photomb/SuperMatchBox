@@ -22,7 +22,6 @@ function creditsPop() {
         mouseCred.onended = () => {
             credits.style.display = "block"
         }
-        fadeVolume(wiiSports)
     })
 }
 

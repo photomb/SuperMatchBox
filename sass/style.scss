@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+body {
+    text-align: center;
+}
+
 main {
     background-color: #fff;
     border: 2px dotted #ff6f00;
@@ -31,6 +35,10 @@ h1 {
         6px 6px 0 #e64a19,
         7px 7px 2px #999;
     color: orange;
+}
+
+.h1padding {
+    padding-top: 0.6cap;
 }
 
 h2 {
