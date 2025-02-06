@@ -31,7 +31,7 @@
 .upCredits {
     display: none;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -25%);
     border: dotted 2px #e64a19;
@@ -44,16 +44,17 @@
     z-index: 10;
     font-family: 'Reglisse-Fill';
     color: #e64a19;
-
+    
     & ul {
         list-style-type: none;
     }
-
+    
     & a {
         color: blueviolet;
     }
-
+    
     & li {
+        font-size: 1.2em;
         padding: 2%;
     }
 }

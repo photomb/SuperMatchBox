@@ -1,6 +1,7 @@
 import { creditsContent, closeCredits } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
+import { createMuteButton } from "./mutebutton.js";
 
 function letStart() {
     const start = document.getElementById('start');
@@ -32,3 +33,4 @@ letStart()
 quickGame()
 creditsPop()
 closeCredits()
+createMuteButton()

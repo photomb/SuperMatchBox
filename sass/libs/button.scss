@@ -52,3 +52,16 @@
     text-align: center;
     margin: 0 1%;
 }
+
+#mute {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-5%, -2%);
+    width: 5cap;
+    height: 3cap;
+    background-image: url(../media/volume-on.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

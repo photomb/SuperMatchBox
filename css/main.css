@@ -68,6 +68,19 @@
   margin: 0 1%;
 }
 
+#mute {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-5%, -2%);
+  width: 5cap;
+  height: 3cap;
+  background-image: url(../media/volume-on.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #preloader {
   position: fixed;
   width: 100%;
@@ -156,7 +169,7 @@ video {
 .upCredits {
   display: none;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -25%);
   border: dotted 2px #e64a19;
@@ -177,6 +190,7 @@ video {
   color: blueviolet;
 }
 .upCredits li {
+  font-size: 1.2em;
   padding: 2%;
 }
 
