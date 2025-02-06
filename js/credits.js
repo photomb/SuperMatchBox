@@ -1,15 +1,7 @@
-export function creditsShow() {
-    const creditsTags = document.getElementById('credits')
-    const creditsButton = document.getElementById('?')
-    creditsButton.addEventListener('click', (event) => {
-        event.preventDefault()
-        creditsTags.style.display = "block"
-    })
-}
-
-export function creditsPop() {
+export function creditsContent() {
     let creditsWindow = document.createElement('div')
     creditsWindow.className = "credits"
+    creditsWindow.display = 'none'
     creditsWindow.style.position = "absolute"
     creditsWindow.left = '50%'
     creditsWindow.top = '25%'

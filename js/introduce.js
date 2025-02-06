@@ -1,4 +1,4 @@
-//import { creditsPop } from "./credits.js"
+import { creditsContent } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
 
@@ -20,7 +20,7 @@ function creditsPop() {
     credits.addEventListener('click', () => {
         mouseCred.play()
         mouseCred.onended = () => {
-            credits.style.display = "block"
+            credits.style.display = 'block'
         }
     })
 }
@@ -28,3 +28,4 @@ function creditsPop() {
 letStart()
 quickGame()
 creditsPop()
+creditsContent()
