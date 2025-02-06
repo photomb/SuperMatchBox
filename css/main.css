@@ -14,6 +14,172 @@
   font-family: "SuperMario256";
   src: url("../fonts/SuperMario256.ttf") format("truetype");
 }
+.gameBtn {
+  width: auto;
+  height: 35px;
+  border-radius: 1.1rem;
+  line-height: 1.2cap;
+  padding: 7px;
+  border-color: #ff6f00;
+  color: rgb(114, 53, 34);
+  cursor: pointer;
+  font-family: "Reglisse-Fill";
+  font-size: 1.3em;
+  border-width: 3px;
+  box-shadow: #333 1px 3px 2px;
+  background-color: rgb(255, 241, 161);
+  letter-spacing: -0.1rem;
+}
+.gameBtn:hover {
+  border-color: #e64a19;
+  color: rgb(92, 48, 19);
+  box-shadow: #333 1px 1px 2px;
+}
+
+#btnExit {
+  margin-left: 3cap;
+  margin-top: 2cap;
+  color: red;
+}
+
+#btnReset {
+  margin-right: 3cap;
+  margin-top: 2cap;
+  color: green;
+}
+
+#sendGameButton {
+  opacity: 1;
+  margin-top: 1vh;
+  width: 15%;
+  height: 10%;
+}
+
+#exit {
+  padding: 0 3cap;
+  margin-right: 33%;
+}
+
+#quickGame, #start, #credits {
+  width: 15cap;
+  height: auto;
+  line-height: 2cap;
+  text-align: center;
+  margin: 0 1%;
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35vh;
+  z-index: 1000;
+}
+
+#loading-logo {
+  padding-top: 15vh;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #5c74dd;
+  transition: width 0.5s;
+}
+
+#loading-text {
+  color: white;
+  font-size: 1.5em;
+  font-family: "Reglisse-fill";
+}
+
+video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#sendGameButton {
+  display: block;
+  opacity: 0;
+  margin-bottom: 20vh;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: auto;
+  padding-bottom: 2cap;
+  background-color: rgba(255, 255, 234, 0.9);
+  border: dotted 2px #e64a19;
+  border-radius: 15px;
+  z-index: 9999;
+  overflow: auto;
+  box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  background-image: url("../img/close.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.upCredits {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  border: dotted 2px #e64a19;
+  border-radius: 15px;
+  box-shadow: #333 1px 3px 6px;
+  width: 30%;
+  height: auto;
+  padding: 3%;
+  background-color: rgba(255, 255, 234, 0.9);
+  z-index: 10;
+  font-family: "Reglisse-Fill";
+  color: #e64a19;
+}
+.upCredits ul {
+  list-style-type: none;
+}
+.upCredits a {
+  color: blueviolet;
+}
+.upCredits li {
+  padding: 2%;
+}
+
 .game-option-label {
   font-family: "Reglisse-Fill";
   font-size: 2.3em;
@@ -204,90 +370,6 @@ fieldset {
   text-shadow: 2px 2px 0 orange, 4px 4px 0 #ff6f00, 6px 6px 0 #ff5722, 8px 8px 2px #999;
 }
 
-.gameBtn {
-  width: auto;
-  height: 35px;
-  border-radius: 1.1rem;
-  line-height: 1.2cap;
-  padding: 7px;
-  border-color: #ff6f00;
-  color: rgb(114, 53, 34);
-  cursor: pointer;
-  font-family: "Reglisse-Fill";
-  font-size: 1.3em;
-  border-width: 3px;
-  box-shadow: #333 1px 3px 2px;
-  background-color: rgb(255, 241, 161);
-  letter-spacing: -0.1rem;
-}
-.gameBtn:hover {
-  border-color: #e64a19;
-  color: rgb(92, 48, 19);
-  box-shadow: #333 1px 1px 2px;
-}
-
-#btnExit {
-  margin-left: 3cap;
-  margin-top: 2cap;
-  color: red;
-}
-
-#btnReset {
-  margin-right: 3cap;
-  margin-top: 2cap;
-  color: green;
-}
-
-#sendGameButton {
-  opacity: 1;
-  margin-top: 1vh;
-  width: 15%;
-  height: 10%;
-}
-
-#exit {
-  padding: 0 3cap;
-  margin-right: 33%;
-}
-
-#quickGame, #start, #credits {
-  width: 15cap;
-  height: auto;
-  line-height: 2cap;
-  text-align: center;
-  margin: 0 1%;
-}
-
-#popup {
-  display: none;
-  position: fixed;
-  top: 20%;
-  left: 25%;
-  width: 50%;
-  height: auto;
-  padding-bottom: 2cap;
-  background-color: rgba(255, 255, 234, 0.9);
-  border: dotted 2px #e64a19;
-  border-radius: 15px;
-  z-index: 9999;
-  overflow: auto;
-  box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
-}
-
-#close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  cursor: pointer;
-  background-image: url("../img/close.png");
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #background-video {
   height: 100vh;
   width: 100vw;
@@ -312,61 +394,6 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 5%;
-}
-
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 35vh;
-  z-index: 1000;
-}
-
-#loading-logo {
-  padding-top: 15vh;
-}
-
-.progress-bar {
-  width: 50%;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.progress-fill {
-  width: 0%;
-  height: 100%;
-  background: #5c74dd;
-  transition: width 0.5s;
-}
-
-#loading-text {
-  color: white;
-  font-size: 1.5em;
-  font-family: "Reglisse-fill";
-}
-
-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-#sendGameButton {
-  display: block;
-  opacity: 0;
-  margin-bottom: 20vh;
 }
 
 * {

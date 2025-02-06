@@ -1,4 +1,4 @@
-import { creditsContent } from "./credits.js"
+import { creditsContent, closeCredits } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
 
@@ -15,17 +15,20 @@ function letStart() {
 }
 
 function creditsPop() {
-    const credits = document.getElementById('credits');
+    const creditsButton = document.getElementById('credits');
+    let credits = document.querySelector('.upCredits')
+    if (!credits) {
+        creditsContent()
+        credits = document.querySelector('.upCredits')
+    }
     const mouseCred = new Audio ('./media/correct.mp3')
-    credits.addEventListener('click', () => {
+    creditsButton.addEventListener('click', () => {
         mouseCred.play()
-        mouseCred.onended = () => {
-            credits.style.display = 'block'
-        }
+        credits.style.display = 'block'
     })
 }
 
 letStart()
 quickGame()
 creditsPop()
-creditsContent()
+closeCredits()

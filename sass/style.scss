@@ -1,10 +1,11 @@
 @use "./libs/fonts.scss";
+@use "./libs/button.scss";
+@use "./libs/progress.scss";
+@use "./libs/popupstyle.scss";
+
 @use "./pages/gameoptions.scss";
 @use "./pages/gameplay.scss";
-@use "./libs/button.scss";
-@use "./pages/popupname.scss";
 @use "./pages/index.scss";
-@use "./libs/progress.scss";
 
 * {
     margin: 0;
