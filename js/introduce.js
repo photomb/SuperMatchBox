@@ -1,7 +1,10 @@
 import { creditsContent, closeCredits } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
-import { createMuteButton } from "./mutebutton.js";
+import { muted } from "./mutebutton.js";
+
+// Init all game with clear cache //
+sessionStorage.clear()
 
 function letStart() {
     const start = document.getElementById('start');
@@ -33,4 +36,4 @@ letStart()
 quickGame()
 creditsPop()
 closeCredits()
-createMuteButton()
+muted(wiiSports)

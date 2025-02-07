@@ -2,6 +2,7 @@ import { gamePlay, numberOfPlayers } from './gameplay.js'
 import { displayMatches } from './displaymatches.js'
 import { backButton } from './backbutton.js'
 import { miiMusic } from "./fadevolume.js"
+import { muted } from './mutebutton.js'
 
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
@@ -49,3 +50,4 @@ document.querySelectorAll('.special').forEach(button => {
 })
 
 backButton()
+muted(miiMusic)

@@ -1,5 +1,3 @@
-import { wiiSports, fadeVolume } from "./fadevolume.js"
-
 document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("background-video")
     const audio = document.getElementById("wiiSports")
@@ -12,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let videoLoaded = false
     let audioLoaded = false
     let fontsLoaded = false
+
+    sessionStorage.clear()
+
 
     function updateProgress() {
         let progress = 0
@@ -35,12 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
         progressFill.style.width = `${progress}%`
         loadingText.textContent = `Loading ... ${progress}%`
 
-        if (progress == 100) {
+        if (progress === 100) {
             loadingText.textContent = "Done !"
             sendGameButton.style.opacity = 1
             sendGameButton.addEventListener("click", () => {
-                preloader.style.display = "none"
-                sendGameButton.style.display = "none"
+                requestAnimationFrame(() => {
+                    preloader.classList.add("fade-out")
+                    setTimeout(() => {
+                        preloader.style.display = "none"
+                        sendGameButton.style.display = "none"
+                    }, 1000)
+                })
                 letsPlayButton.play()
                 audio.play()
                 audio.volume = 0.3

@@ -55,13 +55,13 @@
 
 #mute {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-5%, -2%);
-    width: 5cap;
-    height: 3cap;
+    top: 10%;
+    right: 15%;
+    transform: translate(-50%);
+    width: 3cap;
+    height: 2cap;
     background-image: url(../media/volume-on.png);
-    background-size: 40%;
+    background-size: 45%;
     background-repeat: no-repeat;
     background-position: center;
 }

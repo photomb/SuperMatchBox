@@ -1,4 +1,5 @@
 import { fadeVolume, miiMusic, wiiMusic } from "./fadevolume.js"
+import { fadeToBlack } from "./fadetoblack.js"
 
 export function gameOverResetButton() {
     const resetButton = document.getElementById("btnReset")
@@ -20,8 +21,9 @@ export function gameOverExitButton() {
         exitSound.onended = () => {
             setTimeout(() => {
                 location.replace('./index.html')
-            }, 2000);
+            }, 2000)
         }
+        fadeToBlack()
         fadeVolume(miiMusic)
     })
 }

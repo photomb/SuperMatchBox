@@ -1,10 +1,12 @@
 import { wiiMusic } from "./fadevolume.js" 
 import { audioTouch, exitButton, startGameSound } from "./gamebuttons.js"
+import { muted } from "./mutebutton.js"
 
 // Manage audio wiiMusic //
 wiiMusic.play()
 wiiMusic.volume = 0.5
 wiiMusic.loop = true
+muted(wiiMusic)
 
 function getNumberOfPlayers() { //choose number of players //
     document.getElementById("startGame").addEventListener("click", () => {

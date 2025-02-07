@@ -1,3 +1,12 @@
+@keyframes preloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 #preloader {
     position: fixed;
     width: 100%;
@@ -9,6 +18,11 @@
     align-items: center;
     padding-top: 35vh;
     z-index: 1000;
+    opacity: 1;
+}
+
+.fade-out {
+    animation: preloader 1s ease-in-out forwards;
 }
 
 #loading-logo {
