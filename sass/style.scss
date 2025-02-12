@@ -3,6 +3,8 @@
 @use "./libs/progress.scss";
 @use "./libs/popupstyle.scss";
 @use "./libs/fadetoblack.scss";
+@use "./libs/loader.scss";
+@use "./libs/colors.scss" as *;
 
 @use "./pages/gameoptions.scss";
 @use "./pages/gameplay.scss";
@@ -19,7 +21,7 @@ body {
 }
 
 main {
-    background-color: #fff;
+    background-color: $white;
     border: 2px dotted #ff6f00;
     width: 50%;
     height: auto;
