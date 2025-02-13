@@ -1,23 +1,22 @@
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
 .matchVisu {
     width: 50px;
     height: 50px;
 }
 
 .totalMatches {
-    color: orange;
+    color: $orangeTextTitle;
     font-size: 11em;
     font-family: 'Reglisse-Fill';
-    text-shadow: 
-        2px 2px 0 #ff6f00,
-        4px 4px 0 #ff5722,
-        6px 6px 0 #e64a19,
-        11px 11px 3px #999;
+    text-shadow: $gradientTextShadow;
     margin-top: -50px;
     margin-bottom: -20px;
 }
 
 .interactive {
-    border: 1px dashed grey;
+    border: 1px dashed $baseGrey;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 2% auto;
@@ -34,14 +33,14 @@
     height:45%;
     padding-top: 3%;
     border-radius: 3cap;
-    border: dotted 2px #ff6f00;
+    border: dotted 2px $orangeGrad1;
     text-align: center;
-    background-color: rgba(255, 255, 234, 0.9);
+    background-color: $bgPopup;
     box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .resultloser {
-    color: #e64a19;
+    color: $orangeGrad3;
     font-family: 'Reglisse-Fill';
     font-size: 1.7em;
     padding: 2%;
@@ -49,7 +48,7 @@
 }
 
 .resultwinner {
-    color: #ffd900;
+    color: $yellowstar;
     font-family: 'Reglisse-Fill';
     font-size: 1.7em;
     padding: 2%;
@@ -57,13 +56,13 @@
 }
 
 #alertMessage {
-    color: #ff6f00;
+    color: $orangeGrad1;
     font-family: 'Reglisse-Fill';
     font-size: 1.3em;
 }
 
 #specialMessage {
-    color: #e64a19,;
+    color: $orangeGrad3,;
     font-family: 'Reglisse-Fill';
     font-size: 1.1em;
     height: 1.1em;
@@ -71,7 +70,7 @@
 
 #game {
     font-size: 2em;
-    color: orange;
+    color: $orangeTextTitle;
     font-family: 'Reglisse-Fill';
 }
 
@@ -83,20 +82,21 @@
     padding: 2px;
     border-width: 5px;
     border-radius: 15px;
-    border-color: orange;
+    border-color: $orangeTextTitle;
     border-style: outset;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px 1px color.adjust($baseGrey, $alpha: -0.5);
     cursor: pointer;
-    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    background-image: $gradientGameButton;
     font-size: 3em;
 
 
     &:hover {
-        border-color: #ff5722;
+        border-color: $orangeGrad2;
+        box-shadow:  0px 1px 1px 1px color.adjust($baseGrey, $alpha: -0.5);
     }
 
     &:active {
-        border-color: #d33505;
+        border-color: $orangeGrad3;
     }
 }
 
@@ -107,14 +107,15 @@
     margin: 3% 0;
     padding: 2px;
     border-radius: 15px;
-    border-color: yellow;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(#ffffff,  #b6b6b6);
+    border-color: $yellowstar;
+    box-shadow: 0px 2px 2px 1px color.adjust($baseGrey, $alpha: -0.5);
+    background-image: $gradientGameButton;
     font-size: 2.5em;
     cursor: pointer;
 
     &:hover {
-        border-color: #ffe522;
+        border-color: color.adjust($yellowstar, $blackness: 10%);
+        box-shadow:  0px 1px 1px 1px color.adjust($baseGrey, $alpha: -0.5);
     }
 }
 
@@ -132,11 +133,7 @@
 }
 
 .playerturn {
-    color: #e64a19;
+    color: $orangeGrad3;
     font-family: 'Reglisse-Fill';
-    text-shadow: 
-    2px 2px 0 orange,
-    4px 4px 0 #ff6f00,
-    6px 6px 0 #ff5722,
-    8px 8px 2px #999;
+    text-shadow: $gradientTextShadow;
 }

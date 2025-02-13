@@ -29,7 +29,7 @@ input[type="radio"].game-option-input {
 input[type="text"] {
     width: 35%;
     height: 0.9rem;
-    border: 0.3cap solid color.adjust($lighterGrey, $blue: 50%);
+    border: 0.3cap solid color.adjust($spiralblue, $lightness: 40%);
     border-radius: 0.5rem;
     margin: 0 auto;
     padding: 1.2cap;
@@ -40,7 +40,7 @@ input[type="text"] {
 
     &:focus {
         outline: none;
-        border-color: color.adjust($spiralblue, $lightness: 40%);
+        border-color: color.adjust($spiralblue, $whiteness: 20%);
     }
 }
 
@@ -76,7 +76,7 @@ fieldset {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: color.adjust(#fff, $alpha: -0.2);
+    background-color: color.adjust(#fff, $alpha: -0.3);
     z-index: 9999;
     opacity: 1;
     backdrop-filter: blur(4px); //blur effect under the focus div

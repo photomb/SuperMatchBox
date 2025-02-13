@@ -6,34 +6,34 @@
     height: 35px;
     border-radius: 1.1rem;
     line-height: 1.2cap;
-    padding: 7px;
-    border-color: #ff6f00;
-    color: #723522;
+    padding: 7px 14px;
+    border-color: $orangeGrad1;
+    color: color.adjust($orangeGrad3, $blackness: 10%);
     cursor: pointer;
     font-family: 'Reglisse-Fill';
-    font-size: 1.3em;
-    border-width: 3px;
-    box-shadow: #333 1px 3px 2px;
+    font-size: 1.2em;
+    border-width: 2px;
+    box-shadow: $baseGrey 0px 3px 2px;
     background-color: color.adjust($yellowstar, $whiteness: 50%);
     letter-spacing: -0.1rem;
 
     &:hover {
-        border-color: #e64a19;
-        color: rgb(92, 48, 19);
-        box-shadow: #333 1px 1px 2px;
+        border-color: $orangeGrad3;
+        color: color.adjust($orangeGrad3, $whiteness: 10%);
+        box-shadow: #333 0px 1px 2px;
     }
 }
 
 #btnExit {
     margin-left: 3cap;
     margin-top: 2cap;
-    color : red;
+    color : $orangeGrad3;
 }
 
 #btnReset {
     margin-right: 3cap;
     margin-top: 2cap;
-    color: green;
+    color: $spiralblue;
 }
 
 #sendGameButton {

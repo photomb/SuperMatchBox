@@ -1,3 +1,6 @@
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
 #popup {
     display: none;
     position: fixed;
@@ -6,8 +9,8 @@
     width: 50%;
     height: auto;
     padding-bottom: 2cap;
-    background-color: rgba(255, 255, 234, 0.9);
-    border: dotted 2px #e64a19;
+    background-color: $bgPopup;
+    border: dotted 2px $orangeGrad3;
     border-radius: 15px;
     z-index: 9999;
     overflow: auto;
@@ -34,23 +37,23 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -25%);
-    border: dotted 2px #e64a19;
+    border: dotted 2px $orangeGrad3;
     border-radius: 15px;
-    box-shadow: #333 1px 3px 6px;
+    box-shadow: $baseGrey 3px 6px;
     width: 30%;
     height: auto;
     padding: 3%;
-    background-color: rgba(255, 255, 234, 0.9); 
+    background-color: $bgPopup;
     z-index: 10;
     font-family: 'Reglisse-Fill';
-    color: #e64a19;
+    color: $orangeGrad3;
     
     & ul {
         list-style-type: none;
     }
     
     & a {
-        color: blueviolet;
+        color: $spiralblue;
     }
     
     & li {

@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    background-color: color.adjust(#fff, $alpha: -0.2);
+    background-color: color.adjust(#fff, $alpha: -0.3);
     backdrop-filter: blur(6px);
     border: 2px dotted $orangeGrad2;
     width: 50%;

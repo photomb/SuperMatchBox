@@ -20,33 +20,33 @@
   height: 35px;
   border-radius: 1.1rem;
   line-height: 1.2cap;
-  padding: 7px;
+  padding: 7px 14px;
   border-color: #ff6f00;
-  color: #723522;
+  color: rgb(204.5, 67.9048780488, 25);
   cursor: pointer;
   font-family: "Reglisse-Fill";
-  font-size: 1.3em;
-  border-width: 3px;
-  box-shadow: #333 1px 3px 2px;
+  font-size: 1.2em;
+  border-width: 2px;
+  box-shadow: #333 0px 3px 2px;
   background-color: rgb(252, 239.3095238095, 190.5);
   letter-spacing: -0.1rem;
 }
 .gameBtn:hover {
   border-color: #e64a19;
-  color: rgb(92, 48, 19);
-  box-shadow: #333 1px 1px 2px;
+  color: rgb(230, 93.4048780488, 50.5);
+  box-shadow: #333 0px 1px 2px;
 }
 
 #btnExit {
   margin-left: 3cap;
   margin-top: 2cap;
-  color: red;
+  color: #e64a19;
 }
 
 #btnReset {
   margin-right: 3cap;
   margin-top: 2cap;
-  color: green;
+  color: #1345B7;
 }
 
 #sendGameButton {
@@ -158,7 +158,7 @@ video {
   width: 50%;
   height: auto;
   padding-bottom: 2cap;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   border: dotted 2px #e64a19;
   border-radius: 15px;
   z-index: 9999;
@@ -188,11 +188,11 @@ video {
   transform: translate(-50%, -25%);
   border: dotted 2px #e64a19;
   border-radius: 15px;
-  box-shadow: #333 1px 3px 6px;
+  box-shadow: #333 3px 6px;
   width: 30%;
   height: auto;
   padding: 3%;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   z-index: 10;
   font-family: "Reglisse-Fill";
   color: #e64a19;
@@ -201,7 +201,7 @@ video {
   list-style-type: none;
 }
 .upCredits a {
-  color: blueviolet;
+  color: #1345B7;
 }
 .upCredits li {
   font-size: 1.2em;
@@ -286,7 +286,7 @@ input[type=radio].game-option-input:checked + label {
 input[type=text] {
   width: 35%;
   height: 0.9rem;
-  border: 0.3cap solid #ccccff;
+  border: 0.3cap solid rgb(160.7821782178, 186.5247524752, 245.2178217822);
   border-radius: 0.5rem;
   margin: 0 auto;
   padding: 1.2cap;
@@ -297,7 +297,7 @@ input[type=text] {
 }
 input[type=text]:focus {
   outline: none;
-  border-color: rgb(160.7821782178, 186.5247524752, 245.2178217822);
+  border-color: rgb(70, 104.4512195122, 183);
 }
 
 fieldset {
@@ -332,7 +332,7 @@ fieldset {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 9999;
   opacity: 1;
   backdrop-filter: blur(4px);
@@ -345,16 +345,16 @@ fieldset {
 }
 
 .totalMatches {
-  color: orange;
+  color: #ffa500;
   font-size: 11em;
   font-family: "Reglisse-Fill";
-  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 11px 11px 3px #999;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
   margin-top: -50px;
   margin-bottom: -20px;
 }
 
 .interactive {
-  border: 1px dashed grey;
+  border: 1px dashed #333;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 2% auto;
@@ -373,7 +373,7 @@ fieldset {
   border-radius: 3cap;
   border: dotted 2px #ff6f00;
   text-align: center;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
@@ -386,7 +386,7 @@ fieldset {
 }
 
 .resultwinner {
-  color: #ffd900;
+  color: #fcd53f;
   font-family: "Reglisse-Fill";
   font-size: 1.7em;
   padding: 2%;
@@ -408,7 +408,7 @@ fieldset {
 
 #game {
   font-size: 2em;
-  color: orange;
+  color: #ffa500;
   font-family: "Reglisse-Fill";
 }
 
@@ -420,18 +420,19 @@ fieldset {
   padding: 2px;
   border-width: 5px;
   border-radius: 15px;
-  border-color: orange;
+  border-color: #ffa500;
   border-style: outset;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 2px 1px rgba(51, 51, 51, 0.5);
   cursor: pointer;
-  background-image: linear-gradient(#ffffff, #b6b6b6);
+  background-image: linear-gradient(#fff, #bbbbbb);
   font-size: 3em;
 }
 .choice:hover {
   border-color: #ff5722;
+  box-shadow: 0px 1px 1px 1px rgba(51, 51, 51, 0.5);
 }
 .choice:active {
-  border-color: #d33505;
+  border-color: #e64a19;
 }
 
 .special {
@@ -441,14 +442,15 @@ fieldset {
   margin: 3% 0;
   padding: 2px;
   border-radius: 15px;
-  border-color: yellow;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(#ffffff, #b6b6b6);
+  border-color: #fcd53f;
+  box-shadow: 0px 2px 2px 1px rgba(51, 51, 51, 0.5);
+  background-image: linear-gradient(#fff, #bbbbbb);
   font-size: 2.5em;
   cursor: pointer;
 }
 .special:hover {
-  border-color: #ffe522;
+  border-color: rgb(226.5, 192.7619047619, 63);
+  box-shadow: 0px 1px 1px 1px rgba(51, 51, 51, 0.5);
 }
 
 #joker {
@@ -467,7 +469,7 @@ fieldset {
 .playerturn {
   color: #e64a19;
   font-family: "Reglisse-Fill";
-  text-shadow: 2px 2px 0 orange, 4px 4px 0 #ff6f00, 6px 6px 0 #ff5722, 8px 8px 2px #999;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
 }
 
 #background-video {
@@ -507,7 +509,7 @@ body {
 }
 
 main {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
   border: 2px dotted #ff5722;
   width: 50%;
