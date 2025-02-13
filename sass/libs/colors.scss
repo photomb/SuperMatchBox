@@ -1,27 +1,24 @@
 /*------COLORS-------*/
+@use "sass:color";
 
-$orange0: #ffa500;
+$orangeTextTitle: #ffa500;
 
-$orange1: #ff6f00;
+$orangeGrad1: #ff6f00;
 
-$orange2: #ff5722;
+$orangeGrad2: #ff5722;
 
-$red0: #e64a19;
+$orangeGrad3: #e64a19;
 
-$red1: #723522;
+$baseGrey: #333;
 
-$grey0: #999;
+$lighterGrey: color.adjust($baseGrey, $lightness: 60%);
 
-$grey1: #333;
+$spiralblue: #1345B7;
 
-$spiralblue0: #1345B7;
+$yellowstar: #fcd53f;
 
-$spiralblue1: #1f87fd;
-
-$yellowstar0: #fcd53f;
-
-$yellowstar1: #fdd835;
-
-$background0: #fff1a1;
-
-$white: #fff;
+$gradientTextShadow:
+2px 2px 0 $orangeGrad1,
+4px 4px 0 $orangeGrad2,
+6px 6px 0 $orangeGrad3,
+8px 8px 2px $lighterGrey;

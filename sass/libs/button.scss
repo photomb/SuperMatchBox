@@ -1,3 +1,6 @@
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
 .gameBtn {
     width: auto;
     height: 35px;
@@ -11,7 +14,7 @@
     font-size: 1.3em;
     border-width: 3px;
     box-shadow: #333 1px 3px 2px;
-    background-color: #fff1a1;
+    background-color: color.adjust($yellowstar, $whiteness: 50%);
     letter-spacing: -0.1rem;
 
     &:hover {

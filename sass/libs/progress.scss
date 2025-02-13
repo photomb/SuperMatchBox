@@ -1,3 +1,6 @@
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
 @keyframes preloader {
     0% {
         opacity: 1;
@@ -32,7 +35,7 @@
 .progress-bar {
     width: 50%;
     height: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: color.adjust($baseGrey, $blackness: 50%);
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -41,12 +44,12 @@
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: #5c74dd;
+    background: $spiralblue;
     transition: width 0.5s;
 }
 
 #loading-text {
-    color: white;
+    color: #fff;
     font-size: 1.5em;
     font-family: 'Reglisse-fill';
 }

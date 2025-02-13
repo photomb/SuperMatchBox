@@ -1,3 +1,6 @@
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
 /* Animation de disparition */
 @keyframes fadeOut {
     0% {
@@ -13,8 +16,8 @@
 .loader {
     width: 50px;
     height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.9);
-    border-top-color: #ffa500;
+    border: 3px solid color.adjust($baseGrey, $alpha: -0.5);
+    border-top-color: $yellowstar;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
