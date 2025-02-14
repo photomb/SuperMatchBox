@@ -66,19 +66,3 @@ fieldset {
     font-family: 'Reglisse-Fill';
     font-size: 1.1em;
 }
-
-#whiteblur {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: color.adjust(#fff, $alpha: -0.3);
-    z-index: 9999;
-    opacity: 1;
-    backdrop-filter: blur(4px); //blur effect under the focus div
-    animation: fadeOut 1s ease-in-out 0.4s forwards;
-}

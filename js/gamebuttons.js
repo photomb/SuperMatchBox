@@ -43,9 +43,12 @@ export function exitButton() {
     exitButton.addEventListener("click", () => {
         exitSound.play()
         exitSound.onended = () => {
-            location.replace('./index.html')
+            setTimeout(() => {
+                location.replace('./index.html')
+            }, 2000)
         }
         fadeVolume(wiiMusic)
+        fadeToBlack()
     })
 }
 

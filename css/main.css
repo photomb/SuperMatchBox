@@ -49,13 +49,6 @@
   color: #1345B7;
 }
 
-#sendGameButton {
-  opacity: 1;
-  margin-top: 1vh;
-  width: 15%;
-  height: 10%;
-}
-
 #exit {
   padding: 0 3cap;
   margin-right: 33%;
@@ -91,17 +84,17 @@
   }
 }
 #preloader {
+  display: flex;
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #000;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 35vh;
   z-index: 1000;
   opacity: 1;
+  padding-top: 5vh;
 }
 
 .fade-out {
@@ -109,7 +102,7 @@
 }
 
 #loading-logo {
-  padding-top: 15vh;
+  margin-top: 25vh;
 }
 
 .progress-bar {
@@ -118,7 +111,6 @@
   background: #222222;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 10px;
 }
 
 .progress-fill {
@@ -142,12 +134,6 @@ video {
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-#sendGameButton {
-  display: block;
-  opacity: 0;
-  margin-bottom: 20vh;
 }
 
 #popup {
@@ -232,6 +218,22 @@ video {
   animation: fadetoblack 2s ease-in-out forwards;
 }
 
+#whiteblur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  opacity: 1;
+  backdrop-filter: blur(4px);
+  animation: fadeOut 1s ease-in-out 0.4s forwards;
+}
+
 /* Animation de disparition */
 @keyframes fadeOut {
   0% {
@@ -258,6 +260,59 @@ video {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+#sendGameButton {
+  display: block;
+  position: relative;
+  opacity: 0;
+  margin-top: 20vh;
+  margin-bottom: 15vh;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: outset 7px #e64a19;
+  box-shadow: none;
+  outline: none;
+}
+
+#sendGameButton::before,
+#sendGameButton::after,
+#sendGameButton .circle {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: pulse 1.5s infinite ease-out;
+}
+
+#sendGameButton::before {
+  border: 1px solid #1345B7;
+}
+
+#sendGameButton::after {
+  border: 1px solid #fcd53f;
+  animation-delay: 0.5s;
+}
+
+#sendGameButton .circle {
+  border: 1px solid #e64a19;
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
   }
 }
 .game-option-label {
@@ -321,22 +376,6 @@ fieldset {
   display: none;
   font-family: "Reglisse-Fill";
   font-size: 1.1em;
-}
-
-#whiteblur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 9999;
-  opacity: 1;
-  backdrop-filter: blur(4px);
-  animation: fadeOut 1s ease-in-out 0.4s forwards;
 }
 
 .matchVisu {
@@ -495,7 +534,7 @@ section {
 .buttonbox {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 * {

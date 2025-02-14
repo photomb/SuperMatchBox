@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         progressFill.style.width = `${progress}%`
         loadingText.textContent = `Loading ... ${progress}%`
 
+
+        // sendGameButton //
         if (progress === 100) {
             loadingText.textContent = "Done !"
             sendGameButton.style.opacity = 1
