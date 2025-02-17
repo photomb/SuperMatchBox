@@ -27,7 +27,7 @@ input[type="radio"].game-option-input {
 }
 
 input[type="text"] {
-    width: 35%;
+    width: 50%;
     height: 0.9rem;
     border: 0.3cap solid color.adjust($spiralblue, $lightness: 40%);
     border-radius: 0.5rem;
@@ -37,6 +37,7 @@ input[type="text"] {
     font-size: 1.3em;
     color: $spiralblue;
     margin-bottom: 1cap;
+    text-align: center;
 
     &:focus {
         outline: none;

@@ -137,3 +137,8 @@
     font-family: 'Reglisse-Fill';
     text-shadow: $gradientTextShadow;
 }
+
+#headOfConditions {
+    display: flex;
+    justify-content: space-between;
+}

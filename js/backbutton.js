@@ -1,4 +1,5 @@
 import { miiMusic, fadeVolume } from "./fadevolume.js"
+import { fadeToWhite } from "./fadetowhite.js"
 
 export function backButton() {
     const backTouch = document.getElementById('back')
@@ -9,5 +10,6 @@ export function backButton() {
             location.replace('./gameoptions.html')
         }
         fadeVolume(miiMusic)
+        fadeToWhite()
     })
 }

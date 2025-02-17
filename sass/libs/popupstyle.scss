@@ -4,10 +4,12 @@
 #popup {
     display: none;
     position: fixed;
-    top: 20%;
-    left: 25%;
-    width: 50%;
-    height: auto;
+    top: 3%;
+    left: 5%;
+    width: 90%;
+    height: 94%;
+    padding-left: 1%;
+    padding-right: 1%;
     padding-bottom: 2cap;
     background-color: $bgPopup;
     border: dotted 2px $orangeGrad3;
@@ -39,8 +41,8 @@
     transform: translate(-50%, -25%);
     border: dotted 2px $orangeGrad3;
     border-radius: 15px;
-    box-shadow: $baseGrey 3px 6px;
-    width: 30%;
+    box-shadow: $baseGrey 0px 3px 2px;
+    width: 40%;
     height: auto;
     padding: 3%;
     background-color: $bgPopup;

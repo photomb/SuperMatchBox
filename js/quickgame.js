@@ -1,11 +1,12 @@
 import { wiiSports, fadeVolume } from "./fadevolume.js"
+import { fadeToWhite } from "./fadetowhite.js"
 
 function sendSessionStorage() {
     sessionStorage.setItem('players', 2)
     sessionStorage.setItem('totalMatches', 12)
     sessionStorage.setItem('maxMatches', 3)
-    sessionStorage.setItem("namePlayer1", 'Player 1')
-    sessionStorage.setItem("namePlayer2", 'Player 2')
+    sessionStorage.setItem("namePlayer1", 'Match')
+    sessionStorage.setItem("namePlayer2", 'Box')
 }
 
 export function quickGame() {
@@ -18,5 +19,6 @@ export function quickGame() {
             location.replace('./gameplay.html')
         }
         fadeVolume(wiiSports)
+        fadeToWhite()
     })
 }

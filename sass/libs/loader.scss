@@ -1,7 +1,7 @@
+/*-- Loader --*/
 @use "../libs/colors.scss" as *;
 @use "sass:color";
 
-/* Animation de disparition */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -12,11 +12,11 @@
     }
 }
 
-/* Spinner de chargement */
+/* Spinner */
 .loader {
-    width: 50px;
-    height: 50px;
-    border: 3px solid color.adjust($baseGrey, $alpha: -0.5);
+    width: 70px;
+    height: 70px;
+    border: 10px solid color.adjust($baseGrey, $alpha: -0.3);
     border-top-color: $yellowstar;
     border-radius: 50%;
     animation: spin 1s linear infinite;
