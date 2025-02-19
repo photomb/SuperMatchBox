@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videoBG = document.getElementById("background-video")
     const audioIndex = document.getElementById("wiiSports")
-    const letsPlayButton = new Audio('./media/mouse-start.mp3')
+    const letsPlayButton = new Audio('../media/mouse-start.mp3')
     const preloader = document.getElementById("preloader")
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         '../media/mouse-special.mp3',
         '../media/mouse-start.mp3',
         '../media/short-success.mp3',
-        '../media/special.mp3'
+        '../media/special.mp3',
     ]
 
     let progress = 0
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateProgress() {
         progress = 0
         
-        if (videoLoaded) progress += 35
-        if (audioLoaded) progress += 25
+        if (videoLoaded) progress += 30
+        if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
         if (imagesLoadedCount === preloadImages.length) progress += 15
         if (soundsLoadedCount === preloadSounds.length) progress += 15
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     }, 1000)
                 })
                 letsPlayButton.play()
-                audio.play()
-                audio.volume = 0.3
-                audio.loop = true
+                audioIndex.play()
+                audioIndex.volume = 0.3
+                audioIndex.loop = true
             })
         }
     }
