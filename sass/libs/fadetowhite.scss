@@ -1,0 +1,65 @@
+/*--- White Back Loading ---*/
+
+@mixin splashWhiteScreen($img, $size, $lines) {
+    $backgrounds: ();
+    
+    @for $i from 0 through $lines {
+        $pos-y: $i * $size;
+        $pos-x: if($i % 2 == 0, 0,$size / 2);
+        $backgrounds: ($backgrounds, (url($img) + " #{$pos-x} #{$pos-y}"));
+    }
+
+    background: $backgrounds;
+    background-size: $size $size;
+    background-repeat: repeat-x;
+}
+
+@keyframes whitefadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#whitefadeout {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 2s ease-in-out 2s forwards;
+    @include splashWhiteScreen("../img/splash_white_screen.png", 250px, 5);
+}
+
+/*-- Fade to White --*/
+@keyframes fadetowhite {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#fadetowhite {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fade-in-white {
+    animation: fadetowhite 2s ease-in-out forwards;
+}

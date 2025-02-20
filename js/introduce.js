@@ -2,11 +2,12 @@ import { creditsContent, closeCredits } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
 import { muted } from "./mutebutton.js";
+import { fadeToWhite } from "./fadetowhite.js";
 
 // Init all game with clear cache //
 sessionStorage.clear()
 
-function letStart() {
+function goToGameOptionsButton() {
     const start = document.getElementById('start');
     const mouseStart = new Audio ('./media/mouse-start.mp3')
     start.addEventListener('click', () => {
@@ -14,6 +15,7 @@ function letStart() {
         mouseStart.onended = () => {
             location.replace('./gameoptions.html')
         }
+        fadeToWhite()
         fadeVolume(wiiSports)
     })
 }
@@ -32,7 +34,7 @@ function creditsPop() {
     })
 }
 
-letStart()
+goToGameOptionsButton()
 quickGame()
 creditsPop()
 closeCredits()

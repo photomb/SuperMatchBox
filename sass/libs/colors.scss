@@ -1,25 +1,30 @@
-/*------
-#ff6f00
-#ff5722,
-#e64a19,
-#999
+/*------COLORS-------*/
+@use "sass:color";
 
+$orangeTextTitle: #ffa500;
 
+$orangeGrad1: #ff6f00;
 
+$orangeGrad2: #ff5722;
 
+$orangeGrad3: #e64a19;
 
+$baseGrey: #333;
 
+$spiralblue: #1345B7;
 
+$yellowstar: #fcd53f;
 
+$gradientTextShadow:
+2px 2px 0 $orangeGrad1,
+4px 4px 0 $orangeGrad2,
+6px 6px 0 $orangeGrad3,
+8px 8px 2px color.adjust($baseGrey, $lightness: 60%);
 
+$gradientGameButton:
+linear-gradient(#fff,  color.adjust($baseGrey, $whiteness: 200%));
 
+$bgPopup:
+color.adjust($yellowstar, $whiteness: 60%, $alpha: -0.1);
 
-
-
-
-
-
-
-
-
--------------------*/
+$test: #ff4757

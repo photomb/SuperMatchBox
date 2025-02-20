@@ -1,12 +1,18 @@
 @use "./libs/fonts.scss";
-@use "./libs/button.scss";
+@use "./libs/colors.scss" as *;
+@use "./libs/buttons.scss";
 @use "./libs/progress.scss";
 @use "./libs/popupstyle.scss";
 @use "./libs/fadetoblack.scss";
+@use "./libs/fadetowhite.scss";
+@use "./libs/loader.scss";
+@use "./libs/sendgamebutton.scss";
 
 @use "./pages/gameoptions.scss";
 @use "./pages/gameplay.scss";
 @use "./pages/index.scss";
+
+@use "sass:color";
 
 * {
     margin: 0;
@@ -19,8 +25,9 @@ body {
 }
 
 main {
-    background-color: #fff;
-    border: 2px dotted #ff6f00;
+    background-color: color.adjust(#fff, $alpha: -0.3);
+    backdrop-filter: blur(6px);
+    border: 2px dotted $orangeGrad2;
     width: 50%;
     height: auto;
     margin: 1% auto;
@@ -31,12 +38,8 @@ main {
 h1 {
     font-family: 'SuperMario256';
     font-size: 3em;
-    text-shadow: 
-        2px 2px 0 #ff6f00,
-        4px 4px 0 #ff5722,
-        6px 6px 0 #e64a19,
-        7px 7px 2px #999;
-    color: orange;
+    text-shadow: $gradientTextShadow;
+    color: $orangeTextTitle;
 }
 
 .h1padding {
@@ -46,33 +49,21 @@ h1 {
 h2 {
     font-family: 'Reglisse-Fill';
     font-size: 2em;
-    text-shadow: 
-        2px 2px 0 #ff6f00,
-        4px 4px 0 #ff5722,
-        6px 6px 0 #e64a19,
-        7px 7px 2px #999;
-    color: orange;
+    text-shadow: $gradientTextShadow;
+    color: $orangeTextTitle;
 }
 
 h3 {
     font-family: 'Reglisse-fill';
     font-size: 1.6em;
-    text-shadow: 
-        1px 1px 0 #ff6f00,
-        2px 2px 0 #ff5722,
-        3px 3px 0 #e64a19,
-        5px 5px 1px #999;
-    color: orange;
+    text-shadow: $gradientTextShadow;
+    color: $orangeTextTitle;
     line-height: 1.6cap;
 }
 
 h4 {
     font-family: 'Reglisse-fill';
     font-size: 2em;
-    text-shadow: 
-        1px 1px 0 #ff6f00,
-        2px 2px 0 #ff5722,
-        3px 3px 0 #e64a19,
-        5px 5px 1px #999;
-    color: orange;
+    text-shadow: $gradientTextShadow;
+    color: $orangeTextTitle;
 }

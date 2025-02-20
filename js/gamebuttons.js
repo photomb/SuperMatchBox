@@ -1,5 +1,6 @@
 import { fadeVolume, miiMusic, wiiMusic } from "./fadevolume.js"
 import { fadeToBlack } from "./fadetoblack.js"
+import { fadeToWhite } from "./fadetowhite.js"
 
 export function gameOverResetButton() {
     const resetButton = document.getElementById("btnReset")
@@ -9,6 +10,7 @@ export function gameOverResetButton() {
         resetSound.onended = () => {
             location.reload()
         }
+        fadeToWhite()
         fadeVolume(miiMusic)
     })
 }
@@ -43,14 +45,17 @@ export function exitButton() {
     exitButton.addEventListener("click", () => {
         exitSound.play()
         exitSound.onended = () => {
-            location.replace('./index.html')
+            setTimeout(() => {
+                location.replace('./index.html')
+            }, 2000)
         }
         fadeVolume(wiiMusic)
+        fadeToBlack()
     })
 }
 
-export function startGameSound() {
-    document.getElementById("startGame").addEventListener("click", () => {
+export function nextButtonSound() {
+    document.getElementById("next").addEventListener("click", () => {
         const correctBell = new Audio("./media/correct.mp3")
         correctBell.play()
     })

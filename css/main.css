@@ -1,3 +1,4 @@
+/*-- Fonts --*/
 @font-face {
   font-family: "Reglisse-Back";
   src: url("../fonts/Reglisse_Back.otf") format("opentype");
@@ -14,50 +15,49 @@
   font-family: "SuperMario256";
   src: url("../fonts/SuperMario256.ttf") format("truetype");
 }
+/*------COLORS-------*/
+/*-- Formatting Buttons --*/
 .gameBtn {
   width: auto;
   height: 35px;
   border-radius: 1.1rem;
   line-height: 1.2cap;
-  padding: 7px;
+  padding: 7px 14px;
   border-color: #ff6f00;
-  color: rgb(114, 53, 34);
+  color: rgb(204.5, 67.9048780488, 25);
   cursor: pointer;
   font-family: "Reglisse-Fill";
-  font-size: 1.3em;
-  border-width: 3px;
-  box-shadow: #333 1px 3px 2px;
-  background-color: rgb(255, 241, 161);
+  font-size: 1.2em;
+  border-width: 2px;
+  box-shadow: #333 0px 3px 2px;
+  background-color: rgb(252, 239.3095238095, 190.5);
   letter-spacing: -0.1rem;
 }
 .gameBtn:hover {
   border-color: #e64a19;
-  color: rgb(92, 48, 19);
-  box-shadow: #333 1px 1px 2px;
+  color: rgb(230, 93.4048780488, 50.5);
+  box-shadow: #333 0px 1px 2px;
 }
 
 #btnExit {
   margin-left: 3cap;
   margin-top: 2cap;
-  color: red;
+  color: #e64a19;
 }
 
 #btnReset {
   margin-right: 3cap;
   margin-top: 2cap;
-  color: green;
-}
-
-#sendGameButton {
-  opacity: 1;
-  margin-top: 1vh;
-  width: 15%;
-  height: 10%;
+  color: #1345B7;
 }
 
 #exit {
   padding: 0 3cap;
   margin-right: 33%;
+}
+
+#next {
+  padding: 0 2.2cap;
 }
 
 #quickGame, #start, #credits {
@@ -75,10 +75,21 @@
   transform: translate(-50%);
   width: 3cap;
   height: 2cap;
-  background-image: url(../media/volume-on.png);
+  background-image: url(../img/volume-on.png);
   background-size: 45%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#go {
+  position: absolute;
+  font-size: 1.6em;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-width: 5px;
+  bottom: 10%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes preloader {
@@ -90,17 +101,17 @@
   }
 }
 #preloader {
+  display: flex;
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #000;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 35vh;
   z-index: 1000;
   opacity: 1;
+  padding-top: 5vh;
 }
 
 .fade-out {
@@ -108,27 +119,26 @@
 }
 
 #loading-logo {
-  padding-top: 15vh;
+  margin-top: 25vh;
 }
 
 .progress-bar {
   width: 50%;
   height: 10px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #222222;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 10px;
 }
 
 .progress-fill {
   width: 0%;
   height: 100%;
-  background: #5c74dd;
+  background: #1345B7;
   transition: width 0.5s;
 }
 
 #loading-text {
-  color: white;
+  color: #fff;
   font-size: 1.5em;
   font-family: "Reglisse-fill";
 }
@@ -143,21 +153,17 @@ video {
   z-index: -1;
 }
 
-#sendGameButton {
-  display: block;
-  opacity: 0;
-  margin-bottom: 20vh;
-}
-
 #popup {
   display: none;
   position: fixed;
-  top: 20%;
-  left: 25%;
-  width: 50%;
-  height: auto;
+  top: 3%;
+  left: 5%;
+  width: 90%;
+  height: 94%;
+  padding-left: 1%;
+  padding-right: 1%;
   padding-bottom: 2cap;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   border: dotted 2px #e64a19;
   border-radius: 15px;
   z-index: 9999;
@@ -187,11 +193,11 @@ video {
   transform: translate(-50%, -25%);
   border: dotted 2px #e64a19;
   border-radius: 15px;
-  box-shadow: #333 1px 3px 6px;
-  width: 30%;
+  box-shadow: #333 0px 3px 2px;
+  width: 40%;
   height: auto;
   padding: 3%;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   z-index: 10;
   font-family: "Reglisse-Fill";
   color: #e64a19;
@@ -200,13 +206,14 @@ video {
   list-style-type: none;
 }
 .upCredits a {
-  color: blueviolet;
+  color: #1345B7;
 }
 .upCredits li {
   font-size: 1.2em;
   padding: 2%;
 }
 
+/** Fade To Black --*/
 @keyframes fadetoblack {
   0% {
     opacity: 0;
@@ -231,6 +238,138 @@ video {
   animation: fadetoblack 2s ease-in-out forwards;
 }
 
+/*--- White Back Loading ---*/
+@keyframes whitefadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#whitefadeout {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  opacity: 1;
+  animation: fadeOut 2s ease-in-out 2s forwards;
+  background: url("../img/splash_white_screen.png") 0 0px, url("../img/splash_white_screen.png") 125px 250px, url("../img/splash_white_screen.png") 0 500px, url("../img/splash_white_screen.png") 125px 750px, url("../img/splash_white_screen.png") 0 1000px, url("../img/splash_white_screen.png") 125px 1250px;
+  background-size: 250px 250px;
+  background-repeat: repeat-x;
+}
+
+/*-- Fade to White --*/
+@keyframes fadetowhite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#fadetowhite {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade-in-white {
+  animation: fadetowhite 2s ease-in-out forwards;
+}
+
+/*-- Loader --*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Spinner */
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid rgba(51, 51, 51, 0.7);
+  border-top-color: #fcd53f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#sendGameButton {
+  display: block;
+  position: relative;
+  opacity: 0;
+  margin-top: 20vh;
+  margin-bottom: 15vh;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: outset 7px #e64a19;
+  box-shadow: none;
+  outline: none;
+}
+
+#sendGameButton::before,
+#sendGameButton::after,
+#sendGameButton .circle {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: pulse 1.5s infinite ease-out;
+}
+
+#sendGameButton::before {
+  border: 1px solid #1345B7;
+}
+
+#sendGameButton::after {
+  border: 1px solid #fcd53f;
+  animation-delay: 0.5s;
+}
+
+#sendGameButton .circle {
+  border: 1px solid #e64a19;
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
 .game-option-label {
   font-family: "Reglisse-Fill";
   font-size: 2.3em;
@@ -242,40 +381,45 @@ input[type=radio].game-option-input {
   display: none;
 }
 input[type=radio].game-option-input + label {
-  border: dashed 1px grey;
+  border: dashed 0.01cap #333;
   border-radius: 5px;
   padding: 0 20px;
   margin-bottom: 3%;
   display: inline-block;
 }
 input[type=radio].game-option-input:checked + label {
-  color: red;
-  border: solid 0.1cap #ff6f00;
-  background-color: rgba(255, 255, 0, 0.5);
+  color: #e64a19;
+  border: solid 0.1cap #e64a19;
+  background-color: rgb(252, 239.3095238095, 190.5);
 }
 
 input[type=text] {
-  width: 35%;
+  width: 50%;
   height: 0.9rem;
-  border: 0.3cap solid #bbc3ce;
+  border: 0.3cap solid rgb(160.7821782178, 186.5247524752, 245.2178217822);
   border-radius: 0.5rem;
   margin: 0 auto;
   padding: 1.2cap;
   font-family: "Reglisse-Fill";
   font-size: 1.3em;
-  color: #ff6f00;
+  color: #1345B7;
   margin-bottom: 1cap;
+  text-align: center;
+}
+input[type=text]:focus {
+  outline: none;
+  border-color: rgb(70, 104.4512195122, 183);
 }
 
 fieldset {
-  border: 1px solid #ff6f00;
+  border: 1px solid #e64a19;
   border-radius: 0.5rem;
   width: 90%;
   margin: 0 auto;
   padding: 3%;
   font-family: "Reglisse-Fill";
   font-size: 1.3em;
-  color: #ff6f00;
+  color: #e64a19;
 }
 
 #labelPlayer1, #labelPlayer2 {
@@ -290,66 +434,22 @@ fieldset {
   font-size: 1.1em;
 }
 
-#whiteblur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  opacity: 1;
-  backdrop-filter: blur(5px);
-  animation: fadeOut 1s ease-in-out 2s forwards;
-}
-
-/* Animation de disparition */
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-/* Spinner de chargement */
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(255, 255, 255, 0.9);
-  border-top-color: orange;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .matchVisu {
   width: 50px;
   height: 50px;
 }
 
 .totalMatches {
-  color: orange;
+  color: #ffa500;
   font-size: 11em;
   font-family: "Reglisse-Fill";
-  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 11px 11px 3px #999;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
   margin-top: -50px;
   margin-bottom: -20px;
 }
 
 .interactive {
-  border: 1px dashed grey;
+  border: 1px dashed #333;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 2% auto;
@@ -368,7 +468,7 @@ fieldset {
   border-radius: 3cap;
   border: dotted 2px #ff6f00;
   text-align: center;
-  background-color: rgba(255, 255, 234, 0.9);
+  background-color: rgba(252, 244.5714285714, 216, 0.9);
   box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }
 
@@ -381,7 +481,7 @@ fieldset {
 }
 
 .resultwinner {
-  color: #ffd900;
+  color: #fcd53f;
   font-family: "Reglisse-Fill";
   font-size: 1.7em;
   padding: 2%;
@@ -403,7 +503,7 @@ fieldset {
 
 #game {
   font-size: 2em;
-  color: orange;
+  color: #ffa500;
   font-family: "Reglisse-Fill";
 }
 
@@ -415,18 +515,19 @@ fieldset {
   padding: 2px;
   border-width: 5px;
   border-radius: 15px;
-  border-color: orange;
+  border-color: #ffa500;
   border-style: outset;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 2px 1px rgba(51, 51, 51, 0.5);
   cursor: pointer;
-  background-image: linear-gradient(#ffffff, #b6b6b6);
+  background-image: linear-gradient(#fff, #bbbbbb);
   font-size: 3em;
 }
 .choice:hover {
   border-color: #ff5722;
+  box-shadow: 0px 1px 1px 1px rgba(51, 51, 51, 0.5);
 }
 .choice:active {
-  border-color: #d33505;
+  border-color: #e64a19;
 }
 
 .special {
@@ -436,14 +537,15 @@ fieldset {
   margin: 3% 0;
   padding: 2px;
   border-radius: 15px;
-  border-color: yellow;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(#ffffff, #b6b6b6);
+  border-color: #fcd53f;
+  box-shadow: 0px 2px 2px 1px rgba(51, 51, 51, 0.5);
+  background-image: linear-gradient(#fff, #bbbbbb);
   font-size: 2.5em;
   cursor: pointer;
 }
 .special:hover {
-  border-color: #ffe522;
+  border-color: rgb(226.5, 192.7619047619, 63);
+  box-shadow: 0px 1px 1px 1px rgba(51, 51, 51, 0.5);
 }
 
 #joker {
@@ -462,7 +564,12 @@ fieldset {
 .playerturn {
   color: #e64a19;
   font-family: "Reglisse-Fill";
-  text-shadow: 2px 2px 0 orange, 4px 4px 0 #ff6f00, 6px 6px 0 #ff5722, 8px 8px 2px #999;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
+}
+
+#headOfConditions {
+  display: flex;
+  justify-content: space-between;
 }
 
 #background-video {
@@ -488,7 +595,7 @@ section {
 .buttonbox {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 * {
@@ -502,8 +609,9 @@ body {
 }
 
 main {
-  background-color: #fff;
-  border: 2px dotted #ff6f00;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border: 2px dotted #ff5722;
   width: 50%;
   height: auto;
   margin: 1% auto;
@@ -514,8 +622,8 @@ main {
 h1 {
   font-family: "SuperMario256";
   font-size: 3em;
-  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
-  color: orange;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
+  color: #ffa500;
 }
 
 .h1padding {
@@ -525,23 +633,23 @@ h1 {
 h2 {
   font-family: "Reglisse-Fill";
   font-size: 2em;
-  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 7px 7px 2px #999;
-  color: orange;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
+  color: #ffa500;
 }
 
 h3 {
   font-family: "Reglisse-fill";
   font-size: 1.6em;
-  text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
-  color: orange;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
+  color: #ffa500;
   line-height: 1.6cap;
 }
 
 h4 {
   font-family: "Reglisse-fill";
   font-size: 2em;
-  text-shadow: 1px 1px 0 #ff6f00, 2px 2px 0 #ff5722, 3px 3px 0 #e64a19, 5px 5px 1px #999;
-  color: orange;
+  text-shadow: 2px 2px 0 #ff6f00, 4px 4px 0 #ff5722, 6px 6px 0 #e64a19, 8px 8px 2px #cccccc;
+  color: #ffa500;
 }
 
 /*# sourceMappingURL=main.css.map */

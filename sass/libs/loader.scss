@@ -1,0 +1,28 @@
+/*-- Loader --*/
+@use "../libs/colors.scss" as *;
+@use "sass:color";
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Spinner */
+.loader {
+    width: 70px;
+    height: 70px;
+    border: 10px solid color.adjust($baseGrey, $alpha: -0.3);
+    border-top-color: $yellowstar;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

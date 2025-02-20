@@ -1,8 +1,9 @@
 import { wiiMusic, fadeVolume } from "./fadevolume.js"
+import { fadeToWhite } from "./fadetowhite.js"
 
 function nameOfPlayers() {
     const openPopup = document.getElementById("popup")
-    document.getElementById("startGame").addEventListener("click", () => {
+    document.getElementById("next").addEventListener("click", () => {
         openPopup.style.display = "block"
     })
 }
@@ -39,6 +40,7 @@ function goButton() {
             location.replace('./gameplay.html')
         }
         fadeVolume(wiiMusic)
+        fadeToWhite()
     })
 }
 

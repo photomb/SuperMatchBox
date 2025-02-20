@@ -9,7 +9,7 @@ export function displayMatches() {
     showPlayer.textContent = `Game Conditions : 👤${numberOfPlayers} | 🪔${gameMatches} | 🔥${maxMatches}`
     // in start game, first player annonced //
     if (arrPlayers[currentPlayer] == 1) {
-        game.innerHTML = `Your turn <span class='playerturn'>${namePlayer1}</span>`
+        game.innerHTML = `Your turn &nbsp;<span class='playerturn'>${namePlayer1}</span>`
     } else {
         game.textContent = `Your turn PLAYER ${arrPlayers[currentPlayer]}`
     }
