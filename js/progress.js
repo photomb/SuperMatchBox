@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let videoLoaded = false
     let audioLoaded = false
     let fontsLoaded = false
-    let imagesLoaded = false
+    let imagesLoadedCount = 0
+    let soundsLoadedCount = 0
+
+    sessionStorage.clear()
 
     function updateProgress() {
         progress = 0
@@ -29,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (videoLoaded) progress += 40
         if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
-        if (imagesLoaded) progress += 20
+        if (imagesLoadedCount === preloadImages.length) progress += 15
+        if (soundsLoadedCount === preloadSounds.length) progress += 15
 
         progressFill.style.width = `${progress}%`
         loadingText.textContent = `Loading ... ${progress}%`
@@ -69,16 +73,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     resolve(src)
                 }
             }
-        })
-    }
-
-    Promise.all(preloadImages.map(imagesToLoad))
-    .then(() => {
-        imagesLoaded = true
-        localStorage.setItem("imagesLoaded", "true")
-        updateProgress()
-        console.log("IMAGES OK")
+        }
     })
+
+    //Are sounds ready ?
+    preloadSounds.forEach(sound => {
+        if(sessionStorage.getItem(sound)) {
+            soundsLoadedCount++
+            updateProgress()
+        } else {
+            const audio = new Audio(sound)
+            audio.oncanplay = () => {
+                soundsLoadedCount++
+                sessionStorage.setItem(sound, "true") //Onload sound ok
+                sessionStorage.setItem("soundsLoadedCount", soundsLoadedCount)
+                updateProgress()
+            }
+        }
+    }) 
 
     //Is video ready ?
     videoBG.load()
@@ -89,8 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("VIDEO OK")
             updateProgress()
         }
-    }, { once: true })
-
+    }
+    if (videoBG.readyState >= 3) onVideoload() //3 = HAVE_FUTURE_DATA for readyState
+    videoBG.addEventListener("canplay", () => { videoLoaded = true })
+    videoBG.addEventListener("canplaythrough", () => { videoLoaded = true })
 
     //Is audio ready ?
     audioIndex.load()
@@ -101,9 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("AUDIO OK")
             updateProgress()
         }
-    }, { once: true })
-        
-        
+    }
+    if (audioIndex.readyState >= 3) onAudioLoad()
+        audioIndex.addEventListener("canplay", () => { audioLoaded = true })
+        audioIndex.addEventListener("canplaythrough", () => { audioLoaded = true })
+
     // Is fonts ready ?
     if(!fontsLoaded) {
         const fontSuperMario256 = new FontFace('SuperMario256', 'url("./fonts/SuperMario256.ttf")')
@@ -116,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
             fontsLoaded = true
             localStorage.setItem("fontsLoaded", "true")
             updateProgress()
-            console.log("FONTS OK")
         })
         .catch((zut) => {
             console.error("Error loading fonts : ", zut)
