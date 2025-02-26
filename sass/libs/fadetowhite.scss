@@ -4,8 +4,9 @@
     $backgrounds: ();
     
     @for $i from 0 through $lines {
+        $halfSize: calc($size /2);
         $pos-y: $i * $size;
-        $pos-x: if($i % 2 == 0, 0,$size / 2);
+        $pos-x: if($i % 2 == 0, 0,$halfSize);
         $backgrounds: ($backgrounds, (url($img) + " #{$pos-x} #{$pos-y}"));
     }
 
