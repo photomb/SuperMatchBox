@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
     const sendGameButton = document.getElementById("sendGameButton")
+    
     const preloadImages = [
         '../img/close.png',
         '../img/joker.png',
@@ -20,17 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let videoLoaded = false
     let audioLoaded = false
     let fontsLoaded = false
-    let imagesLoadedCount = 0
-
-    sessionStorage.clear()
+    let imagesLoaded = false
 
     function updateProgress() {
         progress = 0
         
-        if (videoLoaded) progress += 50
-        if (audioLoaded) progress += 25
+        if (videoLoaded) progress += 40
+        if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
-        if (imagesLoadedCount === preloadImages.length) progress += 15
+        if (imagesLoaded) progress += 20
 
         progressFill.style.width = `${progress}%`
         loadingText.textContent = `Loading ... ${progress}%`
@@ -53,53 +52,81 @@ document.addEventListener("DOMContentLoaded", () => {
                 audioIndex.play()
                 audioIndex.volume = 0.3
                 audioIndex.loop = true
+                videoBG.play()
             })
         }
     }
 
     //Are images ready ?
-    preloadImages.forEach(src => {
-        if(sessionStorage.getItem(src)) {
-            imagesLoadedCount++
-            updateProgress()
-        } else {
-            const img = new Image()
-            img.src = src
-            img.onload = () => {
-                imagesLoadedCount++
-                sessionStorage.setItem(src, "true") //Onload image ok 
-                sessionStorage.setItem("imagesLoadedCount", imagesLoadedCount)
-                updateProgress()
+    function imagesToLoad(src) {
+        return new Promise((resolve) => {
+            if (localStorage.getItem(src)) {
+                resolve(src) //image loaded yet
+            } else {
+                const image = new Image()
+                image.src = src
+                image.onload = () => {
+                    localStorage.setItem(src, "true") //loading image
+                    resolve(src)
+                }
             }
-            console.log("Images ok")
-        }
+        })
+    }
+
+    Promise.all(preloadImages.map(imagesToLoad))
+    .then(() => {
+        imagesLoaded = true
+        localStorage.setItem("imagesLoaded", "true")
+        updateProgress()
+        console.log("IMAGES OK")
     })
 
     //Is video ready ?
-    const onVideoload = () => {
-        if (!videoLoaded) {
-            videoLoaded = true
-            sessionStorage.setItem("videoLoaded", "true")
-            updateProgress()
-        }
+    function VideoToLoad(videoMedia) {
+        return new Promise((resolve) => {
+            if(localStorage.getItem("videoLoaded")) {
+                resolve("video")
+            } else {
+                videoMedia.addEventListener("canplay", () => {
+                    localStorage.setItem("videoLoaded", "true")
+                    resolve("video")
+                })
+            }
+        })
     }
-    if (videoBG.readyState >= 3) onVideoload() //3 = HAVE_FUTURE_DATA for readyState
-    videoBG.addEventListener("canplay", () => { videoLoaded = true })
-    videoBG.addEventListener("canplaythrough", () => { videoLoaded = true })
-    console.log("Video ok")
+
+    VideoToLoad(videoBG)
+        .then(() => {
+            videoLoaded = true
+            localStorage.setItem("videoLoaded", "true")
+            console.log("VIDEO OK")
+            updateProgress()
+        })
+        .catch((err) => console.warn(err))
+
 
     //Is audio ready ?
-    const onAudioLoad = () => {
-        if(!audioLoaded) {
-            audioLoaded = true
-            sessionStorage.setItem("audioLoaded", "true")
-            updateProgress()
-        }
+    function AudioToLoad(audioMedia) {
+        return new Promise((resolve) => {
+            if(localStorage.getItem("audioLoaded")) {
+                resolve("audio")
+            } else {
+                audioMedia.addEventListener("canplay", () => {
+                    localStorage.setItem("audioLoaded", "true")
+                    resolve("audio")
+                })
+            }
+        })
     }
-    if (audioIndex.readyState >= 3) onAudioLoad()
-        audioIndex.addEventListener("canplay", () => { audioLoaded = true })
-        audioIndex.addEventListener("canplaythrough", () => { audioLoaded = true })
-        console.log("Audio ok")
+
+    AudioToLoad(audioIndex)
+        .then(() => {
+            audioLoaded = true
+            localStorage.setItem("audioLoaded", "true")
+            console.log("AUDIO OK")
+            updateProgress()
+        })
+        .catch((err) => console.warn(err))
 
     // Is fonts ready ?
     if(!fontsLoaded) {
@@ -111,12 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
         Promise.all([fontSuperMario256.load(), fontReglisse.load(), fontReglisseBack.load(), fontReglisseFill.load()])
         .then(() => {
             fontsLoaded = true
-            sessionStorage.setItem("fontsLoaded", "true")
+            localStorage.setItem("fontsLoaded", "true")
             updateProgress()
-            console.log("Fonts ok")
+            console.log("FONTS OK")
         })
         .catch((zut) => {
-            console.error("Error loading fonts:", zut)
+            console.error("Error loading fonts : ", zut)
         })
     }
 })
