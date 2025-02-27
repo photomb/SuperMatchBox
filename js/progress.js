@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (videoLoaded) progress += 40
         if (audioLoaded) progress += 30
+        if (videoLoaded) progress += 40
+        if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
         if (imagesLoaded) progress += 20
 
@@ -80,9 +82,21 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //Is video ready ?
-    videoBG.load()
-    videoBG.addEventListener("canplaythrough", () => {
-        if (!videoLoaded) {
+    function VideoToLoad(videoMedia) {
+        return new Promise((resolve) => {
+            if(localStorage.getItem("videoLoaded")) {
+                resolve("video")
+            } else {
+                videoMedia.addEventListener("canplay", () => {
+                    localStorage.setItem("videoLoaded", "true")
+                    resolve("video")
+                })
+            }
+        })
+    }
+
+    VideoToLoad(videoBG)
+        .then(() => {
             videoLoaded = true
             localStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
@@ -96,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
     wiiSports.addEventListener("canplaythrough", () => {
         if (!audioLoaded) {
             audioLoaded = true
+            localStorage.setItem("audioLoaded", "true")
+            console.log("AUDIO OK")
             localStorage.setItem("audioLoaded", "true")
             console.log("AUDIO OK")
             updateProgress()
@@ -113,10 +129,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => {
             fontsLoaded = true
             localStorage.setItem("fontsLoaded", "true")
+            localStorage.setItem("fontsLoaded", "true")
             updateProgress()
             console.log("FONTS OK")
         })
         .catch((zut) => {
+            console.error("Error loading fonts : ", zut)
             console.error("Error loading fonts : ", zut)
         })
     }
