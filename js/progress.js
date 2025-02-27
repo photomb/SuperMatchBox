@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
     const sendGameButton = document.getElementById("sendGameButton")
-
+    
+    
     const preloadImages = [
         'img/close.png',
         'img/joker.png',
@@ -21,19 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let videoLoaded = false
     let audioLoaded = false
     let fontsLoaded = false
-    let imagesLoadedCount = 0
-    let soundsLoadedCount = 0
-
-    sessionStorage.clear()
+    let imagesLoaded = false
 
     function updateProgress() {
         progress = 0
         
         if (videoLoaded) progress += 40
         if (audioLoaded) progress += 30
+        if (videoLoaded) progress += 40
+        if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
-        if (imagesLoadedCount === preloadImages.length) progress += 15
-        if (soundsLoadedCount === preloadSounds.length) progress += 15
+        if (imagesLoaded) progress += 20
 
         progressFill.style.width = `${progress}%`
         loadingText.textContent = `Loading ... ${progress}%`
@@ -73,44 +72,48 @@ document.addEventListener("DOMContentLoaded", () => {
                     resolve(src)
                 }
             }
-        }
+        })
+    }
+
+    Promise.all(preloadImages.map(imagesToLoad))
+    .then(() => {
+        imagesLoaded = true
+        localStorage.setItem("imagesLoaded", "true")
+        updateProgress()
+        console.log("IMAGES OK")
     })
 
-    //Are sounds ready ?
-    preloadSounds.forEach(sound => {
-        if(sessionStorage.getItem(sound)) {
-            soundsLoadedCount++
-            updateProgress()
-        } else {
-            const audio = new Audio(sound)
-            audio.oncanplay = () => {
-                soundsLoadedCount++
-                sessionStorage.setItem(sound, "true") //Onload sound ok
-                sessionStorage.setItem("soundsLoadedCount", soundsLoadedCount)
-                updateProgress()
-            }
-        }
-    }) 
-
     //Is video ready ?
-    videoBG.load()
-    videoBG.addEventListener("canplaythrough", () => {
-        if (!videoLoaded) {
+    function VideoToLoad(videoMedia) {
+        return new Promise((resolve) => {
+            if(localStorage.getItem("videoLoaded")) {
+                resolve("video")
+            } else {
+                videoMedia.addEventListener("canplay", () => {
+                    localStorage.setItem("videoLoaded", "true")
+                    resolve("video")
+                })
+            }
+        })
+    }
+
+    VideoToLoad(videoBG)
+        .then(() => {
             videoLoaded = true
-            sessionStorage.setItem("videoLoaded", "true")
+            localStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
             updateProgress()
-        }
-    }
-    if (videoBG.readyState >= 3) onVideoload() //3 = HAVE_FUTURE_DATA for readyState
-    videoBG.addEventListener("canplay", () => { videoLoaded = true })
-    videoBG.addEventListener("canplaythrough", () => { videoLoaded = true })
+        })
+        .catch((err) => console.warn(err))
+
 
     //Is audio ready ?
     wiiSports.load()
     wiiSports.addEventListener("canplaythrough", () => {
         if (!audioLoaded) {
             audioLoaded = true
+            localStorage.setItem("audioLoaded", "true")
+            console.log("AUDIO OK")
             localStorage.setItem("audioLoaded", "true")
             console.log("AUDIO OK")
             updateProgress()
@@ -128,9 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => {
             fontsLoaded = true
             localStorage.setItem("fontsLoaded", "true")
+            localStorage.setItem("fontsLoaded", "true")
             updateProgress()
+            console.log("FONTS OK")
         })
         .catch((zut) => {
+            console.error("Error loading fonts : ", zut)
             console.error("Error loading fonts : ", zut)
         })
     }
