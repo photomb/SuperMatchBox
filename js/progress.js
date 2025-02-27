@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 audioIndex.play()
                 audioIndex.volume = 0.3
                 audioIndex.loop = true
+                videoBG.play()
             })
         }
     }
