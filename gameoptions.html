@@ -14,10 +14,16 @@
         <div class="loader"></div>
     </div>
     
-    <audio id="wiiMusic" src="./media/WiiMusic.mp3"></audio>
-    <video id="background-video" autoplay loop>
+    <!-- Audio -->
+    <audio id="wiiMusic" preload="auto">
+        <source src="./media/WiiMusic.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Background Video -->
+    <video id="background-video" preload="auto" loop muted>
         <source src="./media/animation_bg_smb15.mp4" type="video/mp4">    
     </video>
+
     <h1 class="h1padding">Super Match Box</h1>
     <h2>Choose your game options</h2>
     <main>

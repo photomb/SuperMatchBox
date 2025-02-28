@@ -3,19 +3,23 @@
 @font-face {
     font-family: 'Reglisse-Back';
     src: url('../fonts/Reglisse_Back.otf') format('opentype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Reglisse-Fill';
     src: url('../fonts/Reglisse_Fill.otf') format('opentype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Reglisse';
     src: url('../fonts/Reglisse.otf') format('opentype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SuperMario256';
     src: url('../fonts/SuperMario256.ttf') format('truetype');
+    font-display: swap;
 }
