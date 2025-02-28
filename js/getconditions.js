@@ -4,9 +4,15 @@ import { muted } from "./mutebutton.js"
 
 // Manage audio wiiMusic //
 wiiMusic.play()
-wiiMusic.volume = 0.5
+wiiMusic.volume = 0.7
 wiiMusic.loop = true
 muted(wiiMusic)
+
+// Manage video playback //
+const videoBG = document.getElementById("background-video")
+videoBG.play()
+videoBG.muted = true
+videoBG.loop = true
 
 function getNumberOfPlayers() { //choose number of players //
     document.getElementById("next").addEventListener("click", () => {
