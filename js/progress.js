@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 audioIndex.play()
                 audioIndex.volume = 0.3
                 audioIndex.loop = true
-                videoBG.play()
             })
         }
     }
@@ -85,54 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //Is video ready ?
-    function VideoToLoad(videoMedia) {
-        return new Promise((resolve) => {
-            if(localStorage.getItem("videoLoaded")) {
-                resolve("video")
-            } else {
-                videoMedia.addEventListener("canplay", () => {
-                    localStorage.setItem("videoLoaded", "true")
-                    resolve("video")
-                })
-            }
-        })
-    }
-
-    VideoToLoad(videoBG)
-        .then(() => {
+    videoBG.load()
+    videoBG.addEventListener("canplaythrough", () => {
+        if (!videoLoaded) {
             videoLoaded = true
-            localStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
             updateProgress()
-        })
-        .catch((err) => console.warn(err))
+        }
+    }, { once: true })
 
 
     //Is audio ready ?
-    function AudioToLoad(audioMedia) {
-        return new Promise((resolve) => {
-            if(localStorage.getItem("audioLoaded")) {
-                resolve("audio")
-            } else {
-                audioMedia.addEventListener("canplay", () => {
-                    localStorage.setItem("audioLoaded", "true")
-                    resolve("audio")
-                })
-            }
-        })
-    }
-
-    AudioToLoad(audioIndex)
-        .then(() => {
+    audioIndex.load()
+    audioIndex.addEventListener("canplaythrough", () => {
+        if (!audioLoaded) {
             audioLoaded = true
             localStorage.setItem("audioLoaded", "true")
             console.log("AUDIO OK")
             localStorage.setItem("audioLoaded", "true")
             console.log("AUDIO OK")
             updateProgress()
-        })
-        .catch((err) => console.warn(err))
-
+        }
+    }, { once: true })
+        
+        
     // Is fonts ready ?
     if(!fontsLoaded) {
         const fontSuperMario256 = new FontFace('SuperMario256', 'url("./fonts/SuperMario256.ttf")')
