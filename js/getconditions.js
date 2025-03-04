@@ -3,6 +3,11 @@ import { audioTouch, exitButton, nextButtonSound } from "./gamebuttons.js"
 import { muted } from "./mutebutton.js"
 
 // Manage audio wiiMusic //
+wiiMusic.load()
+wiiMusic.addEventListener('canplaythrough', () => {
+    localStorage.setItem("wiiMusic", "true")
+    console.log("WiiMusic OK")  
+}, { once: true })
 wiiMusic.play()
 wiiMusic.volume = 0.7
 wiiMusic.loop = true
