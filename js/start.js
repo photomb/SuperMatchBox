@@ -16,6 +16,11 @@ export const mouseSpecial = new Audio ('./media/mouse-special.mp3')
 export let gameButtons = 0
 
 // manage audio //
+miiMusic.load()
+miiMusic.addEventListener('canplaythrough', () => {
+    localStorage.setItem("miiMusic", "true")
+    console.log("MiiMusic OK")  
+}, { once: true })
 miiMusic.play()
 miiMusic.volume = 0.3
 miiMusic.loop = true

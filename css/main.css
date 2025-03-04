@@ -438,6 +438,18 @@ fieldset {
   font-size: 1.1em;
 }
 
+.newGameplayBG {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/splash_white_screen.png");
+  background-repeat: repeat;
+}
+
+.newGameplayBG main {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .matchVisu {
   width: 50px;
   height: 50px;
