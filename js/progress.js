@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     videoBG.addEventListener("canplaythrough", () => {
         if (!videoLoaded) {
             videoLoaded = true
+            sessionStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
             updateProgress()
         }

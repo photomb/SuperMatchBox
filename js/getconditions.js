@@ -4,6 +4,11 @@ import { muted } from "./mutebutton.js"
 import { arrowScroll } from "./arrowScroll.js"
 
 // Manage audio wiiMusic //
+wiiMusic.load()
+wiiMusic.addEventListener('canplaythrough', () => {
+    localStorage.setItem("wiiMusic", "true")
+    console.log("WiiMusic OK")  
+}, { once: true })
 wiiMusic.play()
 wiiMusic.volume = 0.5
 wiiMusic.loop = true
