@@ -1,3 +1,8 @@
+@use "libs/_fonts";
+@use "libs/_colors" as *;
+@use "libs/_responsive" as *;
+@use "sass:color";
+
 @use "styles/buttons";
 @use "styles/progress";
 @use "styles/popupstyle";
@@ -5,16 +10,11 @@
 @use "styles/fadetowhite";
 @use "styles/loader";
 @use "styles/sendgamebutton";
-//@use "styles/responsiverules";
+@use "styles/responsiverules";
 
 @use "pages/index";
 @use "pages/gameoptions";
 @use "pages/gameplay";
-
-@use "libs/_fonts";
-@use "libs/_colors" as *;
-@use "libs/_responsive" as *;
-@use "sass:color";
 
 * {
     margin: 0;

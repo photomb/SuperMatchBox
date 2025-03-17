@@ -2,6 +2,10 @@
 
 @use "../libs/_responsive" as *;
 
+@include mediaQueries();
+
+
+
 @include mediaQueries(xxs) {
     form fieldset {
         padding: 0;
@@ -13,16 +17,15 @@
     }
 
     h1 {
-        width: 50%;
         margin: 0 auto;
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     h2 {
         font-size: 1.6em;
     }
 
-    h4 {
+    h4.subtitle {
         font-size: 1.6em;
     }
 
@@ -33,7 +36,6 @@
     #quickGame, #start, #credits {
         margin: 2% auto;
         height: 3.5em;
-        width: 12em;
     }
 
     #mute {
@@ -43,14 +45,23 @@
         height: 3cap;
     }
 
-    .title {
-        font-size: 5em;
+    h1.title {
+        font-size: 4em;
     }
 
     .buttonbox {
         flex-direction: column;
     }
-}
+
+    #loading-logo {
+        margin-top: 15vh;
+        & img {
+            width: 80%;
+        }
+    }
+};
+
+
 
 
 

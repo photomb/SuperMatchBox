@@ -1,5 +1,27 @@
-/*-------------Formatting Buttons-------------*/
+/*-- Fonts --*/
+@font-face {
+  font-family: "Reglisse-Back";
+  src: url("../fonts/Reglisse_Back.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Reglisse-Fill";
+  src: url("../fonts/Reglisse_Fill.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Reglisse";
+  src: url("../fonts/Reglisse.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../fonts/SuperMario256.ttf") format("truetype");
+  font-display: swap;
+}
 /*------COLORS-------*/
+/*------ RESPONSIVE LIBS--------*/
+/*-------------Formatting Buttons-------------*/
 .gameBtn {
   width: auto;
   height: 35px;
@@ -353,6 +375,51 @@ video {
     opacity: 0;
   }
 }
+/*------------Responsive Rules---------*/
+@media only screen and (min-width: 320px) {
+  form fieldset {
+    padding: 0;
+    font-size: 1em;
+  }
+  main {
+    width: 95%;
+  }
+  h1 {
+    margin: 0 auto;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h4.subtitle {
+    font-size: 1.6em;
+  }
+  .logo_prop {
+    width: 80%;
+  }
+  #quickGame, #start, #credits {
+    margin: 2% auto;
+    height: 3.5em;
+  }
+  #mute {
+    top: 2%;
+    right: 2%;
+    width: 3cap;
+    height: 3cap;
+  }
+  h1.title {
+    font-size: 4em;
+  }
+  .buttonbox {
+    flex-direction: column;
+  }
+  #loading-logo {
+    margin-top: 15vh;
+  }
+  #loading-logo img {
+    width: 80%;
+  }
+}
 /*-----------Index Style-----------*/
 #background-video {
   height: 100vh;
@@ -598,28 +665,6 @@ fieldset {
   justify-content: space-between;
 }
 
-/*-- Fonts --*/
-@font-face {
-  font-family: "Reglisse-Back";
-  src: url("../fonts/Reglisse_Back.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Reglisse-Fill";
-  src: url("../fonts/Reglisse_Fill.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Reglisse";
-  src: url("../fonts/Reglisse.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SuperMario256";
-  src: url("../fonts/SuperMario256.ttf") format("truetype");
-  font-display: swap;
-}
-/*------ RESPONSIVE LIBS--------*/
 * {
   margin: 0;
   padding: 0;

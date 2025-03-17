@@ -1,19 +1,25 @@
 /*------ RESPONSIVE LIBS--------*/
 @use "sass:map";
 
+$breakpoint_base: lg;
+
 $breakpoints: (
-    xxs: 20em, //320px
-    xs: 30em, //480px
-    sm: 48em, //768px
-    md: 64em, //1024px
-    lg: 80em, //1280px
-    xl: 120em //1920px
+    xxs: 320px,
+    xs: 480px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1280px,
+    xl: 1920px
 );
 
-@mixin mediaQueries($key) {
+@mixin mediaQueries($key: $breakpoint_base) {
     $size: map.get($breakpoints, $key);
-    
-    @media only screen and (min-width: $size) {
-        @content;
+
+    @if $size {
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint #{$key} doesn't exist in the map $breakpoints.";
     }
-};
+}
