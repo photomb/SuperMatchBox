@@ -1,17 +1,19 @@
-@use "./libs/fonts.scss";
-@use "./libs/colors.scss" as *;
-@use "./libs/buttons.scss";
-@use "./libs/progress.scss";
-@use "./libs/popupstyle.scss";
-@use "./libs/fadetoblack.scss";
-@use "./libs/fadetowhite.scss";
-@use "./libs/loader.scss";
-@use "./libs/sendgamebutton.scss";
+@use "styles/buttons";
+@use "styles/progress";
+@use "styles/popupstyle";
+@use "styles/fadetoblack";
+@use "styles/fadetowhite";
+@use "styles/loader";
+@use "styles/sendgamebutton";
+//@use "styles/responsiverules";
 
-@use "./pages/gameoptions.scss";
-@use "./pages/gameplay.scss";
-@use "./pages/index.scss";
+@use "pages/index";
+@use "pages/gameoptions";
+@use "pages/gameplay";
 
+@use "libs/_fonts";
+@use "libs/_colors" as *;
+@use "libs/_responsive" as *;
 @use "sass:color";
 
 * {

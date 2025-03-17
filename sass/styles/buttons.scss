@@ -1,5 +1,6 @@
-/*-- Formatting Buttons --*/
-@use "../libs/colors.scss" as *;
+/*-------------Formatting Buttons-------------*/
+
+@use "../libs/_colors" as *;
 @use "sass:color";
 
 .gameBtn {
@@ -22,7 +23,7 @@
         border-color: $orangeGrad3;
         color: color.adjust($orangeGrad3, $whiteness: 10%);
         box-shadow: #333 0px 1px 2px;
-    }
+    };
 }
 
 #btnExit {

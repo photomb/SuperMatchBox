@@ -1,0 +1,19 @@
+/*------ RESPONSIVE LIBS--------*/
+@use "sass:map";
+
+$breakpoints: (
+    xxs: 20em, //320px
+    xs: 30em, //480px
+    sm: 48em, //768px
+    md: 64em, //1024px
+    lg: 80em, //1280px
+    xl: 120em //1920px
+);
+
+@mixin mediaQueries($key) {
+    $size: map.get($breakpoints, $key);
+    
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+};

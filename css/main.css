@@ -1,26 +1,5 @@
-/*-- Fonts --*/
-@font-face {
-  font-family: "Reglisse-Back";
-  src: url("../fonts/Reglisse_Back.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Reglisse-Fill";
-  src: url("../fonts/Reglisse_Fill.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Reglisse";
-  src: url("../fonts/Reglisse.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SuperMario256";
-  src: url("../fonts/SuperMario256.ttf") format("truetype");
-  font-display: swap;
-}
+/*-------------Formatting Buttons-------------*/
 /*------COLORS-------*/
-/*-- Formatting Buttons --*/
 .gameBtn {
   width: auto;
   height: 35px;
@@ -108,7 +87,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #000;
   flex-direction: column;
   justify-content: center;
@@ -374,6 +353,37 @@ video {
     opacity: 0;
   }
 }
+/*-----------Index Style-----------*/
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.title {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 9em;
+  line-height: 0.8em;
+}
+
+section {
+  padding-top: 5vh;
+}
+
+.buttonbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+/*------------Game Options Style------------*/
 .game-option-label {
   font-family: "Reglisse-Fill";
   font-size: 2.3em;
@@ -588,35 +598,28 @@ fieldset {
   justify-content: space-between;
 }
 
-#background-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+/*-- Fonts --*/
+@font-face {
+  font-family: "Reglisse-Back";
+  src: url("../fonts/Reglisse_Back.otf") format("opentype");
+  font-display: swap;
 }
-
-.title {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-  font-size: 9em;
-  line-height: 0.8em;
+@font-face {
+  font-family: "Reglisse-Fill";
+  src: url("../fonts/Reglisse_Fill.otf") format("opentype");
+  font-display: swap;
 }
-
-section {
-  padding-top: 5vh;
+@font-face {
+  font-family: "Reglisse";
+  src: url("../fonts/Reglisse.otf") format("opentype");
+  font-display: swap;
 }
-
-.buttonbox {
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../fonts/SuperMario256.ttf") format("truetype");
+  font-display: swap;
 }
-
+/*------ RESPONSIVE LIBS--------*/
 * {
   margin: 0;
   padding: 0;
