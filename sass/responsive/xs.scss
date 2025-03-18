@@ -1,0 +1,151 @@
+/*------------Responsive Rules XXS---------*/
+
+@use "../libs/_responsive" as *;
+
+@include mediaQueries(xs) {
+    
+    #mute {
+        top: 2%;
+        right: 2%;
+        width: 3cap;
+        height: 3cap;
+    }
+
+    .gameBtn {
+        font-size: 1em;
+    }
+
+    /*---Progress + Index---*/
+    .logo_prop {
+        width: 80%;
+    }
+    #loading-logo {
+        margin-top: 15vh;
+        & img {
+            width: 80%;
+        }
+    }
+    h4.head {
+        font-size: 1.4em;
+    }
+    h4.subtitle {
+        font-size: 1.4em;
+    }
+    h1.title {
+        font-size: 3em;
+    }
+    .buttonbox {
+        flex-direction: column;
+    }
+    #quickGame, #start, #credits {
+        margin: 2% auto;
+        height: 3.5em;
+    }
+    section.first {
+        padding-top: 3dvh;
+    }
+    .upCredits {
+        width: 90%;
+    }
+    
+    /*---Game Options---*/
+    form fieldset {
+        font-size: 0.9em;
+    }
+    main.option {
+        width: 95%;
+        min-height: 80dvh;
+    }
+    h1.h1padding {
+        margin: 0 auto;
+        width: 50%;
+        font-size: 1.5em;
+    }
+    h2.option {
+        font-size: 1.3em;
+        padding: 2% 0;
+    }
+    #exit {
+        margin-right: 25%;
+    }
+    #popup h2 {
+        font-size: 1.5em;
+        padding-top: 1vh;
+    }
+    #go {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+        top: 93%;
+        padding: 0;
+    }
+    #popup {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    /*---Gameplay---*/
+    h3.option {
+        font-size: 1.3em;
+        padding: 2vh 0;
+    }
+    .newGameplayBG {
+        padding-top: 0;
+    }
+    main.GP {
+        width: 95%;
+        min-height: 80dvh;
+    }
+    #headOfConditions {
+        flex-direction: row;
+        font-size: 0.7em;
+    }
+    #gameConditions {
+        margin: 0 auto;
+    }
+    #back {
+        letter-spacing: 0;
+        padding: 0 3px;
+    }
+    #totalMatches {
+        font-size: 7em;
+    }
+    h3#game {
+        font-size: 1.5em;
+    }
+    h3.ask {
+        font-size: 1em;
+    }
+    button.choice {
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+    }
+    button.special {
+        width: 50px;
+        height: 50px;
+    }
+    img#joker {
+        width: 30px;
+    }
+    div.interactive {
+        width: 95%;
+        height: 20dvh;
+        font-size: 0.9em;
+    }
+    div#resultGame {
+        width: 100%;
+        height: 80dvh;
+        font-size: 0.9em;
+        top: 0;
+        left: 0;
+    }
+};
+
+
+
+
+

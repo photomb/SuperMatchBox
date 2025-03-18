@@ -10,7 +10,9 @@
 @use "styles/fadetowhite";
 @use "styles/loader";
 @use "styles/sendgamebutton";
-@use "styles/responsiverules";
+
+@use "responsive/xxs";
+@use "responsive/xs";
 
 @use "pages/index";
 @use "pages/gameoptions";
