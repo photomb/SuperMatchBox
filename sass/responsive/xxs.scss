@@ -5,77 +5,92 @@
 @include mediaQueries(xxs) {
     
     #mute {
-        top: 2%;
-        right: 2%;
-        width: 3cap;
+        top: 4%;
+        left: 89%;
+        width: 2cap;
         height: 3cap;
+        background-size: 73%;
     }
 
     .gameBtn {
         font-size: 1em;
+        padding: 2px;
+        border-radius: 0.8rem;
+    }
+
+    /*---Loader---*/
+    .loader {
+        width: 50px;
+        height: 50px;
     }
 
     /*---Progress + Index---*/
-    .logo_prop {
-        width: 80%;
-    }
     #loading-logo {
-        margin-top: 15vh;
+        margin-top: 10vh;
         & img {
-            width: 80%;
+            width: 90%;
         }
     }
+    #sendGameButton {
+        width: 35%;
+    }
     h4.head {
-        font-size: 1.4em;
+        font-size: 1em;
     }
     h4.subtitle {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     h1.title {
-        font-size: 3em;
+        font-size: 2em;
+        margin: 0 auto;
     }
     .buttonbox {
         flex-direction: column;
     }
     #quickGame, #start, #credits {
         margin: 2% auto;
-        height: 3.5em;
+        height: auto;
     }
     section.first {
         padding-top: 3dvh;
     }
     .upCredits {
         width: 90%;
+        font-size: 0.6em;
+        & h4 {
+            font-size: 1.2em;
+            text-shadow: none;
+        }
     }
     
     /*---Game Options---*/
     form fieldset {
-        font-size: 0.9em;
+        font-size: 0.5em;
     }
     main.option {
-        width: 95%;
+        width: 100%;
         min-height: 80dvh;
     }
     h1.h1padding {
         margin: 0 auto;
         width: 50%;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     h2.option {
-        font-size: 1.3em;
+        font-size: 1.1em;
         padding: 2% 0;
     }
-    #exit {
-        margin-right: 25%;
+    div.bottombutton {
+        margin: 0 1%;
     }
     #popup h2 {
-        font-size: 1.5em;
-        padding-top: 1vh;
+        font-size: 1.2em;
+        padding-top: 5dvh;
     }
     #go {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5em;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
         top: 93%;
         padding: 0;
     }
@@ -86,18 +101,22 @@
         height: 100%;
         padding: 0;
     }
+    form input[type="text"] {
+        font-size: 0.8em;
+        padding: 1cap 0;
+    }
 
     /*---Gameplay---*/
     h3.option {
-        font-size: 1.3em;
-        padding: 2vh 0;
+        font-size: 1em;
+        padding: 2dvh 0;
     }
     .newGameplayBG {
         padding-top: 0;
     }
     main.GP {
-        width: 95%;
-        min-height: 80dvh;
+        width: 100%;
+        min-height: 130dvh;
     }
     #headOfConditions {
         flex-direction: row;
@@ -111,35 +130,45 @@
         padding: 0 3px;
     }
     #totalMatches {
-        font-size: 7em;
+        font-size: 5em;
+        margin-top: -25px;
     }
     h3#game {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     h3.ask {
+        font-size: 0.9em;
+    }
+    div#specialMessage {
+        font-size: 0.8em;
+    }
+    div#alertMessage {
         font-size: 1em;
     }
     button.choice {
-        width: 70px;
-        height: 70px;
-        font-size: 2em;
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+        margin: 0;
+        padding: 0;
     }
     button.special {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
     }
     img#joker {
-        width: 30px;
+        width: 25px;
     }
     div.interactive {
-        width: 95%;
-        height: 20dvh;
+        width: 100%;
+        height: 40dvh;
         font-size: 0.9em;
     }
     div#resultGame {
         width: 100%;
-        height: 80dvh;
-        font-size: 0.9em;
+        height: 130dvh;
+        font-size: 0.7em;
         top: 0;
         left: 0;
     }

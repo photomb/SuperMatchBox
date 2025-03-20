@@ -2,19 +2,22 @@
 @use "sass:map";
 
 $breakpoints: (
-    xxs: 320px,
-    xs: 480px,
-    sm: 800px,
-    md: 1024px,
-    lg: 1280px,
-    xl: 1920px
+    xxs: 160px,
+    xs: 320px,
+    sm: 390px,
+    md: 480px,
+    lg: 800px,
+    xl: 1024px,
+    xxl: 1280px
 );
 
-@mixin mediaQueries($key) {
+$base-breakpoint: xl;
+
+@mixin mediaQueries($key: $base-breakpoint) {
     $size: map.get($breakpoints, $key);
 
     @if $size {
-        @media only screen and (max-width: $size) {
+        @media only screen and (min-width: $size) {
             @content;
         }
     } @else {
