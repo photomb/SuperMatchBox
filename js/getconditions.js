@@ -1,6 +1,7 @@
 import { wiiMusic } from "./fadevolume.js" 
 import { audioTouch, exitButton, nextButtonSound } from "./gamebuttons.js"
 import { muted } from "./mutebutton.js"
+import { arrowScroll } from "./arrowScroll.js"
 
 // Manage audio wiiMusic //
 wiiMusic.load()
@@ -86,3 +87,4 @@ getMaxMatches()
 audioTouch()
 nextButtonSound()
 exitButton()
+arrowScroll()

@@ -1,8 +1,9 @@
 import { creditsContent, closeCredits } from "./credits.js"
 import { wiiSports, fadeVolume } from "./fadevolume.js"
 import { quickGame } from "./quickgame.js"
-import { muted } from "./mutebutton.js";
-import { fadeToWhite } from "./fadetowhite.js";
+import { muted } from "./mutebutton.js"
+import { fadeToWhite } from "./fadetowhite.js"
+import { arrowScroll } from "./arrowScroll.js"
 
 // Init all game with clear cache //
 sessionStorage.clear()
@@ -39,3 +40,4 @@ quickGame()
 creditsPop()
 closeCredits()
 muted(wiiSports)
+arrowScroll()

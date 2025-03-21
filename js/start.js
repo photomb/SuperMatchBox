@@ -3,6 +3,7 @@ import { displayMatches } from './displaymatches.js'
 import { backButton } from './backbutton.js'
 import { miiMusic } from "./fadevolume.js"
 import { muted } from './mutebutton.js'
+import { arrowScroll } from './arrowScroll.js'
 
 // DOM  elements //
 export const totalMatchesContainer = document.getElementById("totalMatches")
@@ -56,3 +57,4 @@ document.querySelectorAll('.special').forEach(button => {
 
 backButton()
 muted(miiMusic)
+arrowScroll()

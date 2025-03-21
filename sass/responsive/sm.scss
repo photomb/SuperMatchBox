@@ -8,13 +8,13 @@
     #mute {
         top: 2%;
         right: 2%;
-        width: 3cap;
-        height: 4cap;
-        background-size: 45%;
+        width: 2cap;
+        height: 3cap;
+        background-size: 40%;
     }
 
     .gameBtn {
-        font-size: 1em;
+        font-size: 1.4em;
         padding: 7px 14px;
         border-radius: 1.1rem;
     }
@@ -36,40 +36,41 @@
         width: 100px;
     }
     h4.head {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
     h4.subtitle {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
     h1.title {
-        font-size: 3em;
+        font-size: 4.3em;
+        margin: 3% auto;
     }
     .buttonbox {
         flex-direction: column;
     }
     #quickGame, #start, #credits {
         margin: 2% auto;
-        height: 3.5em;
+        height: 3em;
     }
     section.first {
-        padding-top: 3dvh;
+        padding-top: 2dvh;
     }
     .upCredits {
         width: 90%;
         font-size: inherit;
         & h4 {
-            font-size: 2em;
+            font-size: 2.5em;
             text-shadow: $gradientTextShadow;
         }
     }
     
     /*---Game Options---*/
     form fieldset {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     main.option {
         width: 95%;
-        min-height: 80dvh;
+        min-height: 85dvh;
     }
     h1.h1padding {
         margin: 0 auto;
@@ -81,7 +82,7 @@
         padding: 2% 0;
     }
     div.bottombutton {
-        margin: 0 5%;
+        margin: 10% 5%;
     }
     #popup h2 {
         font-size: 1.5em;
