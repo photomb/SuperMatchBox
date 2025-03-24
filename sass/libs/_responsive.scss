@@ -4,16 +4,14 @@
 $breakpoints: (
     xxs: 160px,
     xs: 320px,
-    sm: 400px,
-    md: 480px,
-    lg: 800px,
+    sm: 360px,
+    md: 400px,
+    lg: 720px,
     xl: 1024px,
-    xxl: 1280px
+    plus: 1280px
 );
 
-$base-breakpoint: xl;
-
-@mixin mediaQueries($key: $base-breakpoint) {
+@mixin mediaQueries($key) {
     $size: map.get($breakpoints, $key);
 
     @if $size {

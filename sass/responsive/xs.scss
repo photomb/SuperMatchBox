@@ -45,9 +45,6 @@
         font-size: 3em;
         margin: 0 auto;
     }
-    .buttonbox {
-        flex-direction: column;
-    }
     #quickGame, #start, #credits {
         margin: 2% auto;
         height: 3.5em;
@@ -119,31 +116,26 @@
         width: 95%;
         min-height: 80dvh;
     }
-    #headOfConditions {
-        flex-direction: row;
-        font-size: 0.7em;
-    }
-    #gameConditions {
-        margin: 0 auto;
-    }
     #back {
         letter-spacing: 0;
         padding: 0 3px;
     }
     #totalMatches {
-        font-size: 7em;
-        margin-top: -50px;
-        margin: 5px;
+        font-size: 6em;
+        margin: 0;
         padding: 2px;
     }
     h3#game {
-        font-size: 1.5em;
+        font-size: 2em;
     }
     h3.ask {
-        font-size: 1em;
+        font-size: 1.5em;
     }
     div#specialMessage {
-        font-size: 1.1em;
+        font-size: 1.2em;
+    }
+    div#alertMessage {
+        font-size: 1.2em;
     }
     button.choice {
         width: 70px;
@@ -169,6 +161,7 @@
         font-size: 0.9em;
         top: 0;
         left: 0;
+        padding-top: 10%;
     }
 };
 

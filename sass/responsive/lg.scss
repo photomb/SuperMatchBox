@@ -1,0 +1,132 @@
+/*------------Responsive Rules MD---------*/
+
+@use "../libs/_responsive" as *;
+@use "../libs/_colors" as *; 
+
+@include mediaQueries(md) {
+    
+    #mute {
+        top: 3%;
+        left: 90%;
+        width: 4cap;
+        height: 4cap;
+        background-size: 40%;
+    }
+
+    /*---Progress + Index---*/
+    #loading-logo {
+        margin-top: 25dvh;
+        & img {
+            width: 100%;
+        }
+    }
+    h4.head {
+        font-size: 2em;
+    }
+    h4.subtitle {
+        font-size: 2em;
+    }
+    h1.title {
+        font-size: 8em;
+        margin: 8% auto;
+    }
+    #quickGame, #start, #credits {
+        margin: 2% auto;
+        height: 3.5em;
+    }
+    
+    /*---Game Options---*/
+    form fieldset {
+        font-size: 1.3em;
+    }
+    main.option {
+        width: 95%;
+        min-height: 75dvh;
+    }
+    h1.h1padding {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 4em;
+    }
+    h2.option {
+        font-size: 2em;
+        padding: 2% 0;
+    }
+    #popup h2 {
+        font-size: 3em;
+        padding-top: 2vh;
+    }
+    #go {
+        width: 70px;
+        height: 70px;
+        font-size: 1.9em;
+        top: 75%;
+        padding: 0;
+    }
+    #popup {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    form input[type="text"] {
+        font-size: 1.3em;
+        padding: 1.2cap;
+    }
+    label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+        font-size: 1.5em;
+    }
+
+    /*---Gameplay---*/
+    h3.option {
+        font-size: 1.8em;
+        padding: 2vh 0;
+    }
+    main.GP {
+        width: 95%;
+        min-height: 75dvh;
+    }
+    #headOfConditions {
+        font-size: 1.5em;
+    }
+    #totalMatches {
+        font-size: 13em;
+        margin: 0;
+        padding: 0;
+    }
+    h3.ask {
+        font-size: 1.8em;
+    }
+    div#specialMessage {
+        font-size: 1.7em;
+    }
+    div#alertMessage {
+        font-size: 1.7em;
+    }
+    button.choice {
+        width: 100px;
+        height: 100px;
+        font-size: 3em;
+    }
+    button.special {
+        width: 75px;
+        height: 75px;
+        padding: 2px;
+    }
+    img#joker {
+        width: 45px;
+    }
+    div.interactive {
+        width: 95%;
+        height: 20dvh;
+        font-size: 0.9em;
+    }
+    div#resultGame {
+        width: 100%;
+        height: 75dvh;
+        font-size: 1.2em;
+        top: 0;
+        left: 0;
+    }
+};

@@ -9,7 +9,7 @@ export function gameOver() {
         for (let y = 0; y < arrNames.length; y++) {
             if (loser == y + 1) {
                 resultGame.style.display = 'block'
-                resultGame.innerHTML = '<p class="resultloser">  🌀🌀<br>You lose ' + arrNames[y] + '<br>🌀🌀</p>'
+                resultGame.innerHTML = '<p class="resultloser">  🌀🌀<br>You lose, ' + arrNames[y] + '<br>🌀🌀</p>'
                 resultGame.innerHTML += `<p class="resultwinner">⭐⭐⭐<br>${winner}, you win<br>⭐⭐⭐</p>`
                 shortSuccess.play()
             }

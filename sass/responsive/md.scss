@@ -1,22 +1,16 @@
-/*------------Responsive Rules SM---------*/
+/*------------Responsive Rules MD---------*/
 
 @use "../libs/_responsive" as *;
 @use "../libs/_colors" as *; 
 
-@include mediaQueries(sm) {
+@include mediaQueries(md) {
     
     #mute {
         top: 2%;
         right: 2%;
-        width: 2cap;
+        width: 3cap;
         height: 3cap;
-        background-size: 40%;
-    }
-
-    .gameBtn {
-        font-size: 1.4em;
-        padding: 7px 14px;
-        border-radius: 1.1rem;
+        background-size: 45%;
     }
 
     /*---Progress + Index---*/
@@ -24,47 +18,32 @@
         font-size: 2em;
     }
     h4.subtitle {
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
     h1.title {
-        font-size: 4.5em;
-        margin: 7% auto;
-    }
-    #quickGame, #start, #credits {
-        margin: 3% auto;
-        height: 3em;
+        font-size: 6em;
+        margin: 10% auto;
     }
     section.first {
-        padding-top: 2dvh;
-    }
-    .upCredits {
-        width: 90%;
-        font-size: inherit;
-        & h4 {
-            font-size: 2.5em;
-            text-shadow: $gradientTextShadow;
-        }
+        padding-top: 3dvh;
     }
     
     /*---Game Options---*/
     form fieldset {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     main.option {
         width: 95%;
-        min-height: 82dvh;
+        min-height: 80dvh;
     }
     h1.h1padding {
         margin: 0 auto;
         width: 70%;
-        font-size: 2.3em;
+        font-size: 2.7em;
     }
     h2.option {
         font-size: 1.5em;
         padding: 2% 0;
-    }
-    div.bottombutton {
-        margin: 10% 5%;
     }
     #popup h2 {
         font-size: 1.5em;
@@ -91,32 +70,20 @@
 
     /*---Gameplay---*/
     h3.option {
-        font-size: 1.5em;
+        font-size: 1.8em;
         padding: 2vh 0;
     }
     main.GP {
         width: 95%;
         min-height: 80dvh;
     }
-    #headOfConditions {
-        flex-direction: row;
-        font-size: 0.8em;
-    }
-    #back {
-        letter-spacing: 0;
-        padding: 0 5px;
-        font-size: inherit;
-    }
     #totalMatches {
-        font-size: 9em;
-        margin: -7px 0;
+        font-size: 10em;
+        margin: 0;
         padding: 2px;
     }
-    h3#game {
-        font-size: 2em;
-    }
     h3.ask {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     div#specialMessage {
         font-size: 1.5em;
@@ -125,8 +92,8 @@
         font-size: 1.5em;
     }
     button.choice {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         font-size: 3em;
     }
     button.special {
