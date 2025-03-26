@@ -1467,6 +1467,7 @@ fieldset {
   height: 100vh;
   background-image: url("../img/splash_white_screen.png");
   background-repeat: repeat;
+  padding: 0;
 }
 
 .newGameplayBG main {
