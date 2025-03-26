@@ -1091,8 +1091,156 @@ video {
     left: 0;
   }
 }
-/*------------Responsive Rules XL---------*/
+/*------------Responsive Rules CLASSIC SCREEN---------*/
 @media only screen and (min-width: 1024px) {
+  #mute {
+    top: 10%;
+    right: 15%;
+    left: 89%;
+    width: 3cap;
+    height: 2cap;
+    background-size: 45%;
+  }
+  .gameBtn {
+    font-size: 1.2em;
+    padding: 7px 14px;
+    border-radius: 1.1rem;
+  }
+  /*---Progress + Index---*/
+  #sendGameButton {
+    width: 100px;
+    height: 100px;
+    margin-top: 20vh;
+  }
+  h4.head {
+    font-size: 2em;
+  }
+  h4.subtitle {
+    font-size: 2em;
+  }
+  h1.title {
+    font-size: 9em;
+    margin: 3vh auto;
+  }
+  .buttonbox {
+    flex-direction: row;
+  }
+  #quickGame, #start, #credits {
+    width: 15cap;
+    height: auto;
+    margin: 0 1%;
+  }
+  section.first {
+    padding-top: 5vh;
+  }
+  .upCredits {
+    width: 40%;
+    font-size: inherit;
+  }
+  .upCredits h4 {
+    font-size: 2em;
+  }
+  /*---Game Options---*/
+  form fieldset {
+    font-size: 1.3em;
+  }
+  main.option {
+    width: 50%;
+    min-height: inherit;
+  }
+  h1.h1padding {
+    margin: 0 auto;
+    width: auto;
+    font-size: 3em;
+  }
+  h2.option {
+    font-size: 2.5em;
+    padding: 1% 0;
+  }
+  #popup h2 {
+    font-size: 3em;
+    padding-top: 2vh;
+  }
+  #go {
+    width: 90px;
+    height: 90px;
+    font-size: 1.8em;
+    top: 75%;
+    padding: 0;
+  }
+  #popup {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  form input[type=text] {
+    font-size: 1.3em;
+    padding: 1.2cap;
+  }
+  label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+    font-size: 1.5em;
+  }
+  /*---Gameplay---*/
+  h3.option {
+    font-size: 2.5em;
+    padding: 1vh 0;
+  }
+  main.GP {
+    width: 95%;
+    min-height: 75dvh;
+  }
+  #headOfConditions {
+    font-size: 1.5em;
+  }
+  #totalMatches {
+    font-size: 15em;
+    margin: 0;
+    padding: 0;
+  }
+  h3#game {
+    font-size: 3em;
+  }
+  h3.ask {
+    font-size: 2em;
+  }
+  div#specialMessage {
+    font-size: 2em;
+  }
+  div#alertMessage {
+    font-size: 2em;
+  }
+  button.choice {
+    width: 150px;
+    height: 150px;
+    font-size: 5em;
+    margin: 5px;
+    padding: 2px;
+  }
+  button.special {
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+  }
+  img#joker {
+    width: 70px;
+  }
+  div.interactive {
+    width: 95%;
+    height: 20dvh;
+    font-size: 1.2em;
+  }
+  div#resultGame {
+    width: 100%;
+    height: 75dvh;
+    font-size: 2em;
+    top: 0;
+    left: 0;
+  }
+}
+/*------------Responsive Rules IPAD PRO 13 INCH SIZE---------*/
+@media only screen and (width: 1024px) and (min-height: 1366px) {
   #mute {
     top: 3%;
     left: 90%;

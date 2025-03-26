@@ -1,67 +1,71 @@
-/*------------Responsive Rules XL---------*/
+/*------------Responsive Rules CLASSIC SCREEN---------*/
 
 @use "../libs/_responsive" as *;
 @use "../libs/_colors" as *; 
 
-@include mediaQueries(xl) { //1152px+
+@include mediaQueries(classic) { //1024px+
     
     #mute {
-        top: 3%;
-        left: 90%;
-        width: 4cap;
-        height: 4cap;
-        background-size: 50%;
+        top: 10%;
+        right: 15%;
+        left: 89%;
+        width: 3cap;
+        height: 2cap;
+        background-size: 45%;
     }
     .gameBtn {
-        font-size: 2em;
+        font-size: 1.2em;
         padding: 7px 14px;
         border-radius: 1.1rem;
-        height: auto;
-    }
-    .closeBtn {
-        height: 30px;
     }
 
     /*---Progress + Index---*/
-    #loading-logo {
-        margin-top: 25dvh;
-        & img {
-            width: 100%;
-        }
-    }
     #sendGameButton {
-        width: 150px;
-        height: 150px;
-        margin-top: 18vh;
+        width: 100px;
+        height: 100px;
+        margin-top: 20vh;
     }
     h4.head {
-        font-size: 3em;
+        font-size: 2em;
     }
     h4.subtitle {
-        font-size: 3em;
+        font-size: 2em;
     }
     h1.title {
-        font-size: 11em;
+        font-size: 9em;
         margin: 3vh auto;
     }
+    .buttonbox {
+        flex-direction: row;
+    }
     #quickGame, #start, #credits {
-        margin: 2% auto;
-        height: 3em;
-        width: 25cap;
+        width: 15cap;
+        height: auto;
+        margin: 0 1%;
+    }
+    section.first {
+        padding-top: 5vh;
+    }
+    .upCredits {
+        width: 40%;
+        font-size: inherit;
+        & h4 {
+            font-size: 2em;
+        }
     }
     
     /*---Game Options---*/
     form fieldset {
-        font-size: 2em;
+        font-size: 1.3em;
     }
     main.option {
-        width: 95%;
-        min-height: 70dvh;
+        width: 50%;
+        min-height: inherit;
     }
     h1.h1padding {
         margin: 0 auto;
-        width: 60%;
-        font-size: 5em;
+        width: auto;
+        font-size: 3em;
     }
     h2.option {
         font-size: 2.5em;

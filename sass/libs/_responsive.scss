@@ -7,18 +7,19 @@ $breakpoints: (
     sm: 360px,
     md: 400px,
     lg: 720px,
-    xl: 1024px,
-    plus: 1152px
+    ipad-pro: 1024px, //special size
+    classic: 1024px
 );
 
 @mixin mediaQueries($key) {
-    $size: map.get($breakpoints, $key);
-
-    @if $size {
+    @if $key == ipad-pro {
+        @media only screen and (width: 1024px) and (min-height: 1366px) {
+            @content;
+        } 
+    } @else {
+        $size: map.get($breakpoints, $key);
         @media only screen and (min-width: $size) {
             @content;
         }
-    } @else {
-        @warn "Breakpoint #{$key} doesn't exist in the map $breakpoints.";
     }
 }
