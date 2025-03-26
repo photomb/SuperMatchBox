@@ -57,11 +57,11 @@
 }
 
 #exit {
-  padding: 0 3cap;
+  padding: 5px 2cap;
 }
 
 #next {
-  padding: 0 2.2cap;
+  padding: 5px 1.7cap;
 }
 
 #quickGame, #start, #credits {
@@ -952,9 +952,15 @@ video {
   #mute {
     top: 3%;
     left: 90%;
-    width: 4cap;
-    height: 4cap;
-    background-size: 40%;
+    width: 3cap;
+    height: 3cap;
+    background-size: 35%;
+  }
+  .gameBtn {
+    font-size: 2em;
+    padding: 7px 14px;
+    border-radius: 1.1rem;
+    height: auto;
   }
   /*---Progress + Index---*/
   #loading-logo {
@@ -962,6 +968,11 @@ video {
   }
   #loading-logo img {
     width: 100%;
+  }
+  #sendGameButton {
+    width: 150px;
+    height: 150px;
+    margin-top: 18vh;
   }
   h4.head {
     font-size: 3em;
@@ -975,17 +986,16 @@ video {
   }
   #quickGame, #start, #credits {
     margin: 1% auto;
-    height: 3.5em;
-    width: 25cap;
-    font-size: 1.8em;
+    height: 3em;
+    width: 20cap;
   }
   /*---Game Options---*/
   form fieldset {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
   main.option {
     width: 95%;
-    min-height: 75dvh;
+    min-height: 70dvh;
   }
   h1.h1padding {
     margin: 0 auto;
@@ -993,17 +1003,17 @@ video {
     font-size: 4em;
   }
   h2.option {
-    font-size: 2em;
-    padding: 2% 0;
+    font-size: 2.5em;
+    padding: 1% 0;
   }
   #popup h2 {
     font-size: 3em;
     padding-top: 2vh;
   }
   #go {
-    width: 70px;
-    height: 70px;
-    font-size: 1.9em;
+    width: 90px;
+    height: 90px;
+    font-size: 1.8em;
     top: 75%;
     padding: 0;
   }
@@ -1023,8 +1033,8 @@ video {
   }
   /*---Gameplay---*/
   h3.option {
-    font-size: 1.8em;
-    padding: 2vh 0;
+    font-size: 2.5em;
+    padding: 1vh 0;
   }
   main.GP {
     width: 95%;
@@ -1038,8 +1048,11 @@ video {
     margin: 0;
     padding: 0;
   }
+  h3#game {
+    font-size: 3em;
+  }
   h3.ask {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   div#specialMessage {
     font-size: 1.7em;
@@ -1051,6 +1064,8 @@ video {
     width: 100px;
     height: 100px;
     font-size: 3em;
+    margin: 5px;
+    padding: 2px;
   }
   button.special {
     width: 75px;
@@ -1062,7 +1077,7 @@ video {
   }
   div.interactive {
     width: 95%;
-    height: 20dvh;
+    height: 17dvh;
     font-size: 0.9em;
   }
   div#resultGame {
