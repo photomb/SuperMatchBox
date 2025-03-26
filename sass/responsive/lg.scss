@@ -3,7 +3,7 @@
 @use "../libs/_responsive" as *;
 @use "../libs/_colors" as *; 
 
-@include mediaQueries(md) {
+@include mediaQueries(lg) {
     
     #mute {
         top: 3%;
@@ -21,18 +21,20 @@
         }
     }
     h4.head {
-        font-size: 2em;
+        font-size: 3em;
     }
     h4.subtitle {
-        font-size: 2em;
+        font-size: 3em;
     }
     h1.title {
-        font-size: 8em;
-        margin: 8% auto;
+        font-size: 9em;
+        margin: 2% auto;
     }
     #quickGame, #start, #credits {
-        margin: 2% auto;
+        margin: 1% auto;
         height: 3.5em;
+        width: 25cap;
+        font-size: 1.8em;
     }
     
     /*---Game Options---*/
