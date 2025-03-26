@@ -1179,6 +1179,7 @@ video {
   }
   #totalMatches {
     font-size: 11em;
+    margin: -50px 0 -20px 0;
   }
   h3#game {
     font-size: 2em;
