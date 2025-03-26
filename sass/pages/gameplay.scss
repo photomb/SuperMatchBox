@@ -40,14 +40,16 @@
 #resultGame {
     display: none;
     position: absolute;
-    left: 25%;
-    top: 23%;
-    width: 50%;
-    height:45%;
+    left: 2%;
+    top: 2%;
+    width: 96%;
+    height:96%;
     padding-top: 0;
+    font-size: 1.5em;
     border-radius: 2cap;
     border: dotted 2px $orangeGrad1;
     text-align: center;
+    backdrop-filter: blur(2px);
     background-color: $bgPopup;
     box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
 }

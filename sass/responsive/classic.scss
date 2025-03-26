@@ -71,6 +71,9 @@
         font-size: 2em;
         padding: 0;
     }
+    div.bottombutton {
+        margin: 0 10%;
+    }
     #popup h2 {
         font-size: 2em;
         padding: unset;
@@ -91,7 +94,7 @@
         padding-bottom: 2cap;
     }
     form input[type="text"] {
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding: 1.2cap;
     }
     label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
@@ -104,16 +107,14 @@
         padding: 1vh 0;
     }
     main.GP {
-        width: 95%;
-        min-height: 75dvh;
+        width: 50%;
+        height: auto;
     }
     #headOfConditions {
         font-size: 1.5em;
     }
     #totalMatches {
         font-size: 11em;
-        margin-top: 50px;
-        margin-bottom: 20px;
     }
     h3#game {
         font-size: 2em;
@@ -148,11 +149,11 @@
         font-size: 0.9em;
     }
     div#resultGame {
-        width: 50%;
-        height: 45%;
-        font-size: unset;
-        left: 25%;
-        top: 23%;
-        padding-top: 0;
+        width: 95%;
+        height: 95%;
+        top: 2%;
+        left: 2%;
+        padding-top: 10%;
+        font-size: 1.5em;
     }
 };
