@@ -67,15 +67,13 @@
         margin: 10% 5%;
     }
     #popup h2 {
-        font-size: 1.5em;
-        padding-top: 1vh;
+        font-size: 2.2em;
+        padding-top: 3dvh;
     }
     #go {
         width: 70px;
         height: 70px;
         font-size: 1.9em;
-        top: 75%;
-        padding: 0;
     }
     #popup {
         top: 0;
@@ -88,6 +86,9 @@
         font-size: 1.3em;
         padding: 1.2cap;
     }
+    label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+        font-size: 1.1em;
+    }
 
     /*---Gameplay---*/
     h3.option {
@@ -99,11 +100,9 @@
         min-height: 80dvh;
     }
     #headOfConditions {
-        flex-direction: row;
         font-size: 0.8em;
     }
     #back {
-        letter-spacing: 0;
         padding: 0 5px;
         font-size: inherit;
     }

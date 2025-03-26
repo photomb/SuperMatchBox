@@ -459,8 +459,7 @@ video {
     width: 40px;
     height: 40px;
     font-size: 1.2em;
-    top: 93%;
-    padding: 0;
+    bottom: -1%;
   }
   #popup {
     top: 0;
@@ -470,8 +469,11 @@ video {
     padding: 0;
   }
   form input[type=text] {
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 1cap 0;
+  }
+  label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+    font-size: 0.8em;
   }
   /*---Gameplay---*/
   h3.option {
@@ -486,7 +488,6 @@ video {
     min-height: 130dvh;
   }
   #headOfConditions {
-    flex-direction: row;
     font-size: 0.7em;
   }
   #back {
@@ -613,14 +614,13 @@ video {
   }
   #popup h2 {
     font-size: 1.5em;
-    padding-top: 1vh;
+    padding-top: 1dvh;
   }
   #go {
     width: 50px;
     height: 50px;
     font-size: 1.5em;
-    top: 93%;
-    padding: 0;
+    padding: 0%;
   }
   #popup {
     top: 0;
@@ -632,6 +632,9 @@ video {
   form input[type=text] {
     font-size: 0.8em;
     padding: 1cap 0;
+  }
+  label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+    font-size: 1.3em;
   }
   /*---Gameplay---*/
   h3.option {
@@ -646,7 +649,6 @@ video {
     min-height: 80dvh;
   }
   #back {
-    letter-spacing: 0;
     padding: 0 3px;
   }
   #totalMatches {
@@ -754,15 +756,13 @@ video {
     margin: 10% 5%;
   }
   #popup h2 {
-    font-size: 1.5em;
-    padding-top: 1vh;
+    font-size: 2.2em;
+    padding-top: 3dvh;
   }
   #go {
     width: 70px;
     height: 70px;
     font-size: 1.9em;
-    top: 75%;
-    padding: 0;
   }
   #popup {
     top: 0;
@@ -775,6 +775,9 @@ video {
     font-size: 1.3em;
     padding: 1.2cap;
   }
+  label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+    font-size: 1.1em;
+  }
   /*---Gameplay---*/
   h3.option {
     font-size: 1.5em;
@@ -785,11 +788,9 @@ video {
     min-height: 80dvh;
   }
   #headOfConditions {
-    flex-direction: row;
     font-size: 0.8em;
   }
   #back {
-    letter-spacing: 0;
     padding: 0 5px;
     font-size: inherit;
   }
@@ -880,23 +881,12 @@ video {
     font-size: 1.5em;
     padding-top: 1vh;
   }
-  #go {
-    width: 70px;
-    height: 70px;
-    font-size: 1.9em;
-    top: 75%;
-    padding: 0;
-  }
   #popup {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 0;
-  }
-  form input[type=text] {
-    font-size: 1.3em;
-    padding: 1.2cap;
   }
   /*---Gameplay---*/
   h3.option {
@@ -1016,20 +1006,12 @@ video {
   #go {
     width: 90px;
     height: 90px;
-    font-size: 1.8em;
-    top: 75%;
-    padding: 0;
   }
   #popup {
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0;
-  }
-  form input[type=text] {
-    font-size: 1.3em;
-    padding: 1.2cap;
   }
   label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
     font-size: 1.5em;
@@ -1146,7 +1128,7 @@ video {
   }
   main.option {
     width: 50%;
-    min-height: inherit;
+    min-height: auto;
   }
   h1.h1padding {
     margin: 0 auto;
@@ -1154,37 +1136,38 @@ video {
     font-size: 3em;
   }
   h2.option {
-    font-size: 2.5em;
-    padding: 1% 0;
+    font-size: 2em;
+    padding: 0;
   }
   #popup h2 {
-    font-size: 3em;
-    padding-top: 2vh;
+    font-size: 2em;
+    padding: unset;
   }
   #go {
-    width: 90px;
-    height: 90px;
-    font-size: 1.8em;
-    top: 75%;
-    padding: 0;
+    width: 70px;
+    height: 70px;
+    font-size: 1.6em;
+    bottom: 10%;
   }
   #popup {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
+    top: 3%;
+    left: 5%;
+    width: 90%;
+    height: 94%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2cap;
   }
   form input[type=text] {
-    font-size: 1.3em;
+    font-size: 1.1em;
     padding: 1.2cap;
   }
   label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   /*---Gameplay---*/
   h3.option {
-    font-size: 2.5em;
+    font-size: 1.6em;
     padding: 1vh 0;
   }
   main.GP {
@@ -1195,48 +1178,49 @@ video {
     font-size: 1.5em;
   }
   #totalMatches {
-    font-size: 15em;
-    margin: 0;
-    padding: 0;
+    font-size: 11em;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
   h3#game {
-    font-size: 3em;
+    font-size: 2em;
   }
   h3.ask {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   div#specialMessage {
-    font-size: 2em;
+    font-size: 1.1em;
   }
   div#alertMessage {
-    font-size: 2em;
+    font-size: 1.3em;
   }
   button.choice {
-    width: 150px;
-    height: 150px;
-    font-size: 5em;
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
     margin: 5px;
     padding: 2px;
   }
   button.special {
-    width: 120px;
-    height: 120px;
-    padding: 5px;
+    width: 75px;
+    height: 75px;
+    padding: 2px;
   }
   img#joker {
-    width: 70px;
+    width: 38px;
   }
   div.interactive {
-    width: 95%;
-    height: 20dvh;
-    font-size: 1.2em;
+    width: 70%;
+    height: 160px;
+    font-size: 0.9em;
   }
   div#resultGame {
-    width: 100%;
-    height: 75dvh;
-    font-size: 2em;
-    top: 0;
-    left: 0;
+    width: 50%;
+    height: 45%;
+    font-size: unset;
+    left: 25%;
+    top: 23%;
+    padding-top: 0;
   }
 }
 /*------------Responsive Rules IPAD PRO 13 INCH SIZE---------*/
@@ -1529,7 +1513,7 @@ fieldset {
   top: 23%;
   width: 50%;
   height: 45%;
-  padding-top: 3%;
+  padding-top: 0;
   border-radius: 2cap;
   border: dotted 2px #ff6f00;
   text-align: center;

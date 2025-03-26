@@ -91,8 +91,7 @@
         width: 40px;
         height: 40px;
         font-size: 1.2em;
-        top: 93%;
-        padding: 0;
+        bottom: -1%;
     }
     #popup {
         top: 0;
@@ -102,8 +101,11 @@
         padding: 0;
     }
     form input[type="text"] {
-        font-size: 0.8em;
+        font-size: 1em;
         padding: 1cap 0;
+    }
+    label#labelPlayer1, label#labelPlayer2, label#labelPlayer3, label#labelPlayer4 {
+        font-size: 0.8em;
     }
 
     /*---Gameplay---*/
@@ -119,7 +121,6 @@
         min-height: 130dvh;
     }
     #headOfConditions {
-        flex-direction: row;
         font-size: 0.7em;
     }
     #back {
