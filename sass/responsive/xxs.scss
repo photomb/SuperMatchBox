@@ -2,7 +2,7 @@
 
 @use "../libs/_responsive" as *;
 
-@include mediaQueries(xxs) {
+@include mediaQueries(xxs) { //160px to 319px
     
     #mute {
         top: 4%;

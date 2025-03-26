@@ -3,7 +3,7 @@
 @use "../libs/_responsive" as *;
 @use "../libs/_colors" as *; 
 
-@include mediaQueries(sm) {
+@include mediaQueries(sm) { //360px to 719px
     
     #mute {
         top: 2%;
