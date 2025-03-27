@@ -1024,7 +1024,7 @@ video {
     min-height: 75dvh;
   }
   #headOfConditions {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   #totalMatches {
     font-size: 13em;
@@ -1175,7 +1175,7 @@ video {
     height: auto;
   }
   #headOfConditions {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   #totalMatches {
     font-size: 11em;
@@ -1640,7 +1640,7 @@ main {
   width: 50%;
   height: auto;
   margin: 1% auto;
-  padding: 2%;
+  padding: 1%;
   border-radius: 1.5rem;
 }
 
