@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videoBG = document.getElementById("background-video")
-    const audioIndex = document.getElementById("wiiSports")
+    const wiiSports = document.getElementById("wiiSports")
     const letsPlayButton = new Audio('../media/mouse-start.mp3')
     const preloader = document.getElementById("preloader")
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
     const sendGameButton = document.getElementById("sendGameButton")
-    
+
     const preloadImages = [
-        '../img/close.png',
-        '../img/joker.png',
-        '../img/match.png',
-        '../img/splash_white_screen.png',
-        '../img/volume-mute.png',
-        '../img/volume-on.png',
-        '../media/twinkle.gif'
+        'img/close.png',
+        'img/joker.png',
+        'img/match.png',
+        'img/splash_white_screen.png',
+        'img/volume-mute.png',
+        'img/volume-on.png',
+        'media/twinkle.gif'
     ]
 
     let progress = 0
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 letsPlayButton.play()
                 videoBG.play()
-                audioIndex.play()
-                audioIndex.volume = 0.3
-                audioIndex.loop = true
+                wiiSports.play()
+                wiiSports.volume = 0.3
+                wiiSports.loop = true
             })
         }
     }
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     videoBG.addEventListener("canplaythrough", () => {
         if (!videoLoaded) {
             videoLoaded = true
-            sessionStorage.setItem("videoLoaded", "true")
+            localStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
             updateProgress()
         }
@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //Is audio ready ?
-    audioIndex.load()
-    audioIndex.addEventListener("canplaythrough", () => {
+    wiiSports.load()
+    wiiSports.addEventListener("canplaythrough", () => {
         if (!audioLoaded) {
             audioLoaded = true
             localStorage.setItem("audioLoaded", "true")
@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
             updateProgress()
         }
     }, { once: true })
-        
         
     // Is fonts ready ?
     if(!fontsLoaded) {

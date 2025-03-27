@@ -13,16 +13,17 @@
     <div id="whitefadeout">
         <div class="loader"></div>
     </div>
-    
-    <!-- Audio -->
-    <audio id="wiiMusic" preload="auto">
-        <source src="./media/WiiMusic.mp3" type="audio/mp3">
-    </audio>
 
-    <!-- Background Video -->
-    <video id="background-video" preload="auto" loop muted>
-        <source src="./media/animation_bg_smb15.mp4" type="video/mp4">    
-    </video>
+    <div> 
+        <!-- Background Video -->
+       <video id="background-video" preload="metadata" loop muted playsinline> 
+           <source src="./media/animation_bg_smb15.mp4" type="video/mp4">
+       </video>
+       <!-- Audio -->
+       <audio id="wiiMusic" preload="metadata">
+           <source src="./media/WiiMusic.mp3" type="audio/mp3">
+       </audio>
+    </div>
 
     <h1 class="h1padding">Super Match Box</h1>
     <h2 class="option">⭐ Choose your game options ⭐</h2>
