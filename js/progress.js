@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
     const sendGameButton = document.getElementById("sendGameButton")
+    
     const preloadImages = [
         'img/close.png',
         'img/joker.png',
@@ -25,8 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateProgress() {
         progress = 0
         
-        if (videoLoaded) progress += 40
-        if (audioLoaded) progress += 30
         if (videoLoaded) progress += 40
         if (audioLoaded) progress += 30
         if (fontsLoaded) progress += 10
@@ -112,8 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
             audioLoaded = true
             localStorage.setItem("audioLoaded", "true")
             console.log("AUDIO OK")
-            localStorage.setItem("audioLoaded", "true")
-            console.log("AUDIO OK")
             updateProgress()
         }
     }, { once: true })
@@ -129,12 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => {
             fontsLoaded = true
             localStorage.setItem("fontsLoaded", "true")
-            localStorage.setItem("fontsLoaded", "true")
             updateProgress()
             console.log("FONTS OK")
         })
         .catch((zut) => {
-            console.error("Error loading fonts : ", zut)
             console.error("Error loading fonts : ", zut)
         })
     }
