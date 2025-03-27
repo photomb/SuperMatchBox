@@ -1,6 +1,6 @@
 /*------------Responsive Rules XXS---------*/
 
-@use "../libs/_responsive" as *;
+@use "../libs/responsive" as *;
 
 @include mediaQueries(xxs) { //160px to 319px
     

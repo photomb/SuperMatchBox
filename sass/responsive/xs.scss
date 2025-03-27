@@ -1,7 +1,7 @@
 /*------------Responsive Rules XS---------*/
 
-@use "../libs/_responsive" as *;
-@use "../libs/_colors" as *; 
+@use "../libs/responsive" as *;
+@use "../libs/colors" as *; 
 
 @include mediaQueries(xs) { //320px to 359px
     
