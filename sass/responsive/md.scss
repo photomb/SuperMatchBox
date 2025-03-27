@@ -1,7 +1,7 @@
 /*------------Responsive Rules MD---------*/
 
-@use "../libs/_responsive" as *;
-@use "../libs/_colors" as *; 
+@use "../libs/responsive" as *;
+@use "../libs/colors" as *; 
 
 @include mediaQueries(md) { //400px to 719px
     

@@ -1,7 +1,7 @@
 /*------------Responsive Rules LG---------*/
 
-@use "../libs/_responsive" as *;
-@use "../libs/_colors" as *; 
+@use "../libs/responsive" as *;
+@use "../libs/colors" as *; 
 
 @include mediaQueries(lg) { //720px to 1151px
     
