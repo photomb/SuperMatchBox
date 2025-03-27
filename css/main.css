@@ -1262,6 +1262,9 @@ video {
     font-size: 11em;
     margin: 3vh auto;
   }
+  .buttonbox {
+    flex-direction: column;
+  }
   #quickGame, #start, #credits {
     margin: 2% auto;
     height: 3em;
