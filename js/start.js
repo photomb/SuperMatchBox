@@ -22,9 +22,18 @@ miiMusic.addEventListener('canplaythrough', () => {
     localStorage.setItem("miiMusic", "true")
     console.log("MiiMusic OK")  
 }, { once: true })
-miiMusic.play()
-miiMusic.volume = 0.3
-miiMusic.loop = true
+let playPromiseMiiMusic = miiMusic.play()
+if (playPromiseMiiMusic !== undefined) {
+    playPromiseMiiMusic.then(_ => {    
+        miiMusic.play()
+        miiMusic.volume = 0.3
+        miiMusic.loop = true
+        muted(miiMusic)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+}
 
 // Number of players //
 export let arrPlayers = []
@@ -56,5 +65,4 @@ document.querySelectorAll('.special').forEach(button => {
 })
 
 backButton()
-muted(miiMusic)
 arrowScroll()

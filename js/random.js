@@ -68,7 +68,7 @@ export function specialBtn() {
         document.querySelectorAll('.special').forEach(button => { 
             button.disabled = false, button.style.opacity = 1
             audioSpecial.play()
-
+            
             // gif effect //
             const gifEffect = document.createElement('img')
             gifEffect.src = './media/twinkle.gif'
