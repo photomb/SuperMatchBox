@@ -9,10 +9,24 @@ wiiMusic.addEventListener('canplaythrough', () => {
     localStorage.setItem("wiiMusic", "true")
     console.log("WiiMusic OK")  
 }, { once: true })
-wiiMusic.play()
-wiiMusic.volume = 0.5
-wiiMusic.loop = true
-muted(wiiMusic)
+let playPromiseWiiMusic = wiiMusic.play()
+if (playPromiseWiiMusic !== undefined) {
+    playPromiseWiiMusic.then(_ => {
+        wiiMusic.play()
+        wiiMusic.volume = 0.7
+        wiiMusic.loop = true
+        muted(wiiMusic)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+}
+
+// Manage video playback //
+const videoBG = document.getElementById("background-video")
+videoBG.play()
+videoBG.muted = true
+videoBG.loop = true
 
 function getNumberOfPlayers() { //choose number of players //
     document.getElementById("next").addEventListener("click", () => {

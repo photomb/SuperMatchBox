@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressFill = document.querySelector(".progress-fill")
     const loadingText = document.getElementById("loading-text")
     const sendGameButton = document.getElementById("sendGameButton")
-    
+
     const preloadImages = [
         'img/close.png',
         'img/joker.png',
