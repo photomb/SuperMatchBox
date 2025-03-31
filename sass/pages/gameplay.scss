@@ -140,41 +140,6 @@
     height: auto;
 }
 
-// Echo Joker //
-.special::before,
-.special::after {
-    content: '';
-    position: absolute;
-    top: 78.5%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    animation: pulse 1s infinite ease-out;
-}
-
-.special::before {
-    border: 1px solid $yellowstar;
-}
-
-.special::after {
-    border: 1px solid $orangeGrad1;
-    animation-delay: 0.5s;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2);
-        opacity: 0;
-    }
-}
-
 #btn2 {
     display: inline-block;
 }
