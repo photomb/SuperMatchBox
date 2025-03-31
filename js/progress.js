@@ -81,21 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //Is video ready ?
-    function VideoToLoad(videoMedia) {
-        return new Promise((resolve) => {
-            if(localStorage.getItem("videoLoaded")) {
-                resolve("video")
-            } else {
-                videoMedia.addEventListener("canplay", () => {
-                    localStorage.setItem("videoLoaded", "true")
-                    resolve("video")
-                })
-            }
-        })
-    }
-
-    VideoToLoad(videoBG)
-        .then(() => {
+    videoBG.load()
+    videoBG.addEventListener("canplaythrough", () => {
+        if (!videoLoaded) {
             videoLoaded = true
             localStorage.setItem("videoLoaded", "true")
             console.log("VIDEO OK")
