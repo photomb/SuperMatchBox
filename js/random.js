@@ -71,12 +71,14 @@ export function specialBtn() {
             
             // gif effect //
             const gifEffect = document.createElement('img')
-            gifEffect.src = './media/twinkle.gif'
-            gifEffect.alt = 'twinkle'
+            gifEffect.src = './media/joker_pulse.gif' //'/media/twinkle.gif'
+            gifEffect.alt = 'joker_pulse'
             gifEffect.style.position = 'absolute'
             gifEffect.style.zIndex = 1
-            gifEffect.style.top = '0'
-            gifEffect.style.left = '40%'
+            gifEffect.style.top = '6%'
+            gifEffect.style.left = '42%'
+            gifEffect.style.width = '16%'
+            gifEffect.style.height = 'auto'
 
             const specialEffect = button.parentNode
             specialEffect.style.position = 'relative'
@@ -84,7 +86,7 @@ export function specialBtn() {
 
             setTimeout(() => {
                 gifEffect.remove()
-            }, 500)
+            }, 10000)
         })
     } else {
         document.querySelectorAll('.special').forEach(button => { 
