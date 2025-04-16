@@ -1607,6 +1607,10 @@ fieldset {
   height: auto;
 }
 
+.pulse {
+  width: auto;
+}
+
 #btn2 {
   display: inline-block;
 }
