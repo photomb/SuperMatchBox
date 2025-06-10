@@ -821,7 +821,7 @@ video {
     padding: 2px;
   }
   img#joker {
-    width: 40px;
+    width: 42px;
   }
   div.interactive {
     width: 95%;
@@ -918,9 +918,6 @@ video {
     width: 70px;
     height: 70px;
     padding: 2px;
-  }
-  img#joker {
-    width: 40px;
   }
   div.interactive {
     width: 95%;
@@ -1053,9 +1050,6 @@ video {
     width: 75px;
     height: 75px;
     padding: 2px;
-  }
-  img#joker {
-    width: 45px;
   }
   div.interactive {
     width: 95%;
@@ -1206,7 +1200,7 @@ video {
     padding: 2px;
   }
   img#joker {
-    width: 38px;
+    width: 42px;
   }
   div.interactive {
     width: 70%;
@@ -1524,6 +1518,7 @@ fieldset {
   backdrop-filter: blur(2px);
   background-color: rgba(252, 244.5714285714, 216, 0.9);
   box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
 }
 
 .resultloser {
@@ -1603,12 +1598,17 @@ fieldset {
 }
 
 #joker {
-  width: 38px;
+  width: 42px;
   height: auto;
 }
 
 .pulse {
-  width: auto;
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  width: 14%;
+  height: auto;
+  z-index: 1;
 }
 
 #btn2 {
