@@ -75,12 +75,6 @@ export function specialBtn() {
             const gifEffect = document.createElement('img')
             gifEffect.src = './media/joker_eclat.gif'
             gifEffect.alt = 'joker_eclat'
-            gifEffect.style.position = 'absolute'
-            gifEffect.style.zIndex = 1
-            gifEffect.style.top = '6%'
-            gifEffect.style.left = '42%'
-            gifEffect.style.width = '16%'
-            gifEffect.style.height = 'auto'
             gifEffect.classList = 'pulse'
 
             const specialEffect = button.parentNode
@@ -89,7 +83,7 @@ export function specialBtn() {
 
             setTimeout(() => {
                 gifEffect.remove()
-            }, 30000)
+            }, 2700)
         })
     } else {
         document.querySelectorAll('.special').forEach(button => { 
