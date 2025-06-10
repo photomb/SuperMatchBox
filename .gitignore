@@ -5,4 +5,4 @@ sass-cache/
 #Apple
 .DS_Store
 #CSS because of SASS
-css/
+css/*
