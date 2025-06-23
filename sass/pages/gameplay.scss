@@ -137,15 +137,14 @@
 }
 
 #joker {
-    width: 42px;
+    width: 43px;
     height: auto;
 }
 
 .pulse {
-    position: absolute;
-    top: 5%;
-    left: 43%;
-    width: 14%;
+    position: relative;
+    top: -122px;
+    width: 87px;
     height: auto;
     z-index: 1;
 }
