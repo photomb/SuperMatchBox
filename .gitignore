@@ -3,7 +3,9 @@
 dart-sass/
 sass-cache/
 sass/
-# workin media
+#CSS
+css/main.css.map
+#working media
 w/
 #Apple
 .DS_Store
