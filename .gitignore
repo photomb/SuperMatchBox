@@ -1,7 +1,6 @@
 ### Ignore all files in the root directory ###
 #Sass
 dart-sass/
-sass-cache/
 #CSS
 css/main.css.map
 #working media
