@@ -3,7 +3,7 @@
 @use "../libs/responsive" as *;
 @use "../libs/colors" as *; 
 
-@include mediaQueries(sm) { //360px to 719px
+@include mediaQueries(sm) { //360px to 399px
     
     #mute {
         top: 2%;
@@ -138,6 +138,7 @@
     img.pulse {
         width: 87px;
         height: auto;
+        top: -120px;
     }
     div.interactive {
         width: 95%;

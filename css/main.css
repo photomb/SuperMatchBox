@@ -836,6 +836,7 @@ video {
   img.pulse {
     width: 87px;
     height: auto;
+    top: -120px;
   }
   div.interactive {
     width: 95%;

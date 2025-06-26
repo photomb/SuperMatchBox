@@ -83,7 +83,7 @@ export function specialBtn() {
 
             setTimeout(() => {
                 gifEffect.remove()
-            }, 2000) // remove after 2 seconds
+            }, 20000) // remove after 2 seconds
         })
     } else {
         document.querySelectorAll('.special').forEach(button => { 
