@@ -6,7 +6,7 @@ function sendSessionStorage() {
     sessionStorage.setItem('totalMatches', 12)
     sessionStorage.setItem('maxMatches', 3)
     sessionStorage.setItem("namePlayer1", 'Jacky')
-    sessionStorage.setItem("namePlayer2", 'Déborah')
+    sessionStorage.setItem("namePlayer2", 'Deborah')
 }
 
 export function quickGame() {
